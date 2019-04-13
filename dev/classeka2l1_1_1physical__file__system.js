@@ -1,0 +1,26 @@
+var classeka2l1_1_1physical__file__system =
+[
+    [ "physical_file_system", "classeka2l1_1_1physical__file__system.html#a38d51e74ee1facf787b68b21fa5d84af", null ],
+    [ "ascii_to_drive_number", "classeka2l1_1_1physical__file__system.html#a26fe2e5b312bf1c49aecd2caa08368d6", null ],
+    [ "create_directories", "classeka2l1_1_1physical__file__system.html#ab1b2ded4ae5cd90df8c7a14315221ce8", null ],
+    [ "create_directory", "classeka2l1_1_1physical__file__system.html#a4fb750a2e4fe240f58393c385681e44f", null ],
+    [ "delete_entry", "classeka2l1_1_1physical__file__system.html#a98886359f3fc32d45246ea142492a654", null ],
+    [ "do_mount", "classeka2l1_1_1physical__file__system.html#ae6234221718b5ecfed106e5dfa0f1bc7", null ],
+    [ "drive_number_to_ascii", "classeka2l1_1_1physical__file__system.html#a2b01506d3582f76df493b494eaf5e849", null ],
+    [ "exists", "classeka2l1_1_1physical__file__system.html#a570314a7a3e97643534a9f2569fd5821", null ],
+    [ "get_drive_entry", "classeka2l1_1_1physical__file__system.html#a60ece9b697da09afd6405cb77bfbbf3f", null ],
+    [ "get_entry_info", "classeka2l1_1_1physical__file__system.html#a1bfda5c87aca9425907c128b9584dfe8", null ],
+    [ "get_raw_path", "classeka2l1_1_1physical__file__system.html#a6ed83fcb30c4cc3d33ae268f6be7b5a8", null ],
+    [ "get_real_physical_path", "classeka2l1_1_1physical__file__system.html#ad5c71e3aed39462372a84ada91432107", null ],
+    [ "mount_volume_from_path", "classeka2l1_1_1physical__file__system.html#a6eafbde35d092caafaaeff97842bbfba", null ],
+    [ "open_directory", "classeka2l1_1_1physical__file__system.html#a7465073671863645127890ce040f071e", null ],
+    [ "open_file", "classeka2l1_1_1physical__file__system.html#a476c1a0049a7ffbf85d8a0447755eb9b", null ],
+    [ "replace", "classeka2l1_1_1physical__file__system.html#a2f97597880e9c5588f1a035db8386783", null ],
+    [ "set_epoc_ver", "classeka2l1_1_1physical__file__system.html#a402b4e4fc0a2c688cde4dc4200d7297b", null ],
+    [ "set_product_code", "classeka2l1_1_1physical__file__system.html#ac2b2cb03bcfd3ee8fa4d1eb4009c31fa", null ],
+    [ "unmount", "classeka2l1_1_1physical__file__system.html#ac456ecda00f1fc45e4fb38cc67df5497", null ],
+    [ "firmcode", "classeka2l1_1_1physical__file__system.html#a76b7d563f4cf0e111e5f0f72b2ac0a7f", null ],
+    [ "fs_mutex", "classeka2l1_1_1physical__file__system.html#a90fc67d86de690906ff82f4f4af6f192", null ],
+    [ "mappings", "classeka2l1_1_1physical__file__system.html#aa8bf1d1bbf3a8d7edbc183888e8887ea", null ],
+    [ "ver", "classeka2l1_1_1physical__file__system.html#a2c4d0a4c8435099e64024298565f0ff1", null ]
+];

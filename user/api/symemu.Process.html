@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Process &#8212; EKA2L1 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="process">
+<h1>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="symemu.Process">
+<em class="property">class </em><code class="descclassname">symemu.</code><code class="descname">Process</code><a class="headerlink" href="#symemu.Process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getExecutablePath" title="symemu.Process.getExecutablePath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExecutablePath</span></code></a>(self)</p></td>
+<td><p>Get the executable path in Symbian filesystem.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.getName" title="symemu.Process.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>(self)</p></td>
+<td><p>Get the process’s name</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getThreadList" title="symemu.Process.getThreadList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getThreadList</span></code></a>(self)</p></td>
+<td><p>Get all the thread that the process owns.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readProcessMemory" title="symemu.Process.readProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readProcessMemory</span></code></a>(self, arg0, arg1)</p></td>
+<td><p>Read at the specified address in the process’s address space.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.writeProcessMemory" title="symemu.Process.writeProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeProcessMemory</span></code></a>(self, arg0, arg1)</p></td>
+<td><p>Write at the specified address in the process’s address space.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getExecutablePath" title="symemu.Process.getExecutablePath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExecutablePath</span></code></a>(self)</p></td>
+<td><p>Get the executable path in Symbian filesystem.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.getName" title="symemu.Process.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>(self)</p></td>
+<td><p>Get the process’s name</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getThreadList" title="symemu.Process.getThreadList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getThreadList</span></code></a>(self)</p></td>
+<td><p>Get all the thread that the process owns.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readProcessMemory" title="symemu.Process.readProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readProcessMemory</span></code></a>(self, arg0, arg1)</p></td>
+<td><p>Read at the specified address in the process’s address space.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.writeProcessMemory" title="symemu.Process.writeProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeProcessMemory</span></code></a>(self, arg0, arg1)</p></td>
+<td><p>Write at the specified address in the process’s address space.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="symemu.Process.getExecutablePath">
+<code class="descname">getExecutablePath</code><span class="sig-paren">(</span><em>self: symemu.Process</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#symemu.Process.getExecutablePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the executable path in Symbian filesystem.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="symemu.Process.getName">
+<code class="descname">getName</code><span class="sig-paren">(</span><em>self: symemu.Process</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#symemu.Process.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the process’s name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="symemu.Process.getThreadList">
+<code class="descname">getThreadList</code><span class="sig-paren">(</span><em>self: symemu.Process</em><span class="sig-paren">)</span> &#x2192; List[eka2l1::scripting::thread]<a class="headerlink" href="#symemu.Process.getThreadList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all the thread that the process owns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>List[symemu.Thread]</strong></dt><dd><p>A list of threads that this process owns.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="symemu.Process.readProcessMemory">
+<code class="descname">readProcessMemory</code><span class="sig-paren">(</span><em>self: symemu.Process</em>, <em>arg0: int</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; bytes<a class="headerlink" href="#symemu.Process.readProcessMemory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read at the specified address in the process’s address space.</p>
+<p>The function can throw an exception in case the memory at the given address in the memory
+space is not yet mapped, or the size of the data exceeds the mapped memory size from that
+address fowards.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>addr: int</strong></dt><dd><p>The address that we want to read from.</p>
+</dd>
+<dt><strong>size: int</strong></dt><dd><p>Size of data we want to read.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>str</strong></dt><dd><p>A string contains the data.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="symemu.Process.writeProcessMemory">
+<code class="descname">writeProcessMemory</code><span class="sig-paren">(</span><em>self: symemu.Process</em>, <em>arg0: int</em>, <em>arg1: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#symemu.Process.writeProcessMemory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write at the specified address in the process’s address space.</p>
+<p>The function can throw an exception in case the memory at the given address in the memory
+space is not yet mapped, or the size of the data exceeds the mapped memory size from that
+address fowards.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>addr: int</strong></dt><dd><p>The address that we want to read from.</p>
+</dd>
+<dt><strong>dat: str</strong></dt><dd><p>The data to write to that memory address in the process’s address space.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">EKA2L1</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, pent0.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/symemu.Process.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

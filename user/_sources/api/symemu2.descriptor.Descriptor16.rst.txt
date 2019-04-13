@@ -1,0 +1,7 @@
+Descriptor16
+============
+
+.. currentmodule:: symemu2.descriptor
+
+.. autoclass:: Descriptor16
+   :show-inheritance:

@@ -1,0 +1,23 @@
+MbmReader
+=========
+
+.. currentmodule:: symemu2.common
+
+.. autoclass:: MbmReader
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~MbmReader.bitmapCount
+      ~MbmReader.bitsPerPixel
+      ~MbmReader.dimension
+      ~MbmReader.saveBitmap
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: bitmapCount
+   .. automethod:: bitsPerPixel
+   .. automethod:: dimension
+   .. automethod:: saveBitmap

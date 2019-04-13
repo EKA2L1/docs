@@ -1,0 +1,6 @@
+readWord
+========
+
+.. currentmodule:: symemu
+
+.. autofunction:: readWord

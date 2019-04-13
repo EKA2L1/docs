@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Process operations &#8212; EKA2L1 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scripting API references" href="../apirefs/index.html" />
+    <link rel="prev" title="Scripting basic" href="basic.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="process-operations">
+<h1>Process operations<a class="headerlink" href="#process-operations" title="Permalink to this headline">¶</a></h1>
+<p>Like most of other OS, Symbian has definition of process, and each process has its own memory space.</p>
+<p>EKA2L1 exposes some functions to let you play with process:</p>
+<p class="rubric">Memory space modification</p>
+<p>EKA2L1 provides 2 methods in the <a class="reference internal" href="../api/symemu.Process.html#symemu.Process" title="symemu.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">symemu.Process</span></code></a> class for process memory space modification:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../api/symemu.Process.html#symemu.Process.readProcessMemory" title="symemu.Process.readProcessMemory"><code class="xref py py-meth docutils literal notranslate"><span class="pre">symemu.Process.readProcessMemory()</span></code></a>: read the memory space, returns a string contains binary data.</p></li>
+<li><p><a class="reference internal" href="../api/symemu.Process.html#symemu.Process.writeProcessMemory" title="symemu.Process.writeProcessMemory"><code class="xref py py-meth docutils literal notranslate"><span class="pre">symemu.Process.writeProcessMemory()</span></code></a>: write to the memory space, given a string contains binary data.</p></li>
+</ul>
+</div></blockquote>
+<p>While I support you in playing with reading the process memory, I don’t encourage you to play with writing. It can be dangerous, unless
+you know what you are doing.</p>
+<p>Here, I will only talk about how to read. Let’s start with a reschedule hook, just so we can see the result sooner.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@symemu2.events.emulatorRescheduleInvoke</span>
+<span class="k">def</span> <span class="nf">simpleMemoryHook</span><span class="p">():</span>
+  <span class="k">pass</span>
+</pre></div>
+</div>
+<p>In this example, what are we doing is to get the base address of the ROM. ROM memory is always available, in each process’s memory space.
+In EKA2, the address of the ROM is 0x80000000, starts with the header. We are gonna read the ROM base address, which is at offset 0x8C in the header.</p>
+<p>So we should read 4 bytes from 0x8000008C, since the address is 4 bytes long (32-bit).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">symemu</span><span class="o">.</span><span class="n">getCurrentProcess</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">pr</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+  <span class="n">dat</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">readProcessMemory</span><span class="p">(</span><span class="mh">0x8000008C</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We are getting the current process, and read from its memory space. The return data is a binary string, which we should use <em>struct.unpack</em> to unpacks data
+to integer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="p">)</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&lt;I&#39;</span><span class="p">,</span> <span class="n">dat</span><span class="p">)</span>
+<span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;ROM base address is: 0x{:X}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Finally, the complete code is here!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@symemu2.events.emulatorRescheduleInvoke</span>
+<span class="k">def</span> <span class="nf">simpleMemoryHook</span><span class="p">():</span>
+  <span class="n">pr</span> <span class="o">=</span> <span class="n">symemu</span><span class="o">.</span><span class="n">getCurrentProcess</span><span class="p">()</span>
+
+  <span class="k">if</span> <span class="n">pr</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">dat</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">readProcessMemory</span><span class="p">(</span><span class="mh">0x8000008C</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="p">)</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&lt;I&#39;</span><span class="p">,</span> <span class="n">dat</span><span class="p">)</span>
+    <span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;ROM base address is: 0x{:X}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If you run EKA2L1, you will see the result that we all expected:</p>
+<img alt="../_images/process_memread1.png" src="../_images/process_memread1.png" />
+<p>Let’s a thing that seems more ‘real’. We are going to read an address, in a region that is unique to each process. That region is the local data
+region, from 0x400000 to 0x40000000.</p>
+<p>The heap of any thread in a process is in the local data region, so we are going to read a 4-bytes integer in it. The most meaningful thing that we
+can easily read in the heap is the VTable address of the heap allocator. The heap allocator always locates at the beginning of the chunk, and the vtable
+always located at the beginning of a class layout.</p>
+<p>Append this to our current hook</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">thr</span> <span class="o">=</span> <span class="n">symemu</span><span class="o">.</span><span class="n">getCurrentThread</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">thr</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+  <span class="n">stb</span> <span class="o">=</span> <span class="n">thr</span><span class="o">.</span><span class="n">getHeapBase</span><span class="p">()</span>
+  <span class="n">dat</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">readProcessMemory</span><span class="p">(</span><span class="n">stb</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+  <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="p">)</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&lt;I&#39;</span><span class="p">,</span> <span class="n">dat</span><span class="p">)</span>
+  <span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;Heap allocator Vtable address is: 0x{:X}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>And you should get this:</p>
+<img alt="../_images/process_memread2.png" src="../_images/process_memread2.png" />
+<p>The VTable address is an export in the library <strong>euser</strong>, which is in ROM, which explains why the VTable address is in <em>ROM memory region</em>.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">EKA2L1</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basic.html">Scripting basic</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Process operations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Tutorials</a><ul>
+      <li>Previous: <a href="basic.html" title="previous chapter">Scripting basic</a></li>
+      <li>Next: <a href="../apirefs/index.html" title="next chapter">Scripting API references</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, pent0.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tutorials/process.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

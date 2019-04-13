@@ -1,0 +1,23 @@
+BytePairReaderStream
+====================
+
+.. currentmodule:: symemu2.common
+
+.. autoclass:: BytePairReaderStream
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~BytePairReaderStream.getAllPageOffsets
+      ~BytePairReaderStream.readPage
+      ~BytePairReaderStream.readPageTable
+      ~BytePairReaderStream.readPages
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getAllPageOffsets
+   .. automethod:: readPage
+   .. automethod:: readPageTable
+   .. automethod:: readPages

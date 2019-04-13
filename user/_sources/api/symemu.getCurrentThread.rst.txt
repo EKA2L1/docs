@@ -1,0 +1,6 @@
+getCurrentThread
+================
+
+.. currentmodule:: symemu
+
+.. autofunction:: getCurrentThread

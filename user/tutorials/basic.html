@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scripting basic &#8212; EKA2L1 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scripting API references" href="../apirefs/index.html" />
+    <link rel="prev" title="Tutorials" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="scripting-basic">
+<h1>Scripting basic<a class="headerlink" href="#scripting-basic" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">Purpose</p>
+<p>EKA2L1 provides scripting to help with emulator development. For example, the ability to hook and add debug code, inspects
+emulated memory, without having to write down the code in C++ and recompile it (which takes a lot of time).</p>
+<p>Scripting has been used in EKA2L1 to debug leave codes, which are not exposed to kernel, reverse IPC calls behavior, and more.
+Additionally, you can use it for your own purpose, too! Which is what we gonna learn, now.</p>
+<p class="rubric">A simple script</p>
+<p>We will start with a simple script, which will print to the emulator when running:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">symemu</span>
+
+<span class="k">def</span> <span class="nf">scriptEntry</span><span class="p">():</span>
+    <span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;Hi EKA2L1!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This scripts will redirect to the logger, making it display on both the console screen and in the log file. Log is extremely useful,
+it records runtime information for debugging and more stuffs like reverse engineering. So use <em>emulog</em> when possible.</p>
+<p>So, now, what we got to do, is saving this as a <strong>Python script</strong>, and put it in the <em>scripts</em> folder, which is in the same directory
+as the executable (<em>EKA2L1</em>). And run.</p>
+<img alt="../_images/basic_hello.png" src="../_images/basic_hello.png" />
+<p>You should see that the line <strong>Hi, EKA2L1!</strong> is logged to the screen, with the level <em>Info</em>.</p>
+<p><em>scriptEntry</em> is the function that EKA2L1 will first invoke, each time the emulator loads a new application. If this function doesn’t
+present in your script, nothing happens. You can use <em>scriptEntry</em> to initializes components of your script.</p>
+<p class="rubric">Hooking</p>
+<p>EKA2L1 scripts can hook with a specific event. Many hooks can be added for a single event.
+There are four types of hook:</p>
+<ul>
+<li><p>System call hook (<a class="reference internal" href="../api/symemu2.events.emulatorSystemCallInvoke.html#symemu2.events.emulatorSystemCallInvoke" title="symemu2.events.emulatorSystemCallInvoke"><code class="xref py py-meth docutils literal notranslate"><span class="pre">symemu2.events.emulatorSystemCallInvoke()</span></code></a>)</p>
+<p>This hook takes a single number, which is the ordinal of a system call. The hook will be invoked when the system call is also invoked.</p>
+<p>There are two options to this hook:</p>
+<ul class="simple">
+<li><p>Before system call starts doing its work.</p></li>
+<li><p>After system call done its work.</p></li>
+</ul>
+</li>
+<li><p>Reschedule hook (<a class="reference internal" href="../api/symemu2.events.emulatorRescheduleInvoke.html#symemu2.events.emulatorRescheduleInvoke" title="symemu2.events.emulatorRescheduleInvoke"><code class="xref py py-meth docutils literal notranslate"><span class="pre">symemu2.events.emulatorRescheduleInvoke()</span></code></a>)</p>
+<p>Each time kernel reschedule happens, this hook is invoked.</p>
+</li>
+<li><p>Panic hook (<a class="reference internal" href="../api/symemu2.events.emulatorPanicInvoke.html#symemu2.events.emulatorPanicInvoke" title="symemu2.events.emulatorPanicInvoke"><code class="xref py py-meth docutils literal notranslate"><span class="pre">symemu2.events.emulatorPanicInvoke()</span></code></a>)</p>
+<p>Each time a thread is panic, this hook is invoked.</p>
+</li>
+<li><p>Library function hook (<a class="reference internal" href="../api/symemu2.events.emulatorEpocFunctionInvoke.html#symemu2.events.emulatorEpocFunctionInvoke" title="symemu2.events.emulatorEpocFunctionInvoke"><code class="xref py py-meth docutils literal notranslate"><span class="pre">symemu2.events.emulatorEpocFunctionInvoke()</span></code></a>)</p>
+<p>Each time a function in specified library, at the given ordinal index, is invoked, this function is also invoked.</p>
+<p><strong>Note:</strong> Only works with Unicorn JIT.</p>
+</li>
+<li><p>Breakpoint hook (<a class="reference internal" href="../api/symemu2.events.emulatorBreakpointInvoke.html#symemu2.events.emulatorBreakpointInvoke" title="symemu2.events.emulatorBreakpointInvoke"><code class="xref py py-meth docutils literal notranslate"><span class="pre">symemu2.events.emulatorBreakpointInvoke()</span></code></a>)</p>
+<p>Each time the specified address is reached in any thread, the hook is invoked.</p>
+<p><strong>Note:</strong> Only works with Unicorn JIT.</p>
+</li>
+</ul>
+<p>EKA2L1 makes use of a Python feature, named <strong>Decorator</strong>, to implement hooks. Here is an example, that will get the leaves code for you:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ctypes</span>
+
+<span class="kn">import</span> <span class="nn">symemu</span>
+<span class="kn">import</span> <span class="nn">symemu2.events</span>
+
+<span class="c1">## What is this leave invoke ?</span>
+<span class="c1">##</span>
+<span class="c1">## Leave is not supposed to panic, it&#39;s a way to tell parent function that</span>
+<span class="c1">## there is an error occur with it, and all jobs and resources must immidiately</span>
+<span class="c1">## be freed. The leave will combine with the cleanup stack and trap handler,</span>
+<span class="c1">## create a powerful exception handling with stack and heap object.</span>
+<span class="c1">##</span>
+<span class="c1">## Because of that, we don&#39;t know what the code of the leave resulted, only</span>
+<span class="c1">## the parent function know it. This is a hook to get the leave code, for debugging</span>
+<span class="c1">## and reversing an app/game or a mechanism.</span>
+
+<span class="nd">@symemu2.events.emulatorEpocFunctionInvoke</span><span class="p">(</span><span class="s2">&quot;euser&quot;</span><span class="p">,</span> <span class="mi">649</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">leaveHook</span><span class="p">():</span>
+    <span class="c1"># r0, when begging the function, contains the leave code. User is a static class</span>
+    <span class="c1"># Since the code is uint32 from C, it must be converted to signed for the leave code</span>
+    <span class="c1"># to be visible</span>
+    <span class="n">leaveCode</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">symemu</span><span class="o">.</span><span class="n">Cpu</span><span class="o">.</span><span class="n">getReg</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">value</span>
+    <span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;Function leaved with code: {}&#39;</span><span class="p">,</span> <span class="n">leaveCode</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Symbian library object has function exported, each export function has a number attached to it, called <strong>ordinal</strong>. Here,
+the User::Leave function, has the ordinal of 649, and in the library <em>euser</em>. The rest of the code has been explained by comment.</p>
+<p>Here is the script in action, at some random place:</p>
+<img alt="../_images/basic_leave.png" src="../_images/basic_leave.png" />
+<p>For other hooks, it works the same. Understand decorators should let you master at scripting.</p>
+<p>You can visit more basic examples on <a class="reference external" href="https://github.com/EKA2L1/EKA2L1/tree/master/src/emu/scripting/python/example/basics">Github</a>.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">EKA2L1</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Scripting basic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Tutorials</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Tutorials</a></li>
+      <li>Next: <a href="../apirefs/index.html" title="next chapter">Scripting API references</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, pent0.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/tutorials/basic.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

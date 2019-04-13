@@ -1,0 +1,31 @@
+Codeseg
+=======
+
+.. currentmodule:: symemu
+
+.. autoclass:: Codeseg
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Codeseg.bssRunAddress
+      ~Codeseg.bssSize
+      ~Codeseg.codeRunAddress
+      ~Codeseg.codeSize
+      ~Codeseg.dataRunAddress
+      ~Codeseg.dataSize
+      ~Codeseg.exportCount
+      ~Codeseg.lookup
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: bssRunAddress
+   .. automethod:: bssSize
+   .. automethod:: codeRunAddress
+   .. automethod:: codeSize
+   .. automethod:: dataRunAddress
+   .. automethod:: dataSize
+   .. automethod:: exportCount
+   .. automethod:: lookup

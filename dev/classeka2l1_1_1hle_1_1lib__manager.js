@@ -1,0 +1,25 @@
+var classeka2l1_1_1hle_1_1lib__manager =
+[
+    [ "lib_manager", "classeka2l1_1_1hle_1_1lib__manager.html#a5dd70cc06b5d9cb122208d23fa2bb87f", null ],
+    [ "call_svc", "classeka2l1_1_1hle_1_1lib__manager.html#a8567be4292de6f27126064dd61b823fa", null ],
+    [ "get_symbol", "classeka2l1_1_1hle_1_1lib__manager.html#a55f6e88ee063c4ac0cf55db44eb44c8e", null ],
+    [ "get_sys", "classeka2l1_1_1hle_1_1lib__manager.html#a53012b94897396a5c97553718b75db68", null ],
+    [ "init", "classeka2l1_1_1hle_1_1lib__manager.html#a0def103095f212354c88c41f6746f90c", null ],
+    [ "load", "classeka2l1_1_1hle_1_1lib__manager.html#ab88e0cdcd370f0740911ef12f709f9f0", null ],
+    [ "load_as_e32img", "classeka2l1_1_1hle_1_1lib__manager.html#afd24e1db1226039fb9bfbb7033f37c3b", null ],
+    [ "load_as_romimg", "classeka2l1_1_1hle_1_1lib__manager.html#a2f5897018193cbb8c6f714564032ad30", null ],
+    [ "register_exports", "classeka2l1_1_1hle_1_1lib__manager.html#ae3f4ba3b325db011d027ba2ac6707067", null ],
+    [ "reset", "classeka2l1_1_1hle_1_1lib__manager.html#addb8bb832cb3b89be71ebdedc3419cef", null ],
+    [ "shutdown", "classeka2l1_1_1hle_1_1lib__manager.html#ac781d05b6f5a379288cf4b498c7bf265", null ],
+    [ "try_search_and_parse", "classeka2l1_1_1hle_1_1lib__manager.html#a8e758b7b4d8db3d2588845315b8b968a", null ],
+    [ "addr_symbols", "classeka2l1_1_1hle_1_1lib__manager.html#adf6ef83c0941a7864b84186714113a40", null ],
+    [ "custom_stub", "classeka2l1_1_1hle_1_1lib__manager.html#a59879d9eb033c9291fff23d633ba43f5", null ],
+    [ "io", "classeka2l1_1_1hle_1_1lib__manager.html#a5ac11d0313dcc8975ebd0c489dbf6d41", null ],
+    [ "kern", "classeka2l1_1_1hle_1_1lib__manager.html#a63b74df163e80dd3c54c88acc138a35f", null ],
+    [ "lib_symbols", "classeka2l1_1_1hle_1_1lib__manager.html#a61f09b46f5e9fe20a8071fe931d2ddf1", null ],
+    [ "log_svc", "classeka2l1_1_1hle_1_1lib__manager.html#a1a456d919ff3846d2d24216d999fe8a3", null ],
+    [ "mem", "classeka2l1_1_1hle_1_1lib__manager.html#ac3aa0f74867cd83bef2ac1cb54d8f956", null ],
+    [ "stub", "classeka2l1_1_1hle_1_1lib__manager.html#aae80ec5f2c20d4f6bd7d493ab043263a", null ],
+    [ "svc_funcs", "classeka2l1_1_1hle_1_1lib__manager.html#addd1e195f6495f1bb60fb7ce352586b8", null ],
+    [ "sys", "classeka2l1_1_1hle_1_1lib__manager.html#ad6eb1615f2e3f3d193483a8964d346aa", null ]
+];

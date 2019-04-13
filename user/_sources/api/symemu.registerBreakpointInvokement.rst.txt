@@ -1,0 +1,6 @@
+registerBreakpointInvokement
+============================
+
+.. currentmodule:: symemu
+
+.. autofunction:: registerBreakpointInvokement

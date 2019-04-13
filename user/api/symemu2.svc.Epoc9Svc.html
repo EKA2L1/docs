@@ -1,0 +1,795 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Epoc9Svc &#8212; EKA2L1 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="epoc9svc">
+<h1>Epoc9Svc<a class="headerlink" href="#epoc9svc" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="symemu2.svc.Epoc9Svc">
+<em class="property">class </em><code class="descclassname">symemu2.svc.</code><code class="descname">Epoc9Svc</code><a class="headerlink" href="#symemu2.svc.Epoc9Svc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<p class="rubric">Attributes Summary</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ActiveScheduler" title="symemu2.svc.Epoc9Svc.ActiveScheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActiveScheduler</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ChangeNotifierCreate" title="symemu2.svc.Epoc9Svc.ChangeNotifierCreate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChangeNotifierCreate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ChunkAdjust" title="symemu2.svc.Epoc9Svc.ChunkAdjust"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChunkAdjust</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ChunkBase" title="symemu2.svc.Epoc9Svc.ChunkBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChunkBase</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ChunkCreate" title="symemu2.svc.Epoc9Svc.ChunkCreate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChunkCreate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ChunkMaxSize" title="symemu2.svc.Epoc9Svc.ChunkMaxSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChunkMaxSize</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.DebugMask" title="symemu2.svc.Epoc9Svc.DebugMask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DebugMask</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.DebugMaskIndex" title="symemu2.svc.Epoc9Svc.DebugMaskIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DebugMaskIndex</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.DebugPrint" title="symemu2.svc.Epoc9Svc.DebugPrint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DebugPrint</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.DllFreeTLS" title="symemu2.svc.Epoc9Svc.DllFreeTLS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DllFreeTLS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.DllSetTls" title="symemu2.svc.Epoc9Svc.DllSetTls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DllSetTls</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.DllTls" title="symemu2.svc.Epoc9Svc.DllTls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DllTls</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.GetGlobalUserData" title="symemu2.svc.Epoc9Svc.GetGlobalUserData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GetGlobalUserData</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.HalFunction" title="symemu2.svc.Epoc9Svc.HalFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HalFunction</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.HandleClose" title="symemu2.svc.Epoc9Svc.HandleClose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HandleClose</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.HandleDuplicate" title="symemu2.svc.Epoc9Svc.HandleDuplicate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HandleDuplicate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.HandleName" title="symemu2.svc.Epoc9Svc.HandleName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HandleName</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.HandleOpenObject" title="symemu2.svc.Epoc9Svc.HandleOpenObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HandleOpenObject</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.Heap" title="symemu2.svc.Epoc9Svc.Heap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Heap</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.HeapSwitch" title="symemu2.svc.Epoc9Svc.HeapSwitch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HeapSwitch</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.LastThreadHandle" title="symemu2.svc.Epoc9Svc.LastThreadHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LastThreadHandle</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.LeaveEnd" title="symemu2.svc.Epoc9Svc.LeaveEnd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeaveEnd</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.LeaveStart" title="symemu2.svc.Epoc9Svc.LeaveStart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeaveStart</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.LibraryAttach" title="symemu2.svc.Epoc9Svc.LibraryAttach"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LibraryAttach</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.LibraryAttached" title="symemu2.svc.Epoc9Svc.LibraryAttached"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LibraryAttached</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.LibraryLookup" title="symemu2.svc.Epoc9Svc.LibraryLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LibraryLookup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.MessageComplete" title="symemu2.svc.Epoc9Svc.MessageComplete"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MessageComplete</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.MessageGetDesLength" title="symemu2.svc.Epoc9Svc.MessageGetDesLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MessageGetDesLength</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.MessageIpcCopy" title="symemu2.svc.Epoc9Svc.MessageIpcCopy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MessageIpcCopy</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.MessageKill" title="symemu2.svc.Epoc9Svc.MessageKill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MessageKill</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ObjectNext" title="symemu2.svc.Epoc9Svc.ObjectNext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObjectNext</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessCmdLineLength" title="symemu2.svc.Epoc9Svc.ProcessCmdLineLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessCmdLineLength</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessDataParameterLength" title="symemu2.svc.Epoc9Svc.ProcessDataParameterLength"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessDataParameterLength</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessFilename" title="symemu2.svc.Epoc9Svc.ProcessFilename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessFilename</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessGetDataParameter" title="symemu2.svc.Epoc9Svc.ProcessGetDataParameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessGetDataParameter</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessGetMemoryInfo" title="symemu2.svc.Epoc9Svc.ProcessGetMemoryInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessGetMemoryInfo</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessLogon" title="symemu2.svc.Epoc9Svc.ProcessLogon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessLogon</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessLogonCancel" title="symemu2.svc.Epoc9Svc.ProcessLogonCancel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessLogonCancel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessRendezvous" title="symemu2.svc.Epoc9Svc.ProcessRendezvous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessRendezvous</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessResume" title="symemu2.svc.Epoc9Svc.ProcessResume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessResume</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessSetFlags" title="symemu2.svc.Epoc9Svc.ProcessSetFlags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessSetFlags</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessSetPriority" title="symemu2.svc.Epoc9Svc.ProcessSetPriority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessSetPriority</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ProcessType" title="symemu2.svc.Epoc9Svc.ProcessType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessType</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertyAttach" title="symemu2.svc.Epoc9Svc.PropertyAttach"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyAttach</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertyCancel" title="symemu2.svc.Epoc9Svc.PropertyCancel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyCancel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertyDefine" title="symemu2.svc.Epoc9Svc.PropertyDefine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyDefine</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertyFindGetBin" title="symemu2.svc.Epoc9Svc.PropertyFindGetBin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyFindGetBin</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertyFindGetInt" title="symemu2.svc.Epoc9Svc.PropertyFindGetInt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyFindGetInt</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertyFindSetBin" title="symemu2.svc.Epoc9Svc.PropertyFindSetBin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyFindSetBin</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertyFindSetInt" title="symemu2.svc.Epoc9Svc.PropertyFindSetInt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyFindSetInt</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertyGetBin" title="symemu2.svc.Epoc9Svc.PropertyGetBin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyGetBin</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertyGetInt" title="symemu2.svc.Epoc9Svc.PropertyGetInt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertyGetInt</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertySetBin" title="symemu2.svc.Epoc9Svc.PropertySetBin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertySetBin</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertySetInt" title="symemu2.svc.Epoc9Svc.PropertySetInt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertySetInt</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.PropertySubscribe" title="symemu2.svc.Epoc9Svc.PropertySubscribe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PropertySubscribe</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ReleaseDllLock" title="symemu2.svc.Epoc9Svc.ReleaseDllLock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ReleaseDllLock</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.SafeInc" title="symemu2.svc.Epoc9Svc.SafeInc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SafeInc</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.SemaphoreCreate" title="symemu2.svc.Epoc9Svc.SemaphoreCreate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SemaphoreCreate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ServerCreate" title="symemu2.svc.Epoc9Svc.ServerCreate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ServerCreate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ServerReceive" title="symemu2.svc.Epoc9Svc.ServerReceive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ServerReceive</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.SessionCreate" title="symemu2.svc.Epoc9Svc.SessionCreate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SessionCreate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.SessionSendSync" title="symemu2.svc.Epoc9Svc.SessionSendSync"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SessionSendSync</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.SessionShare" title="symemu2.svc.Epoc9Svc.SessionShare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SessionShare</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.SetActiveScheduler" title="symemu2.svc.Epoc9Svc.SetActiveScheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetActiveScheduler</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.SetSessionPtr" title="symemu2.svc.Epoc9Svc.SetSessionPtr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetSessionPtr</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.SetTrapHandler" title="symemu2.svc.Epoc9Svc.SetTrapHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetTrapHandler</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.StaticCallList" title="symemu2.svc.Epoc9Svc.StaticCallList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StaticCallList</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadContext" title="symemu2.svc.Epoc9Svc.ThreadContext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadContext</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadCreate" title="symemu2.svc.Epoc9Svc.ThreadCreate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadCreate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadKill" title="symemu2.svc.Epoc9Svc.ThreadKill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadKill</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadLogon" title="symemu2.svc.Epoc9Svc.ThreadLogon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadLogon</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadLogonCancel" title="symemu2.svc.Epoc9Svc.ThreadLogonCancel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadLogonCancel</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadProcess" title="symemu2.svc.Epoc9Svc.ThreadProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadProcess</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadRename" title="symemu2.svc.Epoc9Svc.ThreadRename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadRename</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadRendezvous" title="symemu2.svc.Epoc9Svc.ThreadRendezvous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadRendezvous</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadResume" title="symemu2.svc.Epoc9Svc.ThreadResume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadResume</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.ThreadSetFlags" title="symemu2.svc.Epoc9Svc.ThreadSetFlags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadSetFlags</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.TimerCreate" title="symemu2.svc.Epoc9Svc.TimerCreate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimerCreate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.TrapHandler" title="symemu2.svc.Epoc9Svc.TrapHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TrapHandler</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.UTCOffset" title="symemu2.svc.Epoc9Svc.UTCOffset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UTCOffset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.UserSvrRomHeaderAddress" title="symemu2.svc.Epoc9Svc.UserSvrRomHeaderAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserSvrRomHeaderAddress</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.UserSvrRomRootDirAddress" title="symemu2.svc.Epoc9Svc.UserSvrRomRootDirAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UserSvrRomRootDirAddress</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.WaitDllLock" title="symemu2.svc.Epoc9Svc.WaitDllLock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WaitDllLock</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.svc.Epoc9Svc.WaitForAnyRequest" title="symemu2.svc.Epoc9Svc.WaitForAnyRequest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WaitForAnyRequest</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ActiveScheduler">
+<code class="descname">ActiveScheduler</code><em class="property"> = 8388613</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ActiveScheduler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ChangeNotifierCreate">
+<code class="descname">ChangeNotifierCreate</code><em class="property"> = 135</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ChangeNotifierCreate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ChunkAdjust">
+<code class="descname">ChunkAdjust</code><em class="property"> = 108</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ChunkAdjust" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ChunkBase">
+<code class="descname">ChunkBase</code><em class="property"> = 1</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ChunkBase" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ChunkCreate">
+<code class="descname">ChunkCreate</code><em class="property"> = 107</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ChunkCreate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ChunkMaxSize">
+<code class="descname">ChunkMaxSize</code><em class="property"> = 3</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ChunkMaxSize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.DebugMask">
+<code class="descname">DebugMask</code><em class="property"> = 8388620</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.DebugMask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.DebugMaskIndex">
+<code class="descname">DebugMaskIndex</code><em class="property"> = 8388621</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.DebugMaskIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.DebugPrint">
+<code class="descname">DebugPrint</code><em class="property"> = 86</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.DebugPrint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.DllFreeTLS">
+<code class="descname">DllFreeTLS</code><em class="property"> = 119</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.DllFreeTLS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.DllSetTls">
+<code class="descname">DllSetTls</code><em class="property"> = 118</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.DllSetTls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.DllTls">
+<code class="descname">DllTls</code><em class="property"> = 78</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.DllTls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.GetGlobalUserData">
+<code class="descname">GetGlobalUserData</code><em class="property"> = 8388634</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.GetGlobalUserData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.HalFunction">
+<code class="descname">HalFunction</code><em class="property"> = 79</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.HalFunction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.HandleClose">
+<code class="descname">HandleClose</code><em class="property"> = 106</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.HandleClose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.HandleDuplicate">
+<code class="descname">HandleDuplicate</code><em class="property"> = 110</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.HandleDuplicate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.HandleName">
+<code class="descname">HandleName</code><em class="property"> = 60</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.HandleName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.HandleOpenObject">
+<code class="descname">HandleOpenObject</code><em class="property"> = 109</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.HandleOpenObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.Heap">
+<code class="descname">Heap</code><em class="property"> = 8388609</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.Heap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.HeapSwitch">
+<code class="descname">HeapSwitch</code><em class="property"> = 8388610</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.HeapSwitch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.LastThreadHandle">
+<code class="descname">LastThreadHandle</code><em class="property"> = 163</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.LastThreadHandle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.LeaveEnd">
+<code class="descname">LeaveEnd</code><em class="property"> = 224</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.LeaveEnd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.LeaveStart">
+<code class="descname">LeaveStart</code><em class="property"> = 223</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.LeaveStart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.LibraryAttach">
+<code class="descname">LibraryAttach</code><em class="property"> = 158</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.LibraryAttach" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.LibraryAttached">
+<code class="descname">LibraryAttached</code><em class="property"> = 159</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.LibraryAttached" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.LibraryLookup">
+<code class="descname">LibraryLookup</code><em class="property"> = 14</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.LibraryLookup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.MessageComplete">
+<code class="descname">MessageComplete</code><em class="property"> = 66</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.MessageComplete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.MessageGetDesLength">
+<code class="descname">MessageGetDesLength</code><em class="property"> = 167</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.MessageGetDesLength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.MessageIpcCopy">
+<code class="descname">MessageIpcCopy</code><em class="property"> = 168</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.MessageIpcCopy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.MessageKill">
+<code class="descname">MessageKill</code><em class="property"> = 172</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.MessageKill" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ObjectNext">
+<code class="descname">ObjectNext</code><em class="property"> = 0</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ObjectNext" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessCmdLineLength">
+<code class="descname">ProcessCmdLineLength</code><em class="property"> = 82</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessCmdLineLength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessDataParameterLength">
+<code class="descname">ProcessDataParameterLength</code><em class="property"> = 210</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessDataParameterLength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessFilename">
+<code class="descname">ProcessFilename</code><em class="property"> = 22</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessFilename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessGetDataParameter">
+<code class="descname">ProcessGetDataParameter</code><em class="property"> = 209</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessGetDataParameter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessGetMemoryInfo">
+<code class="descname">ProcessGetMemoryInfo</code><em class="property"> = 95</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessGetMemoryInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessLogon">
+<code class="descname">ProcessLogon</code><em class="property"> = 123</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessLogon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessLogonCancel">
+<code class="descname">ProcessLogonCancel</code><em class="property"> = 124</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessLogonCancel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessRendezvous">
+<code class="descname">ProcessRendezvous</code><em class="property"> = 165</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessRendezvous" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessResume">
+<code class="descname">ProcessResume</code><em class="property"> = 122</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessResume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessSetFlags">
+<code class="descname">ProcessSetFlags</code><em class="property"> = 30</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessSetFlags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessSetPriority">
+<code class="descname">ProcessSetPriority</code><em class="property"> = 28</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessSetPriority" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ProcessType">
+<code class="descname">ProcessType</code><em class="property"> = 100</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ProcessType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertyAttach">
+<code class="descname">PropertyAttach</code><em class="property"> = 190</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertyAttach" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertyCancel">
+<code class="descname">PropertyCancel</code><em class="property"> = 192</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertyCancel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertyDefine">
+<code class="descname">PropertyDefine</code><em class="property"> = 188</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertyDefine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertyFindGetBin">
+<code class="descname">PropertyFindGetBin</code><em class="property"> = 198</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertyFindGetBin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertyFindGetInt">
+<code class="descname">PropertyFindGetInt</code><em class="property"> = 197</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertyFindGetInt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertyFindSetBin">
+<code class="descname">PropertyFindSetBin</code><em class="property"> = 200</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertyFindSetBin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertyFindSetInt">
+<code class="descname">PropertyFindSetInt</code><em class="property"> = 199</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertyFindSetInt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertyGetBin">
+<code class="descname">PropertyGetBin</code><em class="property"> = 194</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertyGetBin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertyGetInt">
+<code class="descname">PropertyGetInt</code><em class="property"> = 193</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertyGetInt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertySetBin">
+<code class="descname">PropertySetBin</code><em class="property"> = 196</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertySetBin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertySetInt">
+<code class="descname">PropertySetInt</code><em class="property"> = 195</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertySetInt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.PropertySubscribe">
+<code class="descname">PropertySubscribe</code><em class="property"> = 191</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.PropertySubscribe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ReleaseDllLock">
+<code class="descname">ReleaseDllLock</code><em class="property"> = 157</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ReleaseDllLock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.SafeInc">
+<code class="descname">SafeInc</code><em class="property"> = 8388629</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.SafeInc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.SemaphoreCreate">
+<code class="descname">SemaphoreCreate</code><em class="property"> = 112</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.SemaphoreCreate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ServerCreate">
+<code class="descname">ServerCreate</code><em class="property"> = 126</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ServerCreate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ServerReceive">
+<code class="descname">ServerReceive</code><em class="property"> = 34</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ServerReceive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.SessionCreate">
+<code class="descname">SessionCreate</code><em class="property"> = 127</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.SessionCreate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.SessionSendSync">
+<code class="descname">SessionSendSync</code><em class="property"> = 77</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.SessionSendSync" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.SessionShare">
+<code class="descname">SessionShare</code><em class="property"> = 39</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.SessionShare" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.SetActiveScheduler">
+<code class="descname">SetActiveScheduler</code><em class="property"> = 8388614</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.SetActiveScheduler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.SetSessionPtr">
+<code class="descname">SetSessionPtr</code><em class="property"> = 36</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.SetSessionPtr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.SetTrapHandler">
+<code class="descname">SetTrapHandler</code><em class="property"> = 8388617</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.SetTrapHandler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.StaticCallList">
+<code class="descname">StaticCallList</code><em class="property"> = 160</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.StaticCallList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadContext">
+<code class="descname">ThreadContext</code><em class="property"> = 94</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadContext" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadCreate">
+<code class="descname">ThreadCreate</code><em class="property"> = 104</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadCreate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadKill">
+<code class="descname">ThreadKill</code><em class="property"> = 115</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadKill" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadLogon">
+<code class="descname">ThreadLogon</code><em class="property"> = 116</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadLogon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadLogonCancel">
+<code class="descname">ThreadLogonCancel</code><em class="property"> = 117</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadLogonCancel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadProcess">
+<code class="descname">ThreadProcess</code><em class="property"> = 125</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadProcess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadRename">
+<code class="descname">ThreadRename</code><em class="property"> = 120</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadRename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadRendezvous">
+<code class="descname">ThreadRendezvous</code><em class="property"> = 164</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadRendezvous" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadResume">
+<code class="descname">ThreadResume</code><em class="property"> = 40</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadResume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.ThreadSetFlags">
+<code class="descname">ThreadSetFlags</code><em class="property"> = 47</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.ThreadSetFlags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.TimerCreate">
+<code class="descname">TimerCreate</code><em class="property"> = 132</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.TimerCreate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.TrapHandler">
+<code class="descname">TrapHandler</code><em class="property"> = 8388616</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.TrapHandler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.UTCOffset">
+<code class="descname">UTCOffset</code><em class="property"> = 8388633</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.UTCOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.UserSvrRomHeaderAddress">
+<code class="descname">UserSvrRomHeaderAddress</code><em class="property"> = 8388627</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.UserSvrRomHeaderAddress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.UserSvrRomRootDirAddress">
+<code class="descname">UserSvrRomRootDirAddress</code><em class="property"> = 8388628</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.UserSvrRomRootDirAddress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.WaitDllLock">
+<code class="descname">WaitDllLock</code><em class="property"> = 156</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.WaitDllLock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="symemu2.svc.Epoc9Svc.WaitForAnyRequest">
+<code class="descname">WaitForAnyRequest</code><em class="property"> = 8388608</em><a class="headerlink" href="#symemu2.svc.Epoc9Svc.WaitForAnyRequest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">EKA2L1</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, pent0.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/api/symemu2.svc.Epoc9Svc.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

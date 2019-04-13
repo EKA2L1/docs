@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['ubyte',['ubyte',['../namespaceeka2l1_1_1drivers.html#a1b68d705bded1a2c8fbaf30605ee4393ac816665acdfcaafa740d4fc74bbd6a1b',1,'eka2l1::drivers']]],
+  ['uc0',['UC0',['../namespaceeka2l1_1_1common.html#ad44042e40374e03f20e54578f833de91a9b9560eca1dd77c917c70c1d8ffa0b23',1,'eka2l1::common']]],
+  ['ud0',['UD0',['../namespaceeka2l1_1_1common.html#ad44042e40374e03f20e54578f833de91a18959db947e705d4dd1548359d97f17f',1,'eka2l1::common']]],
+  ['udx',['UDX',['../namespaceeka2l1_1_1common.html#ad44042e40374e03f20e54578f833de91ab18bf54407d5117f498124d192eda310',1,'eka2l1::common']]],
+  ['uid1_5fcst',['uid1_cst',['../namespaceeka2l1_1_1loader.html#a39946995af8f9e76dfd7719e694d441aa4edee6d75ab582d79e7b229230e3b960',1,'eka2l1::loader']]],
+  ['uint_5f24_5f8',['uint_24_8',['../namespaceeka2l1_1_1drivers.html#a1b68d705bded1a2c8fbaf30605ee4393a9687809ad089acf39522f2e37031dba8',1,'eka2l1::drivers']]],
+  ['umem',['umem',['../page__table_8h.html#aba2da8868a26bba3c7c16d1535ee29a2a895eb8823e13897d3587077a71647843',1,'page_table.h']]],
+  ['undertaker',['undertaker',['../namespaceeka2l1_1_1kernel.html#aa5a6cbdd9c35706691360d2879d2406aa16bdcbc8fcf5533f54f64ff9c05bbf5e',1,'eka2l1::kernel']]],
+  ['undo',['undo',['../namespaceeka2l1_1_1loader.html#a66ba6cf74fffb64a91401e09a0157329a2dce8f543e8c072775c2743c7b9854cc',1,'eka2l1::loader']]],
+  ['unicorn',['unicorn',['../types_8h.html#a44870d3d11b75c3e901b9415071c8421aa1923f5d616f16662e1d26bbb75a253b',1,'types.h']]],
+  ['unk',['unk',['../namespaceeka2l1_1_1kernel.html#aa5a6cbdd9c35706691360d2879d2406aa5108c2162963c0091d28956c37fe60d1',1,'eka2l1::kernel']]],
+  ['unspecified',['unspecified',['../namespaceeka2l1.html#a2df6bad8a88d4d6cfa7060bcd2451577ad415f0e30c471dfdd9bc4f827329ef48',1,'eka2l1']]],
+  ['unsupported',['unsupported',['../namespaceeka2l1.html#a1b8f813d941bb4e57c711396c8876d6ea723c25877a86786664edc4b643c08a6f',1,'eka2l1']]],
+  ['unused',['Unused',['../namespaceeka2l1_1_1loader.html#a0810a682b50cd1c0f125ba1f1831d702a92e592d90b9548016776a6fb68dccded',1,'eka2l1::loader']]],
+  ['up_5fand_5fdowns',['up_and_downs',['../namespaceeka2l1_1_1epoc.html#a5b1dae03fffc8d0c06da130f0c12313baeb2077c9d937ab852505429b9be0c7a5',1,'eka2l1::epoc']]],
+  ['upgrade',['upgrade',['../namespaceeka2l1_1_1loader.html#adada5a5c641d4c5e021f652c3ddac8bbaae26b3d8e556703291282149e3ae894f',1,'eka2l1::loader']]],
+  ['uqu',['UQU',['../namespaceeka2l1_1_1common.html#ad44042e40374e03f20e54578f833de91a1898d75aa67c60ec39ab1e8159a1eafd',1,'eka2l1::common']]],
+  ['usb',['usb',['../types_8h.html#a28c1314da383763a08202b73df877216a62ed973d963913bb55111a7b8116ace1',1,'types.h']]],
+  ['user',['user',['../namespaceeka2l1_1_1epoc.html#a5f9a85f2e5fb7062833bce22ceeebdc4aee11cbb19052e40b07aac0ca060c23ee',1,'eka2l1::epoc']]],
+  ['ushort',['ushort',['../namespaceeka2l1_1_1drivers.html#a1b68d705bded1a2c8fbaf30605ee4393a06e05df900ba9c705cf50bdd4148a499',1,'eka2l1::drivers']]]
+];

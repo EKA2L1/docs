@@ -1,0 +1,29 @@
+ThreadState
+===========
+
+.. currentmodule:: symemu
+
+.. autoclass:: ThreadState
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~ThreadState.READY
+      ~ThreadState.RUN
+      ~ThreadState.STOP
+      ~ThreadState.WAIT
+      ~ThreadState.WAIT_DFC
+      ~ThreadState.WAIT_FAST_SEMA
+      ~ThreadState.name
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: READY
+   .. autoattribute:: RUN
+   .. autoattribute:: STOP
+   .. autoattribute:: WAIT
+   .. autoattribute:: WAIT_DFC
+   .. autoattribute:: WAIT_FAST_SEMA
+   .. autoattribute:: name

@@ -1,0 +1,27 @@
+var namespaceeka2l1_1_1kernel =
+[
+    [ "change_notifier", "classeka2l1_1_1kernel_1_1change__notifier.html", "classeka2l1_1_1kernel_1_1change__notifier" ],
+    [ "chunk", "classeka2l1_1_1kernel_1_1chunk.html", "classeka2l1_1_1kernel_1_1chunk" ],
+    [ "codeseg", "classeka2l1_1_1kernel_1_1codeseg.html", "classeka2l1_1_1kernel_1_1codeseg" ],
+    [ "codeseg_create_info", "structeka2l1_1_1kernel_1_1codeseg__create__info.html", "structeka2l1_1_1kernel_1_1codeseg__create__info" ],
+    [ "debug_function_trace", "structeka2l1_1_1kernel_1_1debug__function__trace.html", "structeka2l1_1_1kernel_1_1debug__function__trace" ],
+    [ "epoc9_std_epoc_thread_create_info", "structeka2l1_1_1kernel_1_1epoc9__std__epoc__thread__create__info.html", "structeka2l1_1_1kernel_1_1epoc9__std__epoc__thread__create__info" ],
+    [ "epoc9_thread_create_info", "structeka2l1_1_1kernel_1_1epoc9__thread__create__info.html", "structeka2l1_1_1kernel_1_1epoc9__thread__create__info" ],
+    [ "handle_inspect_info", "structeka2l1_1_1kernel_1_1handle__inspect__info.html", "structeka2l1_1_1kernel_1_1handle__inspect__info" ],
+    [ "kernel_obj", "classeka2l1_1_1kernel_1_1kernel__obj.html", "classeka2l1_1_1kernel_1_1kernel__obj" ],
+    [ "library", "classeka2l1_1_1kernel_1_1library.html", "classeka2l1_1_1kernel_1_1library" ],
+    [ "memory_info", "structeka2l1_1_1kernel_1_1memory__info.html", "structeka2l1_1_1kernel_1_1memory__info" ],
+    [ "mutex", "classeka2l1_1_1kernel_1_1mutex.html", "classeka2l1_1_1kernel_1_1mutex" ],
+    [ "object_ix", "classeka2l1_1_1kernel_1_1object__ix.html", "classeka2l1_1_1kernel_1_1object__ix" ],
+    [ "object_ix_record", "structeka2l1_1_1kernel_1_1object__ix__record.html", "structeka2l1_1_1kernel_1_1object__ix__record" ],
+    [ "pass_arg", "structeka2l1_1_1kernel_1_1pass__arg.html", "structeka2l1_1_1kernel_1_1pass__arg" ],
+    [ "process", "classeka2l1_1_1kernel_1_1process.html", "classeka2l1_1_1kernel_1_1process" ],
+    [ "process_info", "structeka2l1_1_1kernel_1_1process__info.html", "structeka2l1_1_1kernel_1_1process__info" ],
+    [ "semaphore", "classeka2l1_1_1kernel_1_1semaphore.html", "classeka2l1_1_1kernel_1_1semaphore" ],
+    [ "signal_info", "structeka2l1_1_1kernel_1_1signal__info.html", "structeka2l1_1_1kernel_1_1signal__info" ],
+    [ "thread", "classeka2l1_1_1kernel_1_1thread.html", "classeka2l1_1_1kernel_1_1thread" ],
+    [ "thread_local_data", "structeka2l1_1_1kernel_1_1thread__local__data.html", "structeka2l1_1_1kernel_1_1thread__local__data" ],
+    [ "thread_scheduler", "classeka2l1_1_1kernel_1_1thread__scheduler.html", "classeka2l1_1_1kernel_1_1thread__scheduler" ],
+    [ "timer", "classeka2l1_1_1kernel_1_1timer.html", "classeka2l1_1_1kernel_1_1timer" ],
+    [ "tls_slot", "structeka2l1_1_1kernel_1_1tls__slot.html", "structeka2l1_1_1kernel_1_1tls__slot" ]
+];

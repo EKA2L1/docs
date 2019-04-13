@@ -1,0 +1,183 @@
+Epoc9Svc
+========
+
+.. currentmodule:: symemu2.svc
+
+.. autoclass:: Epoc9Svc
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~Epoc9Svc.ActiveScheduler
+      ~Epoc9Svc.ChangeNotifierCreate
+      ~Epoc9Svc.ChunkAdjust
+      ~Epoc9Svc.ChunkBase
+      ~Epoc9Svc.ChunkCreate
+      ~Epoc9Svc.ChunkMaxSize
+      ~Epoc9Svc.DebugMask
+      ~Epoc9Svc.DebugMaskIndex
+      ~Epoc9Svc.DebugPrint
+      ~Epoc9Svc.DllFreeTLS
+      ~Epoc9Svc.DllSetTls
+      ~Epoc9Svc.DllTls
+      ~Epoc9Svc.GetGlobalUserData
+      ~Epoc9Svc.HalFunction
+      ~Epoc9Svc.HandleClose
+      ~Epoc9Svc.HandleDuplicate
+      ~Epoc9Svc.HandleName
+      ~Epoc9Svc.HandleOpenObject
+      ~Epoc9Svc.Heap
+      ~Epoc9Svc.HeapSwitch
+      ~Epoc9Svc.LastThreadHandle
+      ~Epoc9Svc.LeaveEnd
+      ~Epoc9Svc.LeaveStart
+      ~Epoc9Svc.LibraryAttach
+      ~Epoc9Svc.LibraryAttached
+      ~Epoc9Svc.LibraryLookup
+      ~Epoc9Svc.MessageComplete
+      ~Epoc9Svc.MessageGetDesLength
+      ~Epoc9Svc.MessageIpcCopy
+      ~Epoc9Svc.MessageKill
+      ~Epoc9Svc.ObjectNext
+      ~Epoc9Svc.ProcessCmdLineLength
+      ~Epoc9Svc.ProcessDataParameterLength
+      ~Epoc9Svc.ProcessFilename
+      ~Epoc9Svc.ProcessGetDataParameter
+      ~Epoc9Svc.ProcessGetMemoryInfo
+      ~Epoc9Svc.ProcessLogon
+      ~Epoc9Svc.ProcessLogonCancel
+      ~Epoc9Svc.ProcessRendezvous
+      ~Epoc9Svc.ProcessResume
+      ~Epoc9Svc.ProcessSetFlags
+      ~Epoc9Svc.ProcessSetPriority
+      ~Epoc9Svc.ProcessType
+      ~Epoc9Svc.PropertyAttach
+      ~Epoc9Svc.PropertyCancel
+      ~Epoc9Svc.PropertyDefine
+      ~Epoc9Svc.PropertyFindGetBin
+      ~Epoc9Svc.PropertyFindGetInt
+      ~Epoc9Svc.PropertyFindSetBin
+      ~Epoc9Svc.PropertyFindSetInt
+      ~Epoc9Svc.PropertyGetBin
+      ~Epoc9Svc.PropertyGetInt
+      ~Epoc9Svc.PropertySetBin
+      ~Epoc9Svc.PropertySetInt
+      ~Epoc9Svc.PropertySubscribe
+      ~Epoc9Svc.ReleaseDllLock
+      ~Epoc9Svc.SafeInc
+      ~Epoc9Svc.SemaphoreCreate
+      ~Epoc9Svc.ServerCreate
+      ~Epoc9Svc.ServerReceive
+      ~Epoc9Svc.SessionCreate
+      ~Epoc9Svc.SessionSendSync
+      ~Epoc9Svc.SessionShare
+      ~Epoc9Svc.SetActiveScheduler
+      ~Epoc9Svc.SetSessionPtr
+      ~Epoc9Svc.SetTrapHandler
+      ~Epoc9Svc.StaticCallList
+      ~Epoc9Svc.ThreadContext
+      ~Epoc9Svc.ThreadCreate
+      ~Epoc9Svc.ThreadKill
+      ~Epoc9Svc.ThreadLogon
+      ~Epoc9Svc.ThreadLogonCancel
+      ~Epoc9Svc.ThreadProcess
+      ~Epoc9Svc.ThreadRename
+      ~Epoc9Svc.ThreadRendezvous
+      ~Epoc9Svc.ThreadResume
+      ~Epoc9Svc.ThreadSetFlags
+      ~Epoc9Svc.TimerCreate
+      ~Epoc9Svc.TrapHandler
+      ~Epoc9Svc.UTCOffset
+      ~Epoc9Svc.UserSvrRomHeaderAddress
+      ~Epoc9Svc.UserSvrRomRootDirAddress
+      ~Epoc9Svc.WaitDllLock
+      ~Epoc9Svc.WaitForAnyRequest
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: ActiveScheduler
+   .. autoattribute:: ChangeNotifierCreate
+   .. autoattribute:: ChunkAdjust
+   .. autoattribute:: ChunkBase
+   .. autoattribute:: ChunkCreate
+   .. autoattribute:: ChunkMaxSize
+   .. autoattribute:: DebugMask
+   .. autoattribute:: DebugMaskIndex
+   .. autoattribute:: DebugPrint
+   .. autoattribute:: DllFreeTLS
+   .. autoattribute:: DllSetTls
+   .. autoattribute:: DllTls
+   .. autoattribute:: GetGlobalUserData
+   .. autoattribute:: HalFunction
+   .. autoattribute:: HandleClose
+   .. autoattribute:: HandleDuplicate
+   .. autoattribute:: HandleName
+   .. autoattribute:: HandleOpenObject
+   .. autoattribute:: Heap
+   .. autoattribute:: HeapSwitch
+   .. autoattribute:: LastThreadHandle
+   .. autoattribute:: LeaveEnd
+   .. autoattribute:: LeaveStart
+   .. autoattribute:: LibraryAttach
+   .. autoattribute:: LibraryAttached
+   .. autoattribute:: LibraryLookup
+   .. autoattribute:: MessageComplete
+   .. autoattribute:: MessageGetDesLength
+   .. autoattribute:: MessageIpcCopy
+   .. autoattribute:: MessageKill
+   .. autoattribute:: ObjectNext
+   .. autoattribute:: ProcessCmdLineLength
+   .. autoattribute:: ProcessDataParameterLength
+   .. autoattribute:: ProcessFilename
+   .. autoattribute:: ProcessGetDataParameter
+   .. autoattribute:: ProcessGetMemoryInfo
+   .. autoattribute:: ProcessLogon
+   .. autoattribute:: ProcessLogonCancel
+   .. autoattribute:: ProcessRendezvous
+   .. autoattribute:: ProcessResume
+   .. autoattribute:: ProcessSetFlags
+   .. autoattribute:: ProcessSetPriority
+   .. autoattribute:: ProcessType
+   .. autoattribute:: PropertyAttach
+   .. autoattribute:: PropertyCancel
+   .. autoattribute:: PropertyDefine
+   .. autoattribute:: PropertyFindGetBin
+   .. autoattribute:: PropertyFindGetInt
+   .. autoattribute:: PropertyFindSetBin
+   .. autoattribute:: PropertyFindSetInt
+   .. autoattribute:: PropertyGetBin
+   .. autoattribute:: PropertyGetInt
+   .. autoattribute:: PropertySetBin
+   .. autoattribute:: PropertySetInt
+   .. autoattribute:: PropertySubscribe
+   .. autoattribute:: ReleaseDllLock
+   .. autoattribute:: SafeInc
+   .. autoattribute:: SemaphoreCreate
+   .. autoattribute:: ServerCreate
+   .. autoattribute:: ServerReceive
+   .. autoattribute:: SessionCreate
+   .. autoattribute:: SessionSendSync
+   .. autoattribute:: SessionShare
+   .. autoattribute:: SetActiveScheduler
+   .. autoattribute:: SetSessionPtr
+   .. autoattribute:: SetTrapHandler
+   .. autoattribute:: StaticCallList
+   .. autoattribute:: ThreadContext
+   .. autoattribute:: ThreadCreate
+   .. autoattribute:: ThreadKill
+   .. autoattribute:: ThreadLogon
+   .. autoattribute:: ThreadLogonCancel
+   .. autoattribute:: ThreadProcess
+   .. autoattribute:: ThreadRename
+   .. autoattribute:: ThreadRendezvous
+   .. autoattribute:: ThreadResume
+   .. autoattribute:: ThreadSetFlags
+   .. autoattribute:: TimerCreate
+   .. autoattribute:: TrapHandler
+   .. autoattribute:: UTCOffset
+   .. autoattribute:: UserSvrRomHeaderAddress
+   .. autoattribute:: UserSvrRomRootDirAddress
+   .. autoattribute:: WaitDllLock
+   .. autoattribute:: WaitForAnyRequest

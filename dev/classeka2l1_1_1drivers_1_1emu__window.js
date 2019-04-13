@@ -1,0 +1,26 @@
+var classeka2l1_1_1drivers_1_1emu__window =
+[
+    [ "change_title", "classeka2l1_1_1drivers_1_1emu__window.html#ac16c6fbd89f5ae3b2565505a6e1d48f7", null ],
+    [ "done_current", "classeka2l1_1_1drivers_1_1emu__window.html#a310c4ef3598bb727576c4baaad4431f2", null ],
+    [ "get_mouse_button_hold", "classeka2l1_1_1drivers_1_1emu__window.html#a2edd76fde8685d393264af9112845f9e", null ],
+    [ "get_mouse_pos", "classeka2l1_1_1drivers_1_1emu__window.html#a023c0f35d58ab11822e2cb44d59ece31", null ],
+    [ "init", "classeka2l1_1_1drivers_1_1emu__window.html#aa30037dc05a0490cf0db835fdbf82eda", null ],
+    [ "make_current", "classeka2l1_1_1drivers_1_1emu__window.html#a6e1cbb77a67db3247195de985669e033", null ],
+    [ "poll_events", "classeka2l1_1_1drivers_1_1emu__window.html#ab54cf33c5434d92059ff5e8621a0a33d", null ],
+    [ "should_quit", "classeka2l1_1_1drivers_1_1emu__window.html#a354ea98083bb23f0b731a3e821a21f5e", null ],
+    [ "shutdown", "classeka2l1_1_1drivers_1_1emu__window.html#ae75c97ec7b9052f9753863eb50760cf5", null ],
+    [ "swap_buffer", "classeka2l1_1_1drivers_1_1emu__window.html#aca77f38ae18b560f5d3cef468b9926df", null ],
+    [ "window_fb_size", "classeka2l1_1_1drivers_1_1emu__window.html#a80ab40a015435ea140af6f5d42f1972d", null ],
+    [ "window_size", "classeka2l1_1_1drivers_1_1emu__window.html#ab41e059489064423d87b0ad0ebafed46", null ],
+    [ "button_hold", "classeka2l1_1_1drivers_1_1emu__window.html#aecac720f80b21649e88a8c7c2dc19369", null ],
+    [ "button_pressed", "classeka2l1_1_1drivers_1_1emu__window.html#ac594f956c8270f619e9e7e03643ef885", null ],
+    [ "button_released", "classeka2l1_1_1drivers_1_1emu__window.html#af54f2f4d5378f8e01133099279b572a3", null ],
+    [ "char_hook", "classeka2l1_1_1drivers_1_1emu__window.html#af0fbaad21c36d4e1b378854e49578570", null ],
+    [ "close_hook", "classeka2l1_1_1drivers_1_1emu__window.html#a1009c1f7c157ddeb3a7decaa2e305623", null ],
+    [ "mouse_wheeling", "classeka2l1_1_1drivers_1_1emu__window.html#a3d9f9c55de6cd8963285f136222f97b5", null ],
+    [ "raw_mouse_event", "classeka2l1_1_1drivers_1_1emu__window.html#a026be4157c686fce09bc05adc80449a0", null ],
+    [ "resize_hook", "classeka2l1_1_1drivers_1_1emu__window.html#ad62fd788b2c695637af709504edbaee6", null ],
+    [ "touch_move", "classeka2l1_1_1drivers_1_1emu__window.html#a58bae3b4d482ccecedbbd4574a798796", null ],
+    [ "touch_pressed", "classeka2l1_1_1drivers_1_1emu__window.html#a537641d68ca21cbdbe64b345d0146b6e", null ],
+    [ "touch_released", "classeka2l1_1_1drivers_1_1emu__window.html#aa10f5599e112661c0021116da300d2e0", null ]
+];

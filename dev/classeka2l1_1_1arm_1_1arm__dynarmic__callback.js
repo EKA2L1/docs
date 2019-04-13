@@ -1,0 +1,28 @@
+var classeka2l1_1_1arm_1_1arm__dynarmic__callback =
+[
+    [ "arm_dynarmic_callback", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a6ef405930f1b06316ab03e812ae5fd2e", null ],
+    [ "AddTicks", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a900a8fbcf4f57862bb274d2937ae171c", null ],
+    [ "CallSVC", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#aeed6d77c232f37a9040c4967a902a8cf", null ],
+    [ "ExceptionRaised", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a2b03934750ca25556e89ff5705d329b4", null ],
+    [ "GetTicksRemaining", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#acd5f6c5d4057ca21c0d37455282ea120", null ],
+    [ "handle_read_status", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a1e2f3e7746c4709f2ec2666011da1cac", null ],
+    [ "handle_thread_exception", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a3ea093ff0bcca8d03df98fd93536a941", null ],
+    [ "handle_write_status", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#ac70bc2a7446d5691716905a12a41d9aa", null ],
+    [ "InterpreterFallback", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a7eb3fe21a4346eb7aa5916de0166611c", null ],
+    [ "invalid_memory_read", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a4b88bdd9ff408f13ebf28bf8828296dd", null ],
+    [ "invalid_memory_write", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a8343f0a77dd4ae854dacac2dcbf14291", null ],
+    [ "MemoryRead16", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#ac041e4d17ba8953bc2a774f187bed70c", null ],
+    [ "MemoryRead32", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a617d6961e5d528b79af819f8cbac8abe", null ],
+    [ "MemoryRead64", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#ae3996e1220c623654b798d73084e4b3d", null ],
+    [ "MemoryRead8", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#ab82d34528ea9017b0fc3723c66cf220e", null ],
+    [ "MemoryReadCode", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#aef052b01cde4ba5826c1575bb4e9d8eb", null ],
+    [ "MemoryWrite16", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a798b7d6dda076032616d29f58127d16a", null ],
+    [ "MemoryWrite32", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#ac608134b8ad7d2b64d5e60db6e12dfdd", null ],
+    [ "MemoryWrite64", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a7b7195486017db7c3a7d7e0ab934245f", null ],
+    [ "MemoryWrite8", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a9ad52efc8925de99f372aefe07cbd9fc", null ],
+    [ "interpreted", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#aa64b9b2b556911885e8388734bf2c533", null ],
+    [ "log_code", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#ab6dda32745fb43f7837c59f6ad64bffe", null ],
+    [ "log_read", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#a5a078f5fc530717d9eb4b8ad619c325d", null ],
+    [ "log_write", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#acbc78b4dbacf65216674c3c1173af3a7", null ],
+    [ "parent", "classeka2l1_1_1arm_1_1arm__dynarmic__callback.html#aaf6685bf467e6c9ac39844200d6d3683", null ]
+];

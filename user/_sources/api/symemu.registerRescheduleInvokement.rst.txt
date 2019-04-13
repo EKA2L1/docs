@@ -1,0 +1,6 @@
+registerRescheduleInvokement
+============================
+
+.. currentmodule:: symemu
+
+.. autofunction:: registerRescheduleInvokement

@@ -1,0 +1,25 @@
+Process
+=======
+
+.. currentmodule:: symemu
+
+.. autoclass:: Process
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Process.getExecutablePath
+      ~Process.getName
+      ~Process.getThreadList
+      ~Process.readProcessMemory
+      ~Process.writeProcessMemory
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getExecutablePath
+   .. automethod:: getName
+   .. automethod:: getThreadList
+   .. automethod:: readProcessMemory
+   .. automethod:: writeProcessMemory

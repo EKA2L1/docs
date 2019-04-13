@@ -1,0 +1,11 @@
+<map id="inheritanceb5b3bfa63a" name="inheritanceb5b3bfa63a">
+<area shape="rect" id="node1" href="../../api/symemu.Codeseg.html#symemu.Codeseg" target="_top" title="Codeseg" alt="" coords="184,5,257,31"/>
+<area shape="rect" id="node3" href="../../api/symemu.Cpu.html#symemu.Cpu" target="_top" title="Cpu" alt="" coords="185,55,257,80"/>
+<area shape="rect" id="node4" href="../../api/symemu.IpcMessage.html#symemu.IpcMessage" target="_top" title="IpcMessage" alt="" coords="175,104,267,129"/>
+<area shape="rect" id="node5" href="../../api/symemu.Process.html#symemu.Process" target="_top" title="Process" alt="" coords="185,153,257,179"/>
+<area shape="rect" id="node6" href="../../api/symemu.Server.html#symemu.Server" target="_top" title="Server" alt="" coords="185,203,257,228"/>
+<area shape="rect" id="node7" href="../../api/symemu.Session.html#symemu.Session" target="_top" title="Session" alt="" coords="185,252,257,277"/>
+<area shape="rect" id="node8" href="../../api/symemu.Thread.html#symemu.Thread" target="_top" title="Thread" alt="" coords="185,301,257,327"/>
+<area shape="rect" id="node9" href="../../api/symemu.ThreadPriority.html#symemu.ThreadPriority" target="_top" title="Members:" alt="" coords="169,351,272,376"/>
+<area shape="rect" id="node10" href="../../api/symemu.ThreadState.html#symemu.ThreadState" target="_top" title="Members:" alt="" coords="175,400,267,425"/>
+</map>

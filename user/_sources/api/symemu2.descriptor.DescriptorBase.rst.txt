@@ -1,0 +1,7 @@
+DescriptorBase
+==============
+
+.. currentmodule:: symemu2.descriptor
+
+.. autoclass:: DescriptorBase
+   :show-inheritance:

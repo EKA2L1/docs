@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['v3',['v3',['../structeka2l1_1_1epoc_1_1security__policy.html#acd89a37d6465842e6025a9a83594e55da50ee2b328533c071afae54cabd1e4fc1',1,'eka2l1::epoc::security_policy']]],
+  ['vc',['VC',['../namespaceeka2l1_1_1arm.html#a4313f481ef3a234e984fe3230ea5ee91ab7128ad1d9b838be26989d1037a8c987',1,'eka2l1::arm']]],
+  ['vec3',['vec3',['../namespaceeka2l1_1_1drivers.html#a74a9d1db8a2e9166bd729ad7c46e532aa97ade28e93c0de60adc075bdbe07ca36',1,'eka2l1::drivers']]],
+  ['vec4',['vec4',['../namespaceeka2l1_1_1drivers.html#a74a9d1db8a2e9166bd729ad7c46e532aa1a9028fd802c481a99491a418ca2fe86',1,'eka2l1::drivers']]],
+  ['vendor_5famd',['VENDOR_AMD',['../namespaceeka2l1_1_1common.html#a08fbc867324519ba35afaeb1f8eff330a5d9003770c1159fef8c8751573266133',1,'eka2l1::common']]],
+  ['vendor_5farm',['VENDOR_ARM',['../namespaceeka2l1_1_1common.html#a08fbc867324519ba35afaeb1f8eff330a572d71d5608f413381178b10f786dfb8',1,'eka2l1::common']]],
+  ['vendor_5fintel',['VENDOR_INTEL',['../namespaceeka2l1_1_1common.html#a08fbc867324519ba35afaeb1f8eff330ab9cd63366b807475592cb97956d2e3a2',1,'eka2l1::common']]],
+  ['vendor_5fother',['VENDOR_OTHER',['../namespaceeka2l1_1_1common.html#a08fbc867324519ba35afaeb1f8eff330af7c2b4ded287f451fa1dac4a6af95000',1,'eka2l1::common']]],
+  ['vimm_5f_5f_5fx_5f_5f_5fx',['VIMM___x___x',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2a077715de2f65739c4e32e9bf095195b2',1,'eka2l1::common::armgen']]],
+  ['vimm_5f_5fx1_5f_5fx1',['VIMM__x1__x1',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2abe320f441aa6c52f53372b9e5ac4e33b',1,'eka2l1::common::armgen']]],
+  ['vimm_5f_5fx_5f_5f_5fx_5f',['VIMM__x___x_',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2a592836e64892170000579d5dda870ab5',1,'eka2l1::common::armgen']]],
+  ['vimm_5fx11_5fx11',['VIMM_x11_x11',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2afc80ea5253c25c406e711e4e2950b830',1,'eka2l1::common::armgen']]],
+  ['vimm_5fx_5f_5f_5fx_5f_5f',['VIMM_x___x__',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2ac5162c1c199dd933a7820fb43c4a88c4',1,'eka2l1::common::armgen']]],
+  ['vimm_5fx_5fx_5fx_5fx',['VIMM_x_x_x_x',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2ac4d06dbb3744beca0861ac37f5a50496',1,'eka2l1::common::armgen']]],
+  ['vimmbits2bytes',['VIMMbits2bytes',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2a50604658196873183bd1d492e816613a',1,'eka2l1::common::armgen']]],
+  ['vimmf000f000',['VIMMf000f000',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2a269ee35b8f59e5b68fa866e2013ed71e',1,'eka2l1::common::armgen']]],
+  ['vimmx_5f_5f_5fx_5f_5f_5f',['VIMMx___x___',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2ac2ebe760d51b2616eef53cb15baf5d8a',1,'eka2l1::common::armgen']]],
+  ['vimmx_5fx_5fx_5fx_5f',['VIMMx_x_x_x_',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2a61613f34f5ea9e081f416989eb8575aa',1,'eka2l1::common::armgen']]],
+  ['vimmxxxxxxxx',['VIMMxxxxxxxx',['../namespaceeka2l1_1_1common_1_1armgen.html#a711d9edbff8eb0577a4827c023b2e3b2a6a9b71b5a9b65b23b609d56a2c6fcc2c',1,'eka2l1::common::armgen']]],
+  ['violate_5fbitmap',['violate_bitmap',['../structeka2l1_1_1epoc_1_1bitwise__bitmap.html#aacc270ed1d2eca799727cf3bfa45238aa8a9539bed09eed539a861429843f495b',1,'eka2l1::epoc::bitwise_bitmap']]],
+  ['visible',['visible',['../structeka2l1_1_1epoc_1_1window__user.html#a122bc3926045b3a9c7a6760e8c68d4f4af93007d7967e7a7d9f8a46a589a0a9d4',1,'eka2l1::epoc::window_user']]],
+  ['vs',['VS',['../namespaceeka2l1_1_1arm.html#a4313f481ef3a234e984fe3230ea5ee91a2c54e23f4c5442c665a807ab19f61204',1,'eka2l1::arm']]],
+  ['vulkan',['vulkan',['../namespaceeka2l1_1_1drivers.html#a8e1a8b654c960dc163b2c53f3e15d5a8a8473f19e6529e22157459e75b4cbf485',1,'eka2l1::drivers']]]
+];

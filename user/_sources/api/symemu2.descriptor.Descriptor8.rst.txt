@@ -1,0 +1,7 @@
+Descriptor8
+===========
+
+.. currentmodule:: symemu2.descriptor
+
+.. autoclass:: Descriptor8
+   :show-inheritance:

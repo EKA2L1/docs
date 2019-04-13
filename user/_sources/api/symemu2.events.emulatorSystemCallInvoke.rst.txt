@@ -1,0 +1,6 @@
+emulatorSystemCallInvoke
+========================
+
+.. currentmodule:: symemu2.events
+
+.. autofunction:: emulatorSystemCallInvoke

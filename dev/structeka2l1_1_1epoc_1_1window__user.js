@@ -1,0 +1,28 @@
+var structeka2l1_1_1epoc_1_1window__user =
+[
+    [ "invalidate_rect", "structeka2l1_1_1epoc_1_1window__user_1_1invalidate__rect.html", "structeka2l1_1_1epoc_1_1window__user_1_1invalidate__rect" ],
+    [ "shadow_disable", "structeka2l1_1_1epoc_1_1window__user.html#a122bc3926045b3a9c7a6760e8c68d4f4a58850a852bd83b5a3c8b55905c39301b", null ],
+    [ "active", "structeka2l1_1_1epoc_1_1window__user.html#a122bc3926045b3a9c7a6760e8c68d4f4acd1379237fde94f6dbf7485d4bcaf001", null ],
+    [ "visible", "structeka2l1_1_1epoc_1_1window__user.html#a122bc3926045b3a9c7a6760e8c68d4f4af93007d7967e7a7d9f8a46a589a0a9d4", null ],
+    [ "allow_pointer_grab", "structeka2l1_1_1epoc_1_1window__user.html#a122bc3926045b3a9c7a6760e8c68d4f4abb01d2482cb62ad3850b172ac176948a", null ],
+    [ "window_user", "structeka2l1_1_1epoc_1_1window__user.html#aef943ef205f9bc871f06ec82ad771c67", null ],
+    [ "execute_command", "structeka2l1_1_1epoc_1_1window__user.html#a924b8c1328c2231e9ba6eaae7f916b5f", null ],
+    [ "get_group", "structeka2l1_1_1epoc_1_1window__user.html#a97566734403b52cdd5343055b6397faf", null ],
+    [ "is_visible", "structeka2l1_1_1epoc_1_1window__user.html#ad34085571bdddf637a06055e7af88f3a", null ],
+    [ "priority_updated", "structeka2l1_1_1epoc_1_1window__user.html#a47170c918017f74300e3ee4ea7b35d6a", null ],
+    [ "queue_event", "structeka2l1_1_1epoc_1_1window__user.html#ab248f8e3c1b09127472c6b29579a219b", null ],
+    [ "set_visible", "structeka2l1_1_1epoc_1_1window__user.html#a56d601df8f5bf1c7d0321407b31d1e9a", null ],
+    [ "clear_color", "structeka2l1_1_1epoc_1_1window__user.html#a754f24d2661c9b9b4f9b3132f7e1f2fe", null ],
+    [ "contexts", "structeka2l1_1_1epoc_1_1window__user.html#aa4db8fc5f032e692056dc34d5b1836d9", null ],
+    [ "cursor_pos", "structeka2l1_1_1epoc_1_1window__user.html#a590638943035ff984cf24f8ac0a46dd5", null ],
+    [ "dmode", "structeka2l1_1_1epoc_1_1window__user.html#a129ffd966a450e4e9ad0b8990692170e", null ],
+    [ "driver_win_id", "structeka2l1_1_1epoc_1_1window__user.html#abadbf6decbd5893c24b02df512b7df8c", null ],
+    [ "filter", "structeka2l1_1_1epoc_1_1window__user.html#a723cc549c092f243c03c4cf44e830f49", null ],
+    [ "flags", "structeka2l1_1_1epoc_1_1window__user.html#a8387efa272acf18788d6ea67c2d3163c", null ],
+    [ "irect", "structeka2l1_1_1epoc_1_1window__user.html#a8220561d162fd85d442918d7850d97bb", null ],
+    [ "pos", "structeka2l1_1_1epoc_1_1window__user.html#a9c73c3354a4a259ba2e3c6c42e947bfd", null ],
+    [ "redraw_evt_id", "structeka2l1_1_1epoc_1_1window__user.html#ae7f161a1f91f4816c68e5d1df6196803", null ],
+    [ "shadow_height", "structeka2l1_1_1epoc_1_1window__user.html#a65d2e14fa66f3a5196f38c04bd542805", null ],
+    [ "size", "structeka2l1_1_1epoc_1_1window__user.html#a83ef4f78dfc5d708a572bd993ecf766e", null ],
+    [ "win_type", "structeka2l1_1_1epoc_1_1window__user.html#a52b9962fb4ecba217e8d6de11e0fb48c", null ]
+];

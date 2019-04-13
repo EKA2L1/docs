@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['terminate',['terminate',['../namespaceeka2l1_1_1kernel.html#a5ded60501260ced64827bec2c374afd1a1459e53d3fbaa95cebaf90860dd7a259',1,'eka2l1::kernel::terminate()'],['../namespaceeka2l1_1_1eka2l1_1_1epoc.html#a6a02a460b769835eb12dfc060e36414fa1459e53d3fbaa95cebaf90860dd7a259',1,'eka2l1::eka2l1::epoc::terminate()']]],
+  ['text',['text',['../namespaceeka2l1_1_1loader.html#a659185a830acf57261f07e0640b35244a1cb251ec0d568de6a929b520c4aed8d1',1,'eka2l1::loader::text()'],['../namespaceeka2l1_1_1loader.html#a23175b504f31176529f5c16d501e5c1ea1cb251ec0d568de6a929b520c4aed8d1',1,'eka2l1::loader::text()']]],
+  ['tf_5fpropotional',['tf_propotional',['../structeka2l1_1_1epoc_1_1typeface__info.html#ae022e3a45ec20a35063b213832d414b6aabca969a9937be77f957550267c1876c',1,'eka2l1::epoc::typeface_info']]],
+  ['tf_5fserif',['tf_serif',['../structeka2l1_1_1epoc_1_1typeface__info.html#ae022e3a45ec20a35063b213832d414b6a9650688fbfcc41681c7a1604d2868628',1,'eka2l1::epoc::typeface_info']]],
+  ['tf_5fsymbol',['tf_symbol',['../structeka2l1_1_1epoc_1_1typeface__info.html#ae022e3a45ec20a35063b213832d414b6a3426b219bd1d4e2710d90717293a4389',1,'eka2l1::epoc::typeface_info']]],
+  ['themes_5fuid',['THEMES_UID',['../namespaceeka2l1_1_1epoc.html#a6010f34089d9a7aaa73034633c48ae66a957e3306b23150b646eae3482a574cb7',1,'eka2l1::epoc']]],
+  ['third_5fuid_5foffset',['third_uid_offset',['../classeka2l1_1_1loader_1_1rsc__file.html#aa4484b76e5bf4411cd104a3102cda2afa27f3fe5514ee4e9f00c2d33c9e348bc1',1,'eka2l1::loader::rsc_file']]],
+  ['thread',['thread',['../namespaceeka2l1_1_1kernel.html#a73d7ed5a51f8fd3b766252ddcac1c84dadc127f5d2483352fd20eaddb38feb6d2',1,'eka2l1::kernel::thread()'],['../namespaceeka2l1_1_1kernel.html#aa5a6cbdd9c35706691360d2879d2406aadc127f5d2483352fd20eaddb38feb6d2',1,'eka2l1::kernel::thread()'],['../namespaceeka2l1_1_1kernel.html#a1e83844f2bf645e2545f75b226f911f4adc127f5d2483352fd20eaddb38feb6d2',1,'eka2l1::kernel::thread()']]],
+  ['thumb16',['thumb16',['../namespaceeka2l1_1_1arm.html#a68482d3d1ed64f328376bcf1d73b1706afae3c0799ce708d270e499583fc10344',1,'eka2l1::arm']]],
+  ['thumb32',['thumb32',['../namespaceeka2l1_1_1arm.html#a68482d3d1ed64f328376bcf1d73b1706abcd5a29f2aa66e66db587a0c58c0cec0',1,'eka2l1::arm']]],
+  ['timer',['timer',['../namespaceeka2l1_1_1kernel.html#aa5a6cbdd9c35706691360d2879d2406aa2c127bf32ccb4edf2bf22fea5a00e494',1,'eka2l1::kernel']]],
+  ['top_5fclient',['top_client',['../namespaceeka2l1_1_1epoc.html#a3c5ad48fab42c504f3153a240f891f8ba900c16d4a8e321350de728e27518804e',1,'eka2l1::epoc']]],
+  ['total_5flang',['total_lang',['../namespaceeka2l1_1_1loader.html#a35877e250c68560b26f4c9bf534712faa4f8baa20c90e82f81c4776a102205fa5',1,'eka2l1::loader']]],
+  ['touch',['touch',['../namespaceeka2l1_1_1drivers.html#a7fc2018ac5ec69dc402e48fc58f45873ab96ba508e3690f5168e4b0e68b15b178',1,'eka2l1::drivers::touch()'],['../namespaceeka2l1_1_1epoc.html#a5f9a85f2e5fb7062833bce22ceeebdc4ab96ba508e3690f5168e4b0e68b15b178',1,'eka2l1::epoc::touch()']]],
+  ['touch_5fenter',['touch_enter',['../namespaceeka2l1_1_1epoc.html#a5f9a85f2e5fb7062833bce22ceeebdc4ae3a2eeb05dee4e510de4a4d2eb213af0',1,'eka2l1::epoc']]],
+  ['touch_5fexit',['touch_exit',['../namespaceeka2l1_1_1epoc.html#a5f9a85f2e5fb7062833bce22ceeebdc4ac384a2b8b1963d85db33da20fde21485',1,'eka2l1::epoc']]],
+  ['type_5fimm',['TYPE_IMM',['../namespaceeka2l1_1_1common_1_1armgen.html#af2daa2c05bc249bc1582d9671109bd10a693a9b7ecce44c33aafcf5a480e4f737',1,'eka2l1::common::armgen']]],
+  ['type_5fimmsreg',['TYPE_IMMSREG',['../namespaceeka2l1_1_1common_1_1armgen.html#af2daa2c05bc249bc1582d9671109bd10aaf826676fa79d6af5c94ce99a2a1f941',1,'eka2l1::common::armgen']]],
+  ['type_5fmem',['TYPE_MEM',['../namespaceeka2l1_1_1common_1_1armgen.html#af2daa2c05bc249bc1582d9671109bd10a871a793b47320f78558edd1b121d3afb',1,'eka2l1::common::armgen']]],
+  ['type_5freg',['TYPE_REG',['../namespaceeka2l1_1_1common_1_1armgen.html#af2daa2c05bc249bc1582d9671109bd10a9393969d9393817b78cb29f839644775',1,'eka2l1::common::armgen']]],
+  ['type_5frsr',['TYPE_RSR',['../namespaceeka2l1_1_1common_1_1armgen.html#af2daa2c05bc249bc1582d9671109bd10a168453e4895860ecb430a3884d94d18e',1,'eka2l1::common::armgen']]]
+];

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['object_5fcontainer',['object_container',['../classeka2l1_1_1epoc_1_1object__container.html',1,'eka2l1::epoc']]],
+  ['object_5fix',['object_ix',['../classeka2l1_1_1kernel_1_1object__ix.html',1,'eka2l1::kernel']]],
+  ['object_5fix_5frecord',['object_ix_record',['../structeka2l1_1_1kernel_1_1object__ix__record.html',1,'eka2l1::kernel']]],
+  ['object_5fsize',['object_size',['../structeka2l1_1_1object__size.html',1,'eka2l1']]],
+  ['object_5ftable',['object_table',['../classeka2l1_1_1epoc_1_1object__table.html',1,'eka2l1::epoc']]],
+  ['ogl_5fframebuffer',['ogl_framebuffer',['../classeka2l1_1_1drivers_1_1ogl__framebuffer.html',1,'eka2l1::drivers']]],
+  ['ogl_5fgraphics_5fdriver',['ogl_graphics_driver',['../classeka2l1_1_1drivers_1_1ogl__graphics__driver.html',1,'eka2l1::drivers']]],
+  ['ogl_5fimgui_5frenderer',['ogl_imgui_renderer',['../classeka2l1_1_1drivers_1_1ogl__imgui__renderer.html',1,'eka2l1::drivers']]],
+  ['ogl_5finstance',['ogl_instance',['../classeka2l1_1_1driver_1_1ogl__instance.html',1,'eka2l1::driver']]],
+  ['ogl_5fshader',['ogl_shader',['../classeka2l1_1_1drivers_1_1ogl__shader.html',1,'eka2l1::drivers']]],
+  ['ogl_5ftexture',['ogl_texture',['../classeka2l1_1_1drivers_1_1ogl__texture.html',1,'eka2l1::drivers']]],
+  ['oom_5fui_5fapp_5fserver',['oom_ui_app_server',['../classeka2l1_1_1oom__ui__app__server.html',1,'eka2l1']]],
+  ['open_5ffont',['open_font',['../structeka2l1_1_1epoc_1_1open__font.html',1,'eka2l1::epoc']]],
+  ['open_5ffont_5fface_5fattrib',['open_font_face_attrib',['../structeka2l1_1_1epoc_1_1open__font__face__attrib.html',1,'eka2l1::epoc']]],
+  ['open_5ffont_5finfo',['open_font_info',['../structeka2l1_1_1open__font__info.html',1,'eka2l1']]],
+  ['open_5ffont_5fmetrics',['open_font_metrics',['../structeka2l1_1_1epoc_1_1open__font__metrics.html',1,'eka2l1::epoc']]],
+  ['operand2',['operand2',['../classeka2l1_1_1common_1_1armgen_1_1operand2.html',1,'eka2l1::common::armgen']]]
+];

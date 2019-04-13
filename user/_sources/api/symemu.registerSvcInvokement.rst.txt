@@ -1,0 +1,6 @@
+registerSvcInvokement
+=====================
+
+.. currentmodule:: symemu
+
+.. autofunction:: registerSvcInvokement

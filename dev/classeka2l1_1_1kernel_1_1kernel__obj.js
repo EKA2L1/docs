@@ -1,0 +1,26 @@
+var classeka2l1_1_1kernel_1_1kernel__obj =
+[
+    [ "kernel_obj", "classeka2l1_1_1kernel_1_1kernel__obj.html#a2b73ac2b4596499314279225aba1768d", null ],
+    [ "kernel_obj", "classeka2l1_1_1kernel_1_1kernel__obj.html#a49e6d70f9e59a2b96dcba4de9986e894", null ],
+    [ "~kernel_obj", "classeka2l1_1_1kernel_1_1kernel__obj.html#a6db2c0d1bbe800b17a957e92ec86ce97", null ],
+    [ "close", "classeka2l1_1_1kernel_1_1kernel__obj.html#a39076ac7f56cae3d8e904bb25c20cd61", null ],
+    [ "decrease_access_count", "classeka2l1_1_1kernel_1_1kernel__obj.html#adaa39ea1e9e179a48e0c6a124ebf1509", null ],
+    [ "destroy", "classeka2l1_1_1kernel_1_1kernel__obj.html#ac4a9f7e02f3b40989f3f63472fcc4d4a", null ],
+    [ "do_state", "classeka2l1_1_1kernel_1_1kernel__obj.html#a3a3eb3bf2d67e21819b763970a2e2962", null ],
+    [ "get_access_count", "classeka2l1_1_1kernel_1_1kernel__obj.html#a2e7aa3b48e70b0f39763757214efb4ae", null ],
+    [ "get_access_type", "classeka2l1_1_1kernel_1_1kernel__obj.html#a612b46734af9d7ec1fd268b52a07f8be", null ],
+    [ "get_kernel_object_owner", "classeka2l1_1_1kernel_1_1kernel__obj.html#a68dc750833e3a1fb93ccb470563e6e40", null ],
+    [ "get_object_type", "classeka2l1_1_1kernel_1_1kernel__obj.html#a309fdecf373e587d29b1bf7826377fdb", null ],
+    [ "increase_access_count", "classeka2l1_1_1kernel_1_1kernel__obj.html#a65ea974544e5054d7981ca7481fc036a", null ],
+    [ "name", "classeka2l1_1_1kernel_1_1kernel__obj.html#a864a8657aee16039e7f1c46b7e4bd566", null ],
+    [ "rename", "classeka2l1_1_1kernel_1_1kernel__obj.html#abc6dc07ec1696c8b25b1e75ce7d72071", null ],
+    [ "set_access_type", "classeka2l1_1_1kernel_1_1kernel__obj.html#ae1d144de6bc94272e4ecfd4f502deef1", null ],
+    [ "unique_id", "classeka2l1_1_1kernel_1_1kernel__obj.html#ab400756e137c19b74668db5fdbafda8c", null ],
+    [ "kernel_system", "classeka2l1_1_1kernel_1_1kernel__obj.html#ae87c415bfb570ee1874952f125ff3398", null ],
+    [ "access", "classeka2l1_1_1kernel_1_1kernel__obj.html#abd097dcd098e6620052c438d8732d875", null ],
+    [ "access_count", "classeka2l1_1_1kernel_1_1kernel__obj.html#a1d20ead5b1f302afaf9b9125c636ef36", null ],
+    [ "kern", "classeka2l1_1_1kernel_1_1kernel__obj.html#aaea65366f001ad0722eeffbcdf459833", null ],
+    [ "obj_name", "classeka2l1_1_1kernel_1_1kernel__obj.html#a70f7506bf05c41ea29c3d9ed3cd731ae", null ],
+    [ "obj_type", "classeka2l1_1_1kernel_1_1kernel__obj.html#a7eb655727117372165f99800b41eb7cc", null ],
+    [ "uid", "classeka2l1_1_1kernel_1_1kernel__obj.html#a4beae94e43fbe6b4adb99446a02001cb", null ]
+];

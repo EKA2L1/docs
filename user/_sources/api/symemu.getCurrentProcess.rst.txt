@@ -1,0 +1,6 @@
+getCurrentProcess
+=================
+
+.. currentmodule:: symemu
+
+.. autofunction:: getCurrentProcess

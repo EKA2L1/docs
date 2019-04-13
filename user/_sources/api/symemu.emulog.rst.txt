@@ -1,0 +1,6 @@
+emulog
+======
+
+.. currentmodule:: symemu
+
+.. autofunction:: emulog

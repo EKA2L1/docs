@@ -1,0 +1,6 @@
+readByte
+========
+
+.. currentmodule:: symemu
+
+.. autofunction:: readByte

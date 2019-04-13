@@ -1,0 +1,25 @@
+DescriptorType
+==============
+
+.. currentmodule:: symemu2.descriptor
+
+.. autoclass:: DescriptorType
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~DescriptorType.BUF
+      ~DescriptorType.BUF_CONST
+      ~DescriptorType.BUF_CONST_PTR
+      ~DescriptorType.PTR
+      ~DescriptorType.PTR_CONST
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: BUF
+   .. autoattribute:: BUF_CONST
+   .. autoattribute:: BUF_CONST_PTR
+   .. autoattribute:: PTR
+   .. autoattribute:: PTR_CONST

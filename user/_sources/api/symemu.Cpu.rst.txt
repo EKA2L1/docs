@@ -1,0 +1,23 @@
+Cpu
+===
+
+.. currentmodule:: symemu
+
+.. autoclass:: Cpu
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Cpu.getCpsr
+      ~Cpu.getLr
+      ~Cpu.getReg
+      ~Cpu.getSp
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: getCpsr
+   .. automethod:: getLr
+   .. automethod:: getReg
+   .. automethod:: getSp

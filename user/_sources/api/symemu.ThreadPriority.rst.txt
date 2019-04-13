@@ -1,0 +1,41 @@
+ThreadPriority
+==============
+
+.. currentmodule:: symemu
+
+.. autoclass:: ThreadPriority
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~ThreadPriority.ABSOLUTE_BACKGROUND
+      ~ThreadPriority.ABSOLUTE_FOREGROUND
+      ~ThreadPriority.ABSOLUTE_HIGH
+      ~ThreadPriority.ABSOLUTE_LOW
+      ~ThreadPriority.ABSOLUTE_VERY_LOW
+      ~ThreadPriority.LESS
+      ~ThreadPriority.MORE
+      ~ThreadPriority.MUCH_LESS
+      ~ThreadPriority.MUCH_MORE
+      ~ThreadPriority.NORMAL
+      ~ThreadPriority.NULL
+      ~ThreadPriority.REAL_TIME
+      ~ThreadPriority.name
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: ABSOLUTE_BACKGROUND
+   .. autoattribute:: ABSOLUTE_FOREGROUND
+   .. autoattribute:: ABSOLUTE_HIGH
+   .. autoattribute:: ABSOLUTE_LOW
+   .. autoattribute:: ABSOLUTE_VERY_LOW
+   .. autoattribute:: LESS
+   .. autoattribute:: MORE
+   .. autoattribute:: MUCH_LESS
+   .. autoattribute:: MUCH_MORE
+   .. autoattribute:: NORMAL
+   .. autoattribute:: NULL
+   .. autoattribute:: REAL_TIME
+   .. autoattribute:: name
