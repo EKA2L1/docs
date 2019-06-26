@@ -1,7 +1,7 @@
 Tutorials
 ===================
 
-Start scripting with EKA2L1, by reading these:
+Start with EKA2L1, by reading these:
 
 .. toctree::
    :maxdepth: 10
@@ -9,3 +9,4 @@ Start scripting with EKA2L1, by reading these:
    
    basic
    process
+   debugging

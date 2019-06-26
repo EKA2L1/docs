@@ -11,6 +11,7 @@ Thread
    .. autosummary::
 
       ~Thread.getExitReason
+      ~Thread.getHeapBase
       ~Thread.getLeaveDepth
       ~Thread.getLr
       ~Thread.getName
@@ -19,11 +20,13 @@ Thread
       ~Thread.getPriority
       ~Thread.getRegister
       ~Thread.getSp
+      ~Thread.getStackBase
       ~Thread.getState
 
    .. rubric:: Methods Documentation
 
    .. automethod:: getExitReason
+   .. automethod:: getHeapBase
    .. automethod:: getLeaveDepth
    .. automethod:: getLr
    .. automethod:: getName
@@ -32,4 +35,5 @@ Thread
    .. automethod:: getPriority
    .. automethod:: getRegister
    .. automethod:: getSp
+   .. automethod:: getStackBase
    .. automethod:: getState
