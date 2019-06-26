@@ -15,6 +15,8 @@
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="sessionFromHandle" href="symemu.sessionFromHandle.html" />
+    <link rel="prev" title="registerRescheduleInvokement" href="symemu.registerRescheduleInvokement.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -35,7 +37,7 @@
 <h1>registerSvcInvokement<a class="headerlink" href="#registersvcinvokement" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="symemu.registerSvcInvokement">
-<code class="descclassname">symemu.</code><code class="descname">registerSvcInvokement</code><span class="sig-paren">(</span><em>arg0: int</em>, <em>arg1: int</em>, <em>arg2: function</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#symemu.registerSvcInvokement" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">symemu.</code><code class="sig-name descname">registerSvcInvokement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.registerSvcInvokement" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register a function to be called when a specific SVC is called</p>
 </dd></dl>
 
@@ -59,23 +61,61 @@
 
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../apirefs/symemu2/index.html">symemu2</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../apirefs/symemu/index.html">symemu</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../apirefs/symemu/symemu.html">symemu Module</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../apirefs/symemu/symemu.html#functions">Functions</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="symemu.emulog.html">emulog</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.getCurrentProcess.html">getCurrentProcess</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.getCurrentThread.html">getCurrentThread</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.getProcessesList.html">getProcessesList</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.loadCodeseg.html">loadCodeseg</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.messageFromHandle.html">messageFromHandle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.readByte.html">readByte</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.readDword.html">readDword</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.readQword.html">readQword</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.readWord.html">readWord</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.registerBreakpointInvokement.html">registerBreakpointInvokement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.registerLibraryInvokement.html">registerLibraryInvokement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.registerPanicInvokement.html">registerPanicInvokement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.registerRescheduleInvokement.html">registerRescheduleInvokement</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">registerSvcInvokement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.sessionFromHandle.html">sessionFromHandle</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../apirefs/symemu/symemu.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../apirefs/symemu/symemu.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../apirefs/index.html">Scripting API references</a><ul>
+  <li><a href="../apirefs/symemu/index.html">symemu</a><ul>
+  <li><a href="../apirefs/symemu/symemu.html">symemu Module</a><ul>
+      <li>Previous: <a href="symemu.registerRescheduleInvokement.html" title="previous chapter">registerRescheduleInvokement</a></li>
+      <li>Next: <a href="symemu.sessionFromHandle.html" title="next chapter">sessionFromHandle</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -97,7 +137,7 @@
       &copy;2019, pent0.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

@@ -15,6 +15,7 @@
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="sessionFromHandle" href="symemu.sessionFromHandle.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -35,70 +36,70 @@
 <h1>Codeseg<a class="headerlink" href="#codeseg" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="symemu.Codeseg">
-<em class="property">class </em><code class="descclassname">symemu.</code><code class="descname">Codeseg</code><a class="headerlink" href="#symemu.Codeseg" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">symemu.</code><code class="sig-name descname">Codeseg</code><a class="headerlink" href="#symemu.Codeseg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.bssRunAddress" title="symemu.Codeseg.bssRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bssRunAddress</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.bssRunAddress" title="symemu.Codeseg.bssRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bssRunAddress</span></code></a>()</p></td>
 <td><p>Get runtime BSS address.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.bssSize" title="symemu.Codeseg.bssSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bssSize</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.bssSize" title="symemu.Codeseg.bssSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bssSize</span></code></a>()</p></td>
 <td><p>Get bss section size.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.codeRunAddress" title="symemu.Codeseg.codeRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">codeRunAddress</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.codeRunAddress" title="symemu.Codeseg.codeRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">codeRunAddress</span></code></a>()</p></td>
 <td><p>Get runtime code section address.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.codeSize" title="symemu.Codeseg.codeSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">codeSize</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.codeSize" title="symemu.Codeseg.codeSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">codeSize</span></code></a>()</p></td>
 <td><p>Get code section size.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.dataRunAddress" title="symemu.Codeseg.dataRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataRunAddress</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.dataRunAddress" title="symemu.Codeseg.dataRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataRunAddress</span></code></a>()</p></td>
 <td><p>Get runtime data section address.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.dataSize" title="symemu.Codeseg.dataSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataSize</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.dataSize" title="symemu.Codeseg.dataSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataSize</span></code></a>()</p></td>
 <td><p>Get data section size.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.exportCount" title="symemu.Codeseg.exportCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportCount</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.exportCount" title="symemu.Codeseg.exportCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportCount</span></code></a>()</p></td>
 <td><p>Get total exports provided by this code segment.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.lookup" title="symemu.Codeseg.lookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lookup</span></code></a>(self, arg0)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.lookup" title="symemu.Codeseg.lookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lookup</span></code></a>()</p></td>
 <td><p>Lookup address of a symbol with given ordinal.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Summary</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.bssRunAddress" title="symemu.Codeseg.bssRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bssRunAddress</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.bssRunAddress" title="symemu.Codeseg.bssRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bssRunAddress</span></code></a>()</p></td>
 <td><p>Get runtime BSS address.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.bssSize" title="symemu.Codeseg.bssSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bssSize</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.bssSize" title="symemu.Codeseg.bssSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bssSize</span></code></a>()</p></td>
 <td><p>Get bss section size.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.codeRunAddress" title="symemu.Codeseg.codeRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">codeRunAddress</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.codeRunAddress" title="symemu.Codeseg.codeRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">codeRunAddress</span></code></a>()</p></td>
 <td><p>Get runtime code section address.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.codeSize" title="symemu.Codeseg.codeSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">codeSize</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.codeSize" title="symemu.Codeseg.codeSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">codeSize</span></code></a>()</p></td>
 <td><p>Get code section size.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.dataRunAddress" title="symemu.Codeseg.dataRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataRunAddress</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.dataRunAddress" title="symemu.Codeseg.dataRunAddress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataRunAddress</span></code></a>()</p></td>
 <td><p>Get runtime data section address.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.dataSize" title="symemu.Codeseg.dataSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataSize</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.dataSize" title="symemu.Codeseg.dataSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataSize</span></code></a>()</p></td>
 <td><p>Get data section size.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.exportCount" title="symemu.Codeseg.exportCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportCount</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Codeseg.exportCount" title="symemu.Codeseg.exportCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportCount</span></code></a>()</p></td>
 <td><p>Get total exports provided by this code segment.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.lookup" title="symemu.Codeseg.lookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lookup</span></code></a>(self, arg0)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Codeseg.lookup" title="symemu.Codeseg.lookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lookup</span></code></a>()</p></td>
 <td><p>Lookup address of a symbol with given ordinal.</p></td>
 </tr>
 </tbody>
@@ -106,49 +107,49 @@
 <p class="rubric">Methods Documentation</p>
 <dl class="method">
 <dt id="symemu.Codeseg.bssRunAddress">
-<code class="descname">bssRunAddress</code><span class="sig-paren">(</span><em>self: symemu.Codeseg</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Codeseg.bssRunAddress" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bssRunAddress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Codeseg.bssRunAddress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get runtime BSS address.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Codeseg.bssSize">
-<code class="descname">bssSize</code><span class="sig-paren">(</span><em>self: symemu.Codeseg</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Codeseg.bssSize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">bssSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Codeseg.bssSize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get bss section size.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Codeseg.codeRunAddress">
-<code class="descname">codeRunAddress</code><span class="sig-paren">(</span><em>self: symemu.Codeseg</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Codeseg.codeRunAddress" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">codeRunAddress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Codeseg.codeRunAddress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get runtime code section address.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Codeseg.codeSize">
-<code class="descname">codeSize</code><span class="sig-paren">(</span><em>self: symemu.Codeseg</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Codeseg.codeSize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">codeSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Codeseg.codeSize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get code section size.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Codeseg.dataRunAddress">
-<code class="descname">dataRunAddress</code><span class="sig-paren">(</span><em>self: symemu.Codeseg</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Codeseg.dataRunAddress" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dataRunAddress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Codeseg.dataRunAddress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get runtime data section address.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Codeseg.dataSize">
-<code class="descname">dataSize</code><span class="sig-paren">(</span><em>self: symemu.Codeseg</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Codeseg.dataSize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">dataSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Codeseg.dataSize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get data section size.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Codeseg.exportCount">
-<code class="descname">exportCount</code><span class="sig-paren">(</span><em>self: symemu.Codeseg</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Codeseg.exportCount" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">exportCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Codeseg.exportCount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get total exports provided by this code segment.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Codeseg.lookup">
-<code class="descname">lookup</code><span class="sig-paren">(</span><em>self: symemu.Codeseg</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Codeseg.lookup" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">lookup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Codeseg.lookup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lookup address of a symbol with given ordinal.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -159,7 +160,7 @@
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>int</strong></dt><dd><p>The address of the export function.</p>
+<dt>int</dt><dd><p>The address of the export function.</p>
 </dd>
 </dl>
 </dd>
@@ -188,23 +189,53 @@
 
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../apirefs/symemu2/index.html">symemu2</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../apirefs/symemu/index.html">symemu</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../apirefs/symemu/symemu.html">symemu Module</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../apirefs/symemu/symemu.html#functions">Functions</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../apirefs/symemu/symemu.html#classes">Classes</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Codeseg</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.Cpu.html">Cpu</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.IpcMessage.html">IpcMessage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.Process.html">Process</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.Server.html">Server</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.Session.html">Session</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.Thread.html">Thread</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../apirefs/symemu/symemu.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../apirefs/index.html">Scripting API references</a><ul>
+  <li><a href="../apirefs/symemu/index.html">symemu</a><ul>
+  <li><a href="../apirefs/symemu/symemu.html">symemu Module</a><ul>
+      <li>Previous: <a href="symemu.sessionFromHandle.html" title="previous chapter">sessionFromHandle</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -226,7 +257,7 @@
       &copy;2019, pent0.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

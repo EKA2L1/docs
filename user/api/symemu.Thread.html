@@ -35,88 +35,94 @@
 <h1>Thread<a class="headerlink" href="#thread" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="symemu.Thread">
-<em class="property">class </em><code class="descclassname">symemu.</code><code class="descname">Thread</code><a class="headerlink" href="#symemu.Thread" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">symemu.</code><code class="sig-name descname">Thread</code><a class="headerlink" href="#symemu.Thread" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getExitReason" title="symemu.Thread.getExitReason"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExitReason</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getExitReason" title="symemu.Thread.getExitReason"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExitReason</span></code></a>()</p></td>
 <td><p>Get the exit reason of thread</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHeapBase</span></code>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getHeapBase" title="symemu.Thread.getHeapBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHeapBase</span></code></a>()</p></td>
 <td><p>Get the base address of the heap memory chunk.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getLeaveDepth" title="symemu.Thread.getLeaveDepth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLeaveDepth</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getLeaveDepth" title="symemu.Thread.getLeaveDepth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLeaveDepth</span></code></a>()</p></td>
 <td><p>Get the leave depth of thread.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getLr" title="symemu.Thread.getLr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLr</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getLr" title="symemu.Thread.getLr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLr</span></code></a>()</p></td>
 <td><p>Get PC of thread context.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getName" title="symemu.Thread.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getName" title="symemu.Thread.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
 <td><p>Get the name of thread.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getOwningProcess" title="symemu.Thread.getOwningProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOwningProcess</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getOwningProcess" title="symemu.Thread.getOwningProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOwningProcess</span></code></a>()</p></td>
 <td><p>Get the own process of thread.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getPc" title="symemu.Thread.getPc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPc</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getPc" title="symemu.Thread.getPc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPc</span></code></a>()</p></td>
 <td><p>Get PC of thread context.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getPriority" title="symemu.Thread.getPriority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPriority</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getPriority" title="symemu.Thread.getPriority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPriority</span></code></a>()</p></td>
 <td><p>Get the own process of thread.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getRegister" title="symemu.Thread.getRegister"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRegister</span></code></a>(self, arg0)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getRegister" title="symemu.Thread.getRegister"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRegister</span></code></a>()</p></td>
 <td><p>Get a register of thread context.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getSp" title="symemu.Thread.getSp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSp</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getSp" title="symemu.Thread.getSp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSp</span></code></a>()</p></td>
 <td><p>Get PC of thread context.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStackBase</span></code>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getStackBase" title="symemu.Thread.getStackBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStackBase</span></code></a>()</p></td>
 <td><p>Get the base address of the stack memory chunk.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getState" title="symemu.Thread.getState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getState</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getState" title="symemu.Thread.getState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getState</span></code></a>()</p></td>
 <td><p>Get the current state of the thread.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Summary</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getExitReason" title="symemu.Thread.getExitReason"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExitReason</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getExitReason" title="symemu.Thread.getExitReason"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExitReason</span></code></a>()</p></td>
 <td><p>Get the exit reason of thread</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getLeaveDepth" title="symemu.Thread.getLeaveDepth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLeaveDepth</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getHeapBase" title="symemu.Thread.getHeapBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHeapBase</span></code></a>()</p></td>
+<td><p>Get the base address of the heap memory chunk.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getLeaveDepth" title="symemu.Thread.getLeaveDepth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLeaveDepth</span></code></a>()</p></td>
 <td><p>Get the leave depth of thread.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getLr" title="symemu.Thread.getLr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLr</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getLr" title="symemu.Thread.getLr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLr</span></code></a>()</p></td>
 <td><p>Get PC of thread context.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getName" title="symemu.Thread.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getName" title="symemu.Thread.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
 <td><p>Get the name of thread.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getOwningProcess" title="symemu.Thread.getOwningProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOwningProcess</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getOwningProcess" title="symemu.Thread.getOwningProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOwningProcess</span></code></a>()</p></td>
 <td><p>Get the own process of thread.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getPc" title="symemu.Thread.getPc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPc</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getPc" title="symemu.Thread.getPc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPc</span></code></a>()</p></td>
 <td><p>Get PC of thread context.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getPriority" title="symemu.Thread.getPriority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPriority</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getPriority" title="symemu.Thread.getPriority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPriority</span></code></a>()</p></td>
 <td><p>Get the own process of thread.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getRegister" title="symemu.Thread.getRegister"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRegister</span></code></a>(self, arg0)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getRegister" title="symemu.Thread.getRegister"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRegister</span></code></a>()</p></td>
 <td><p>Get a register of thread context.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getSp" title="symemu.Thread.getSp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSp</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getSp" title="symemu.Thread.getSp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSp</span></code></a>()</p></td>
 <td><p>Get PC of thread context.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getState" title="symemu.Thread.getState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getState</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Thread.getStackBase" title="symemu.Thread.getStackBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStackBase</span></code></a>()</p></td>
+<td><p>Get the base address of the stack memory chunk.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Thread.getState" title="symemu.Thread.getState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getState</span></code></a>()</p></td>
 <td><p>Get the current state of the thread.</p></td>
 </tr>
 </tbody>
@@ -124,49 +130,55 @@
 <p class="rubric">Methods Documentation</p>
 <dl class="method">
 <dt id="symemu.Thread.getExitReason">
-<code class="descname">getExitReason</code><span class="sig-paren">(</span><em>self: symemu.Thread</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Thread.getExitReason" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getExitReason</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getExitReason" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the exit reason of thread</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="symemu.Thread.getHeapBase">
+<code class="sig-name descname">getHeapBase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getHeapBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the base address of the heap memory chunk.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="symemu.Thread.getLeaveDepth">
-<code class="descname">getLeaveDepth</code><span class="sig-paren">(</span><em>self: symemu.Thread</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Thread.getLeaveDepth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getLeaveDepth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getLeaveDepth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the leave depth of thread.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Thread.getLr">
-<code class="descname">getLr</code><span class="sig-paren">(</span><em>self: symemu.Thread</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Thread.getLr" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getLr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getLr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get PC of thread context.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Thread.getName">
-<code class="descname">getName</code><span class="sig-paren">(</span><em>self: symemu.Thread</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#symemu.Thread.getName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the name of thread.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Thread.getOwningProcess">
-<code class="descname">getOwningProcess</code><span class="sig-paren">(</span><em>self: symemu.Thread</em><span class="sig-paren">)</span> &#x2192; symemu.Process<a class="headerlink" href="#symemu.Thread.getOwningProcess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getOwningProcess</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getOwningProcess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the own process of thread.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Thread.getPc">
-<code class="descname">getPc</code><span class="sig-paren">(</span><em>self: symemu.Thread</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Thread.getPc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getPc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getPc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get PC of thread context.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Thread.getPriority">
-<code class="descname">getPriority</code><span class="sig-paren">(</span><em>self: symemu.Thread</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Thread.getPriority" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getPriority</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getPriority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the own process of thread.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="symemu.Thread.getRegister">
-<code class="descname">getRegister</code><span class="sig-paren">(</span><em>self: symemu.Thread</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Thread.getRegister" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getRegister</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getRegister" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a register of thread context.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -177,7 +189,7 @@
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>int</strong></dt><dd><p>The value of the register.</p>
+<dt>int</dt><dd><p>The value of the register.</p>
 </dd>
 </dl>
 </dd>
@@ -186,13 +198,19 @@
 
 <dl class="method">
 <dt id="symemu.Thread.getSp">
-<code class="descname">getSp</code><span class="sig-paren">(</span><em>self: symemu.Thread</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Thread.getSp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getSp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getSp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get PC of thread context.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="symemu.Thread.getStackBase">
+<code class="sig-name descname">getStackBase</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getStackBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the base address of the stack memory chunk.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="symemu.Thread.getState">
-<code class="descname">getState</code><span class="sig-paren">(</span><em>self: symemu.Thread</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Thread.getState" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Thread.getState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current state of the thread. States are defined in ThreadState enum.</p>
 </dd></dl>
 
@@ -218,23 +236,52 @@
 
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../apirefs/symemu2/index.html">symemu2</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../apirefs/symemu/index.html">symemu</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../apirefs/symemu/symemu.html">symemu Module</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../apirefs/symemu/symemu.html#functions">Functions</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../apirefs/symemu/symemu.html#classes">Classes</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="symemu.Codeseg.html">Codeseg</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.Cpu.html">Cpu</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.IpcMessage.html">IpcMessage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.Process.html">Process</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.Server.html">Server</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.Session.html">Session</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Thread</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../apirefs/symemu/symemu.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../apirefs/index.html">Scripting API references</a><ul>
+  <li><a href="../apirefs/symemu/index.html">symemu</a><ul>
+  <li><a href="../apirefs/symemu/symemu.html">symemu Module</a><ul>
+  </ul></li>
+  </ul></li>
+  </ul></li>
   </ul></li>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -256,7 +303,7 @@
       &copy;2019, pent0.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

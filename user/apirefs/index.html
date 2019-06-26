@@ -16,7 +16,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="symemu2" href="symemu2/index.html" />
-    <link rel="prev" title="Scripting basic" href="../tutorials/basic.html" />
+    <link rel="prev" title="Debugging with GDB and IDA" href="../tutorials/debugging.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -41,28 +41,47 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="symemu2/index.html">symemu2</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="symemu2/svc.html">symemu2.svc Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="symemu2/svc.html#classes">Classes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="symemu2/svc.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.svc.Epoc9Svc.html">Epoc9Svc</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="symemu2/svc.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="symemu2/common.html">symemu2.common Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="symemu2/common.html#classes">Classes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="symemu2/common.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.common.BytePairReaderStream.html">BytePairReaderStream</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.common.MbmReader.html">MbmReader</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.common.MifReader.html">MifReader</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="symemu2/common.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="symemu2/descriptor.html">symemu2.descriptor Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="symemu2/descriptor.html#classes">Classes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="symemu2/descriptor.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.descriptor.Descriptor16.html">Descriptor16</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.descriptor.Descriptor8.html">Descriptor8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.descriptor.DescriptorBase.html">DescriptorBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.descriptor.DescriptorType.html">DescriptorType</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="symemu2/descriptor.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="symemu2/events.html">symemu2.events Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="symemu2/events.html#functions">Functions</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="symemu2/events.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.events.emulatorBreakpointInvoke.html">emulatorBreakpointInvoke</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.events.emulatorEpocFunctionInvoke.html">emulatorEpocFunctionInvoke</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.events.emulatorPanicInvoke.html">emulatorPanicInvoke</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.events.emulatorRescheduleInvoke.html">emulatorRescheduleInvoke</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu2.events.emulatorSystemCallInvoke.html">emulatorSystemCallInvoke</a></li>
 </ul>
 </li>
 </ul>
@@ -71,10 +90,47 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="symemu/index.html">symemu</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="symemu/symemu.html">symemu Module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="symemu/symemu.html#functions">Functions</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="symemu/symemu.html#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.emulog.html">emulog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.getCurrentProcess.html">getCurrentProcess</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.getCurrentThread.html">getCurrentThread</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.getProcessesList.html">getProcessesList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.loadCodeseg.html">loadCodeseg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.messageFromHandle.html">messageFromHandle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.readByte.html">readByte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.readDword.html">readDword</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.readQword.html">readQword</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.readWord.html">readWord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.registerBreakpointInvokement.html">registerBreakpointInvokement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.registerLibraryInvokement.html">registerLibraryInvokement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.registerPanicInvokement.html">registerPanicInvokement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.registerRescheduleInvokement.html">registerRescheduleInvokement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.registerSvcInvokement.html">registerSvcInvokement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.sessionFromHandle.html">sessionFromHandle</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="symemu/symemu.html#classes">Classes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="symemu/symemu.html#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.Codeseg.html">Codeseg</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.Cpu.html">Cpu</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.IpcMessage.html">IpcMessage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.Process.html">Process</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.Server.html">Server</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.Session.html">Session</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../api/symemu.Thread.html">Thread</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="symemu/symemu.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
@@ -117,16 +173,16 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="../index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="../tutorials/basic.html" title="previous chapter">Scripting basic</a></li>
+      <li>Previous: <a href="../tutorials/debugging.html" title="previous chapter">Debugging with GDB and IDA</a></li>
       <li>Next: <a href="symemu2/index.html" title="next chapter">symemu2</a></li>
   </ul></li>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -148,7 +204,7 @@
       &copy;2019, pent0.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

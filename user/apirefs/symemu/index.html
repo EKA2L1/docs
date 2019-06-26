@@ -16,6 +16,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="symemu Module" href="symemu.html" />
+    <link rel="prev" title="emulatorSystemCallInvoke" href="../../api/symemu2.events.emulatorSystemCallInvoke.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -38,10 +39,47 @@
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="symemu.html">symemu Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="symemu.html#functions">Functions</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="symemu.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.emulog.html">emulog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.getCurrentProcess.html">getCurrentProcess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.getCurrentThread.html">getCurrentThread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.getProcessesList.html">getProcessesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.loadCodeseg.html">loadCodeseg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.messageFromHandle.html">messageFromHandle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.readByte.html">readByte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.readDword.html">readDword</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.readQword.html">readQword</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.readWord.html">readWord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerBreakpointInvokement.html">registerBreakpointInvokement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerLibraryInvokement.html">registerLibraryInvokement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerPanicInvokement.html">registerPanicInvokement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerRescheduleInvokement.html">registerRescheduleInvokement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerSvcInvokement.html">registerSvcInvokement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.sessionFromHandle.html">sessionFromHandle</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="symemu.html#classes">Classes</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="symemu.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Codeseg.html">Codeseg</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Cpu.html">Cpu</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.IpcMessage.html">IpcMessage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Process.html">Process</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Server.html">Server</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Session.html">Session</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Thread.html">Thread</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="symemu.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
@@ -86,16 +124,17 @@
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../index.html">Scripting API references</a><ul>
+      <li>Previous: <a href="../../api/symemu2.events.emulatorSystemCallInvoke.html" title="previous chapter">emulatorSystemCallInvoke</a></li>
       <li>Next: <a href="symemu.html" title="next chapter">symemu Module</a></li>
   </ul></li>
   </ul></li>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -117,7 +156,7 @@
       &copy;2019, pent0.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
