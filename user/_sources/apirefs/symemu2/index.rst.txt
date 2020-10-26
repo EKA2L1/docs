@@ -11,3 +11,5 @@ symemu2
    common
    descriptor
    events
+   ipc/index.rst
+   utils/index.rst

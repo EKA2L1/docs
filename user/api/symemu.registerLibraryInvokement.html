@@ -1,22 +1,23 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>registerLibraryInvokement &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="registerPanicInvokement" href="symemu.registerPanicInvokement.html" />
-    <link rel="prev" title="registerBreakpointInvokement" href="symemu.registerBreakpointInvokement.html" />
+    <link rel="prev" title="registerIpcInvokement" href="symemu.registerIpcInvokement.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -35,10 +36,22 @@
             
   <div class="section" id="registerlibraryinvokement">
 <h1>registerLibraryInvokement<a class="headerlink" href="#registerlibraryinvokement" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
+<dl class="py function">
 <dt id="symemu.registerLibraryInvokement">
-<code class="sig-prename descclassname">symemu.</code><code class="sig-name descname">registerLibraryInvokement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.registerLibraryInvokement" title="Permalink to this definition">¶</a></dt>
-<dd><p>Register a function to be called when a library function is called</p>
+<code class="sig-prename descclassname">symemu.</code><code class="sig-name descname">registerLibraryInvokement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">arg1</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">arg2</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">arg3</span><span class="p">:</span> <span class="n">function</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#symemu.registerLibraryInvokement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a function to be called when a library function is called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ord: int</strong></dt><dd><p>Ordinal of the function we want to hook with.</p>
+</dd>
+<dt><strong>process_uid: int</strong></dt><dd><p>UID of the process we want to hook with.</p>
+</dd>
+<dt><strong>func</strong></dt><dd><p>The function to invoke on breakpoint hit.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -62,6 +75,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../apirefs/symemu2/index.html">symemu2</a></li>
@@ -79,10 +93,10 @@
 <li class="toctree-l5"><a class="reference internal" href="symemu.readQword.html">readQword</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.readWord.html">readWord</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.registerBreakpointInvokement.html">registerBreakpointInvokement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symemu.registerIpcInvokement.html">registerIpcInvokement</a></li>
 <li class="toctree-l5 current"><a class="current reference internal" href="#">registerLibraryInvokement</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.registerPanicInvokement.html">registerPanicInvokement</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.registerRescheduleInvokement.html">registerRescheduleInvokement</a></li>
-<li class="toctree-l5"><a class="reference internal" href="symemu.registerSvcInvokement.html">registerSvcInvokement</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.sessionFromHandle.html">sessionFromHandle</a></li>
 </ul>
 </li>
@@ -103,7 +117,7 @@
   <li><a href="../apirefs/index.html">Scripting API references</a><ul>
   <li><a href="../apirefs/symemu/index.html">symemu</a><ul>
   <li><a href="../apirefs/symemu/symemu.html">symemu Module</a><ul>
-      <li>Previous: <a href="symemu.registerBreakpointInvokement.html" title="previous chapter">registerBreakpointInvokement</a></li>
+      <li>Previous: <a href="symemu.registerIpcInvokement.html" title="previous chapter">registerIpcInvokement</a></li>
       <li>Next: <a href="symemu.registerPanicInvokement.html" title="next chapter">registerPanicInvokement</a></li>
   </ul></li>
   </ul></li>
@@ -120,7 +134,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -134,10 +148,10 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

@@ -10,6 +10,7 @@ Welcome to EKA2L1's documentation!
    :maxdepth: 16
    :caption: Contents:
    
+   changelog/index
    tutorials/index
    apirefs/index
 

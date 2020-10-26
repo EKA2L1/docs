@@ -1,21 +1,23 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>symemu2.events Module &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="emulatorBreakpointInvoke" href="../../api/symemu2.events.emulatorBreakpointInvoke.html" />
+    <link rel="prev" title="DescriptorType" href="../../api/symemu2.descriptor.DescriptorType.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -42,24 +44,51 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorBreakpointInvoke.html#symemu2.events.emulatorBreakpointInvoke" title="symemu2.events.emulatorBreakpointInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorBreakpointInvoke</span></code></a>(addr)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorBreakpointInvoke.html#symemu2.events.emulatorBreakpointInvoke" title="symemu2.events.emulatorBreakpointInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorBreakpointInvoke</span></code></a>(imageName, addr, …)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorEpocFunctionInvoke.html#symemu2.events.emulatorEpocFunctionInvoke" title="symemu2.events.emulatorEpocFunctionInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorEpocFunctionInvoke</span></code></a>(libname, ord)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorEpocFunctionInvoke.html#symemu2.events.emulatorEpocFunctionInvoke" title="symemu2.events.emulatorEpocFunctionInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorEpocFunctionInvoke</span></code></a>(libname, ord, …)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorPanicInvoke.html#symemu2.events.emulatorPanicInvoke" title="symemu2.events.emulatorPanicInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorPanicInvoke</span></code></a>(panicName)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorIpcInvoke.html#symemu2.events.emulatorIpcInvoke" title="symemu2.events.emulatorIpcInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorIpcInvoke</span></code></a>(serverName, opcode[, …])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorRescheduleInvoke.html#symemu2.events.emulatorRescheduleInvoke" title="symemu2.events.emulatorRescheduleInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorRescheduleInvoke</span></code></a>(func)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorPanicInvoke.html#symemu2.events.emulatorPanicInvoke" title="symemu2.events.emulatorPanicInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorPanicInvoke</span></code></a>(panicName)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorSystemCallInvoke.html#symemu2.events.emulatorSystemCallInvoke" title="symemu2.events.emulatorSystemCallInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorSystemCallInvoke</span></code></a>(svcNum[, time])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu2.events.emulatorRescheduleInvoke.html#symemu2.events.emulatorRescheduleInvoke" title="symemu2.events.emulatorRescheduleInvoke"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulatorRescheduleInvoke</span></code></a>(func)</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Context</span></code>(arg0, arg1, arg2, arg3, flags, sender)</p></td>
+<td><p><p class="rubric">Methods</p>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IntEnum</span></code>(value)</p></td>
+<td><p>Enum where members are also (and must be) ints</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu2.events.IpcInvokementType.html#symemu2.events.IpcInvokementType" title="symemu2.events.IpcInvokementType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IpcInvokementType</span></code></a>(value)</p></td>
+<td><p>An enumeration.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h2>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h2>
+<div class="graphviz"><img src="../../_images/inheritance-1dfa4e725aa812c413100b3314b8b9f040fcf08f.png" alt="Inheritance diagram of symemu2.events.IpcInvokementType" usemap="#inheritance6bf37ade5d" class="inheritance graphviz" /></div>
+<map id="inheritance6bf37ade5d" name="inheritance6bf37ade5d">
+<area shape="rect" id="node3" href="../../api/symemu2.events.IpcInvokementType.html#symemu2.events.IpcInvokementType" target="_top" title="An enumeration." alt="" coords="245,5,377,31"/>
+</map></div>
 </div>
 
 
@@ -81,6 +110,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Scripting API references</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">symemu2</a><ul class="current">
@@ -91,13 +121,20 @@
 <li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu2.events.emulatorBreakpointInvoke.html">emulatorBreakpointInvoke</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu2.events.emulatorEpocFunctionInvoke.html">emulatorEpocFunctionInvoke</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../api/symemu2.events.emulatorIpcInvoke.html">emulatorIpcInvoke</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu2.events.emulatorPanicInvoke.html">emulatorPanicInvoke</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu2.events.emulatorRescheduleInvoke.html">emulatorRescheduleInvoke</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../api/symemu2.events.emulatorSystemCallInvoke.html">emulatorSystemCallInvoke</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../api/symemu2.events.IpcInvokementType.html">IpcInvokementType</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ipc/index.html">symemu2.ipc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils/index.html">symemu2.utils</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../symemu/index.html">symemu</a></li>
@@ -111,6 +148,7 @@
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../index.html">Scripting API references</a><ul>
   <li><a href="index.html">symemu2</a><ul>
+      <li>Previous: <a href="../../api/symemu2.descriptor.DescriptorType.html" title="previous chapter">DescriptorType</a></li>
       <li>Next: <a href="../../api/symemu2.events.emulatorBreakpointInvoke.html" title="next chapter">emulatorBreakpointInvoke</a></li>
   </ul></li>
   </ul></li>
@@ -126,7 +164,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -140,10 +178,10 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

@@ -1,0 +1,1 @@
+.. automodapi:: symemu2.utils.string

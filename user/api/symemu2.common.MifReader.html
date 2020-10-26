@@ -1,20 +1,23 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MifReader &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="symemu2.descriptor Module" href="../apirefs/symemu2/descriptor.html" />
+    <link rel="prev" title="MbmReader" href="symemu2.common.MbmReader.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,7 +36,7 @@
             
   <div class="section" id="mifreader">
 <h1>MifReader<a class="headerlink" href="#mifreader" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="symemu2.common.MifReader">
 <em class="property">class </em><code class="sig-prename descclassname">symemu2.common.</code><code class="sig-name descname">MifReader</code><a class="headerlink" href="#symemu2.common.MifReader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
@@ -44,13 +47,13 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.common.MifReader.entryCount" title="symemu2.common.MifReader.entryCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entryCount</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.common.MifReader.entryCount" title="symemu2.common.MifReader.entryCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entryCount</span></code></a>(self)</p></td>
 <td><p>Get total of entry this MIF file consists of.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.common.MifReader.entryDataSize" title="symemu2.common.MifReader.entryDataSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entryDataSize</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.common.MifReader.entryDataSize" title="symemu2.common.MifReader.entryDataSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entryDataSize</span></code></a>(self, arg0)</p></td>
 <td><p>Get the binary data size of a MIF entry.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.common.MifReader.readEntry" title="symemu2.common.MifReader.readEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readEntry</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.common.MifReader.readEntry" title="symemu2.common.MifReader.readEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readEntry</span></code></a>(self, arg0)</p></td>
 <td><p>Read data of a MIF entry.</p></td>
 </tr>
 </tbody>
@@ -62,27 +65,27 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.common.MifReader.entryCount" title="symemu2.common.MifReader.entryCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entryCount</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.common.MifReader.entryCount" title="symemu2.common.MifReader.entryCount"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entryCount</span></code></a>(self)</p></td>
 <td><p>Get total of entry this MIF file consists of.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.common.MifReader.entryDataSize" title="symemu2.common.MifReader.entryDataSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entryDataSize</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu2.common.MifReader.entryDataSize" title="symemu2.common.MifReader.entryDataSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entryDataSize</span></code></a>(self, arg0)</p></td>
 <td><p>Get the binary data size of a MIF entry.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.common.MifReader.readEntry" title="symemu2.common.MifReader.readEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readEntry</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu2.common.MifReader.readEntry" title="symemu2.common.MifReader.readEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readEntry</span></code></a>(self, arg0)</p></td>
 <td><p>Read data of a MIF entry.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Documentation</p>
-<dl class="method">
+<dl class="py method">
 <dt id="symemu2.common.MifReader.entryCount">
-<code class="sig-name descname">entryCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu2.common.MifReader.entryCount" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">entryCount</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu2.common.MifReader" title="symemu2.common.MifReader">symemu2.common.MifReader</a></span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu2.common.MifReader.entryCount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get total of entry this MIF file consists of.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="symemu2.common.MifReader.entryDataSize">
-<code class="sig-name descname">entryDataSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu2.common.MifReader.entryDataSize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">entryDataSize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu2.common.MifReader" title="symemu2.common.MifReader">symemu2.common.MifReader</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu2.common.MifReader.entryDataSize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the binary data size of a MIF entry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -100,9 +103,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="symemu2.common.MifReader.readEntry">
-<code class="sig-name descname">readEntry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu2.common.MifReader.readEntry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">readEntry</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu2.common.MifReader" title="symemu2.common.MifReader">symemu2.common.MifReader</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; bytes<a class="headerlink" href="#symemu2.common.MifReader.readEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read data of a MIF entry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -143,6 +146,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../apirefs/symemu2/index.html">symemu2</a><ul class="current">
@@ -151,9 +155,7 @@
 <li class="toctree-l4 current"><a class="reference internal" href="../apirefs/symemu2/common.html#classes">Classes</a><ul class="current">
 <li class="toctree-l5"><a class="reference internal" href="symemu2.common.BytePairReaderStream.html">BytePairReaderStream</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu2.common.MbmReader.html">MbmReader</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="#">MifReader</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">MifReader</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../apirefs/symemu2/common.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
@@ -161,6 +163,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../apirefs/symemu2/descriptor.html">symemu2.descriptor Module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../apirefs/symemu2/events.html">symemu2.events Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../apirefs/symemu2/ipc/index.html">symemu2.ipc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../apirefs/symemu2/utils/index.html">symemu2.utils</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../apirefs/symemu/index.html">symemu</a></li>
@@ -175,6 +179,8 @@
   <li><a href="../apirefs/index.html">Scripting API references</a><ul>
   <li><a href="../apirefs/symemu2/index.html">symemu2</a><ul>
   <li><a href="../apirefs/symemu2/common.html">symemu2.common Module</a><ul>
+      <li>Previous: <a href="symemu2.common.MbmReader.html" title="previous chapter">MbmReader</a></li>
+      <li>Next: <a href="../apirefs/symemu2/descriptor.html" title="next chapter">symemu2.descriptor Module</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -190,7 +196,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -204,10 +210,10 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

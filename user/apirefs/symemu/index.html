@@ -1,22 +1,23 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>symemu &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="symemu Module" href="symemu.html" />
-    <link rel="prev" title="emulatorSystemCallInvoke" href="../../api/symemu2.events.emulatorSystemCallInvoke.html" />
+    <link rel="prev" title="getStaticUtf8String" href="../../api/symemu2.utils.string.getStaticUtf8String.html" />
    
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
@@ -51,35 +52,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/symemu.readQword.html">readQword</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/symemu.readWord.html">readWord</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerBreakpointInvokement.html">registerBreakpointInvokement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerIpcInvokement.html">registerIpcInvokement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerLibraryInvokement.html">registerLibraryInvokement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerPanicInvokement.html">registerPanicInvokement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerRescheduleInvokement.html">registerRescheduleInvokement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.registerSvcInvokement.html">registerSvcInvokement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/symemu.sessionFromHandle.html">sessionFromHandle</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="symemu.html#classes">Classes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Codeseg.html">Codeseg</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Cpu.html">Cpu</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.IpcMessage.html">IpcMessage</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Process.html">Process</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Server.html">Server</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Session.html">Session</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Thread.html">Thread</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Codeseg.html">Codeseg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Cpu.html">Cpu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.IpcMessage.html">IpcMessage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Process.html">Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Server.html">Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Session.html">Session</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/symemu.Thread.html">Thread</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="symemu.html#class-inheritance-diagram">Class Inheritance Diagram</a></li>
@@ -108,6 +95,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Scripting API references</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../symemu2/index.html">symemu2</a></li>
@@ -124,7 +112,7 @@
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
   <li><a href="../index.html">Scripting API references</a><ul>
-      <li>Previous: <a href="../../api/symemu2.events.emulatorSystemCallInvoke.html" title="previous chapter">emulatorSystemCallInvoke</a></li>
+      <li>Previous: <a href="../../api/symemu2.utils.string.getStaticUtf8String.html" title="previous chapter">getStaticUtf8String</a></li>
       <li>Next: <a href="symemu.html" title="next chapter">symemu Module</a></li>
   </ul></li>
   </ul></li>
@@ -139,7 +127,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -153,10 +141,10 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

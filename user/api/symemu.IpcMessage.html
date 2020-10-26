@@ -1,20 +1,23 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IpcMessage &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Process" href="symemu.Process.html" />
+    <link rel="prev" title="Cpu" href="symemu.Cpu.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,7 +36,7 @@
             
   <div class="section" id="ipcmessage">
 <h1>IpcMessage<a class="headerlink" href="#ipcmessage" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="symemu.IpcMessage">
 <em class="property">class </em><code class="sig-prename descclassname">symemu.</code><code class="sig-name descname">IpcMessage</code><a class="headerlink" href="#symemu.IpcMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
@@ -44,16 +47,19 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.arg" title="symemu.IpcMessage.arg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arg</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.arg" title="symemu.IpcMessage.arg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arg</span></code></a>(self, arg0)</p></td>
 <td><p>Get the argument at specified index.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.IpcMessage.function" title="symemu.IpcMessage.function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">function</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.IpcMessage.flags" title="symemu.IpcMessage.flags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flags</span></code></a>(self)</p></td>
+<td><p>Get IPC message flags, containing information about argument types.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.function" title="symemu.IpcMessage.function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">function</span></code></a>(self)</p></td>
 <td><p>Get opcode ordinal of this message.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.sender" title="symemu.IpcMessage.sender"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sender</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.IpcMessage.sender" title="symemu.IpcMessage.sender"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sender</span></code></a>(self)</p></td>
 <td><p>Get the thread that sends and owns the message.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.IpcMessage.session" title="symemu.IpcMessage.session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">session</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.session" title="symemu.IpcMessage.session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">session</span></code></a>(self)</p></td>
 <td><p>Get the session of this message.</p></td>
 </tr>
 </tbody>
@@ -65,24 +71,27 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.arg" title="symemu.IpcMessage.arg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arg</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.arg" title="symemu.IpcMessage.arg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arg</span></code></a>(self, arg0)</p></td>
 <td><p>Get the argument at specified index.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.IpcMessage.function" title="symemu.IpcMessage.function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">function</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.IpcMessage.flags" title="symemu.IpcMessage.flags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flags</span></code></a>(self)</p></td>
+<td><p>Get IPC message flags, containing information about argument types.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.function" title="symemu.IpcMessage.function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">function</span></code></a>(self)</p></td>
 <td><p>Get opcode ordinal of this message.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.sender" title="symemu.IpcMessage.sender"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sender</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.IpcMessage.sender" title="symemu.IpcMessage.sender"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sender</span></code></a>(self)</p></td>
 <td><p>Get the thread that sends and owns the message.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.IpcMessage.session" title="symemu.IpcMessage.session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">session</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.IpcMessage.session" title="symemu.IpcMessage.session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">session</span></code></a>(self)</p></td>
 <td><p>Get the session of this message.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Documentation</p>
-<dl class="method">
+<dl class="py method">
 <dt id="symemu.IpcMessage.arg">
-<code class="sig-name descname">arg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.IpcMessage.arg" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">arg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.IpcMessage" title="symemu.IpcMessage">symemu.IpcMessage</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.IpcMessage.arg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the argument at specified index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -100,21 +109,27 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
+<dt id="symemu.IpcMessage.flags">
+<code class="sig-name descname">flags</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.IpcMessage" title="symemu.IpcMessage">symemu.IpcMessage</a></span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.IpcMessage.flags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get IPC message flags, containing information about argument types.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="symemu.IpcMessage.function">
-<code class="sig-name descname">function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.IpcMessage.function" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">function</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.IpcMessage" title="symemu.IpcMessage">symemu.IpcMessage</a></span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.IpcMessage.function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get opcode ordinal of this message.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="symemu.IpcMessage.sender">
-<code class="sig-name descname">sender</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.IpcMessage.sender" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sender</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.IpcMessage" title="symemu.IpcMessage">symemu.IpcMessage</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="symemu.Thread.html#symemu.Thread" title="symemu.Thread">symemu.Thread</a><a class="headerlink" href="#symemu.IpcMessage.sender" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the thread that sends and owns the message.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="symemu.IpcMessage.session">
-<code class="sig-name descname">session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.IpcMessage.session" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">session</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.IpcMessage" title="symemu.IpcMessage">symemu.IpcMessage</a></span></em><span class="sig-paren">)</span> &#x2192; eka2l1::scripting::session_wrapper<a class="headerlink" href="#symemu.IpcMessage.session" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the session of this message.</p>
 </dd></dl>
 
@@ -141,6 +156,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../apirefs/symemu2/index.html">symemu2</a></li>
@@ -150,9 +166,7 @@
 <li class="toctree-l4 current"><a class="reference internal" href="../apirefs/symemu/symemu.html#classes">Classes</a><ul class="current">
 <li class="toctree-l5"><a class="reference internal" href="symemu.Codeseg.html">Codeseg</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Cpu.html">Cpu</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="#">IpcMessage</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">IpcMessage</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Process.html">Process</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Server.html">Server</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Session.html">Session</a></li>
@@ -175,6 +189,8 @@
   <li><a href="../apirefs/index.html">Scripting API references</a><ul>
   <li><a href="../apirefs/symemu/index.html">symemu</a><ul>
   <li><a href="../apirefs/symemu/symemu.html">symemu Module</a><ul>
+      <li>Previous: <a href="symemu.Cpu.html" title="previous chapter">Cpu</a></li>
+      <li>Next: <a href="symemu.Process.html" title="next chapter">Process</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -190,7 +206,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -204,10 +220,10 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

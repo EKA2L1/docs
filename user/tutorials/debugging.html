@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Debugging with GDB and IDA &#8212; EKA2L1 0.0.1 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging with IDA &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Scripting API references" href="../apirefs/index.html" />
@@ -33,64 +34,58 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="debugging-with-gdb-and-ida">
-<h1>Debugging with GDB and IDA<a class="headerlink" href="#debugging-with-gdb-and-ida" title="Permalink to this headline">¶</a></h1>
-<p>EKA2L1 has a <em>functional GDB stub with the Unicorn JIT engine</em>. It means that you can hook up and debugging the whole EPOC system with GDB,
-and also with IDA. Because of performance reason, this is not included in the <em>Dynarmic JIT engine</em> yet.</p>
+  <div class="section" id="debugging-with-ida">
+<h1>Debugging with IDA<a class="headerlink" href="#debugging-with-ida" title="Permalink to this headline">¶</a></h1>
+<p>EKA2L1 has a <em>functional GDB stub with the Dynarmic JIT engine</em>. It means that you can hook up and debugging the whole EPOC system with IDA (plus GDB).</p>
 <p>Here is list of supported features:</p>
 <ul class="simple">
 <li><p><strong>Software breakpoints</strong>: Record a list of address that will pause the emulated system once the program counter of the CPU hit one of the address in the list. Use the <em>b/break</em> command in GDB and specify the execute breakpoint address.</p></li>
-<li><dl class="simple">
-<dt><strong>Hardware breakpoints</strong>: This includes read/write and access breakpoints.</dt><dd><ul>
-<li><p><strong>Read breakpoint</strong> (see <em>rwatch</em> command), is a kind of breakpoint that hit when there is an instruction that read memory at specified address.</p></li>
-<li><p><strong>Write breakpoint</strong> (see <em>watch</em> command), works pretty much the same as read one, except, yes, it hits when memory are writed at specified address.</p></li>
-<li><p><strong>Access breakpoint</strong> is read and write breakpoint fuses toghether.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
 <li><p>Segmentation faults are reported as well. Be careful.</p></li>
 </ul>
 <p class="rubric">Get ready</p>
 <p>If you want to use raw GDB, please make sure that your GDB version support ARM guest. You can download the ARM toolchain from ARM website, it contains
 what you need on Windows, or just use gdb-multiarch in case you are on Unix-based system.</p>
 <p>It’s not possible to run gdb with a EPOC image yet. You must run gdb with no comment and connect it with EKA2L1.</p>
-<p>First, make sure that in <em>config.yml</em>, option <strong>enable-gdb-stub</strong> is set to <em>true</em>:</p>
+<p>First, make sure that in <em>config.yml</em>, option <strong>enable-gdb-stub</strong> is set to <em>true</em>.</p>
 <img alt="../_images/gdb_enable_gdb_stub.png" src="../_images/gdb_enable_gdb_stub.png" />
-<p>Then, launch the emulator with program you wish to debug, or the program that spawns another program or loads an DLL you wish to debug. In this example, I’m gonna
-launch the ecomserver.exe (<em>“z:\sys\bin\ecomserver.exe”</em>)</p>
-<img alt="../_images/gdb_stub_wait.png" src="../_images/gdb_stub_wait.png" />
-<p>You can change the port in option <strong>gdb-port</strong> inside config.yml. The emulator should now wait for a connection…. from somewhere!</p>
+<p><em>Note:</em> You can also adjust the port that your GDB/IDA will connect to with the option <strong>gdb-port.</strong> By default it’s 24689, the same as being used in Citra.</p>
+<p>Then, launch the emulator with program you wish to debug, or the program that spawns another program or loads an DLL you wish to debug.</p>
+<p>In this example, I’m gonna launch the game <strong>The Night Flier</strong> by <strong>PageNet. Soft</strong>. It’s executable is located in <em>E:/sys/bin/</em> with the name of <strong>thenightflier.exe</strong>.
+We might keep that in mind for future purpose.</p>
+<img alt="../_images/emu_launch_with_gdb.png" src="../_images/emu_launch_with_gdb.png" />
+<p>The emulator should now wait for a connection…. from somewhere!</p>
+<p class="rubric">Use with IDA</p>
+<p>Launch IDA, choose remote GDB backend for debug, and setup the process options like this:</p>
+<img alt="../_images/ida_new_set_port.png" src="../_images/ida_new_set_port.png" />
+<p>The input and application fields should be leave by default. The port field should contains the GDB port displayed on EKA2L1 log screen. You can change it in <em>config.yml</em>.</p>
+<p>Now let’s try to rebase the program. Why? Normally the program does not rebase by itself, since it’s limitation from both IDA and emulator part. This part needs
+to be done in order for user to debug any non-ROM program. ROM program will be debuggable out of the box.</p>
+<p>Notice the executable name mentioned earlier. Now let’s try to run the game normally, without GDB stub enabled.
+A search for the executable name in the log shows the code base of the executable.</p>
+<img alt="../_images/exe_find_base.png" src="../_images/exe_find_base.png" />
+<p>That’s the address we gonna use to rebase the entire image: <strong>0x70000000</strong>. Get back on IDA, and choose <em>Edit/Segments/Rebase program</em>:</p>
+<img alt="../_images/ida_new_rebase.png" src="../_images/ida_new_rebase.png" />
+<p>That’s almost done. Why are we launching the debugger without nothing to debug? Let’s put a breakpoint somewhere.</p>
+<img alt="../_images/ida_new_set_breakpoint.png" src="../_images/ida_new_set_breakpoint.png" />
+<p>I have set a new breakpoint at the subroutine which is supposed to handle application event delivered from Symbian.</p>
+<p>Now launch EKA2L1 with that program as parameter, and launch the IDA debugger now :). Try to continue all the way, and…</p>
+<img alt="../_images/ida_new_see_another.png" src="../_images/ida_new_see_another.png" />
+<p>The breakpoint hits! Here in the image I put another breakpoint, and has skipped to that breakpoint. You can see on the right panel
+the value of some registers. The circled R0 here supposedly temporary stored the event type delivered to this game.</p>
+<p>It’s recommend for you to try it yourself more. Now if you get used to this in IDA, it’s mostly the same in GDB, just more commands to
+remember.</p>
 <p class="rubric">Use with GDB</p>
-<p>First, launch the GDB instance with ARM support :D, and connect it with the remote using <em>target remote localhost:&lt;gdb_port&gt;</em>.</p>
+<p>First, launch the GDB instance with ARM support, and connect it with the remote using <em>target remote localhost:&lt;gdb_port&gt;</em>.</p>
 <img alt="../_images/gdb_launch.png" src="../_images/gdb_launch.png" />
 <p>The default port number is 24689, and if you set it yourself but forgot, EKA2L1 will remind it. Look at the log again.</p>
-<p>From now feel free to use GDB commands. For example, let’s set a hardware breakpoint! At 0x400004. Normally, Symbian BSS is hardcoded for ROM image. For ROM process image,
-the BSS always reside at the base, while for DLL, the ROM builder allocated section staticly at a memory region, specifically dedicated to ROM DLL static data.</p>
-<p>This memory region is sadly not available on EKA1, which maybe is why they tell you that global data in DLL were not supported in Symbian version 6 or lower (EKA1),
-because it’s unfair for ROM DLL?</p>
-<p>EComServer executable uses some global memory, and have the base BSS address at 0x400000. At DWORD 0x400004, it is a boolean, for what purpose we don’t care. So let’s use
-it as our dummy test.</p>
-<img alt="../_images/gdb_set_hbreakpoint.png" src="../_images/gdb_set_hbreakpoint.png" />
-<p>We set a write watch here, any write operation to this address will temporary halt the emulator. Let’s use <em>c</em> command to continue!</p>
+<p>From now feel free to use GDB commands. For example, let’s set a breakpoint at that same address again (0x70016d2c). Since it’s a Thumb breakpoint, you need to prepare:</p>
+<ul class="simple">
+<li><p>Set the fallback mode to Thumb. The command to set fallback mode is <em>set arm fallback-mode &lt;arm/thumb&gt;</em>, which depends on what type of breakpoint you want to set.</p></li>
+<li><p>Use the command <em>break *0x&lt;hex_address&gt;</em> to set a breakpoint at that specific address.</p></li>
+<li><p>Since the launch time of EKA2L1 is not fast, it may got out of GDB’s remote timeout. To extend the timeout, use the command <em>set remotetimeout &lt;num_in_seconds&gt;</em>. I use 200 in this example.</p></li>
+</ul>
 <img alt="../_images/gdb_breakpoint_hit.png" src="../_images/gdb_breakpoint_hit.png" />
-<p>Woohoo! The breakpoint is hit. The new value is 1, so somewhere it must set this boolean to true. Feel free to go on from now, but if you really want to know where it’s
-set, IDA would help.</p>
-<p class="rubric">Use with IDA</p>
-<p>We use ecomserver.exe for this example again.</p>
-<p>Launch IDA, choose remote GDB backend for debug, and setup the process options like this:</p>
-<img alt="../_images/ida_process_options.png" src="../_images/ida_process_options.png" />
-<p>The input and application fields should be leave by default. The port field should contains the GDB port displayed on EKA2L1 log screen. You can change it in <em>config.yml</em>.</p>
-<p>Now let’s try to add a hardware breakpoint like on the GDB example. Write breakpoint at address 0x400004. Go to <strong>Debugger/Breakpoint/Breakpoint list</strong> and insert a new breakpoint.</p>
-<img alt="../_images/ida_setup_breakpoint.png" src="../_images/ida_setup_breakpoint.png" />
-<p>Our breakpoint is memory breakpoint, so it should be a hardware one and the mode is <em>“write”</em>.</p>
-<p>Now launch EKA2L1 with that program as parameter, and launch the IDA debugger now :). Try to continue all the way, and…</p>
-<img alt="../_images/ida_breakpoint_trigger.png" src="../_images/ida_breakpoint_trigger.png" />
-<p>The breakpoint is hit! If you click OK, the PC will <em>points to the instruction</em> after <em>the one that does the write</em>.</p>
-<img alt="../_images/ida_pc_point.png" src="../_images/ida_pc_point.png" />
-<p>It’s recommend for you to try it yourself more. I do have <strong>notes</strong> before ending this.</p>
-<p><strong>Note:</strong> With relocatable image like E32 image, the remote debugger won’t rebase the disassembly itself. That means you have to manually relocate the program in the disassembler.
-For process image, EKA2L1 mentions the base address in the log when spawning new process. I will make it easier in the future to do this.</p>
+<p>Following the step, and boom… It hits. Enjoy the time debugging!</p>
 </div>
 
 
@@ -112,10 +107,11 @@ For process image, EKA2L1 mentions the base address in the log when spawning new
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="basic.html">Scripting basic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="process.html">Process operations</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Debugging with GDB and IDA</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Debugging with IDA</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a></li>
@@ -141,7 +137,7 @@ For process image, EKA2L1 mentions the base address in the log when spawning new
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -155,10 +151,10 @@ For process image, EKA2L1 mentions the base address in the log when spawning new
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

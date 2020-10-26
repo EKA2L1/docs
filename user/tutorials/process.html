@@ -1,21 +1,22 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Process operations &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Debugging with GDB and IDA" href="debugging.html" />
+    <link rel="next" title="Debugging with IDA" href="debugging.html" />
     <link rel="prev" title="Scripting basic" href="basic.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
@@ -48,7 +49,7 @@
 <p>While I support you in playing with reading the process memory, I don’t encourage you to play with writing. It can be dangerous, unless
 you know what you are doing.</p>
 <p>Here, I will only talk about how to read. Let’s start with a reschedule hook, just so we can see the result sooner.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@symemu2.events.emulatorRescheduleInvoke</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@symemu2</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">emulatorRescheduleInvoke</span>
 <span class="k">def</span> <span class="nf">simpleMemoryHook</span><span class="p">():</span>
   <span class="k">pass</span>
 </pre></div>
@@ -58,25 +59,25 @@ In EKA2, the address of the ROM is 0x80000000, starts with the header. We are go
 <p>So we should read 4 bytes from 0x8000008C, since the address is 4 bytes long (32-bit).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">symemu</span><span class="o">.</span><span class="n">getCurrentProcess</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="n">pr</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">pr</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
   <span class="n">dat</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">readProcessMemory</span><span class="p">(</span><span class="mh">0x8000008C</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>We are getting the current process, and read from its memory space. The return data is a binary string, which we should use <em>struct.unpack</em> to unpacks data
 to integer.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="p">)</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&lt;I&#39;</span><span class="p">,</span> <span class="n">dat</span><span class="p">)</span>
-<span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;ROM base address is: 0x{:X}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+<span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;ROM base address is: 0x</span><span class="si">{:X}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Finally, the complete code is here!</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@symemu2.events.emulatorRescheduleInvoke</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@symemu2</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">emulatorRescheduleInvoke</span>
 <span class="k">def</span> <span class="nf">simpleMemoryHook</span><span class="p">():</span>
   <span class="n">pr</span> <span class="o">=</span> <span class="n">symemu</span><span class="o">.</span><span class="n">getCurrentProcess</span><span class="p">()</span>
 
-  <span class="k">if</span> <span class="n">pr</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">pr</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">dat</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">readProcessMemory</span><span class="p">(</span><span class="mh">0x8000008C</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
     <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="p">)</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&lt;I&#39;</span><span class="p">,</span> <span class="n">dat</span><span class="p">)</span>
-    <span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;ROM base address is: 0x{:X}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+    <span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;ROM base address is: 0x</span><span class="si">{:X}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>If you run EKA2L1, you will see the result that we all expected:</p>
@@ -89,11 +90,11 @@ always located at the beginning of a class layout.</p>
 <p>Append this to our current hook</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">thr</span> <span class="o">=</span> <span class="n">symemu</span><span class="o">.</span><span class="n">getCurrentThread</span><span class="p">()</span>
 
-<span class="k">if</span> <span class="n">thr</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">thr</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
   <span class="n">stb</span> <span class="o">=</span> <span class="n">thr</span><span class="o">.</span><span class="n">getHeapBase</span><span class="p">()</span>
   <span class="n">dat</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">readProcessMemory</span><span class="p">(</span><span class="n">stb</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
   <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="p">)</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&lt;I&#39;</span><span class="p">,</span> <span class="n">dat</span><span class="p">)</span>
-  <span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;Heap allocator Vtable address is: 0x{:X}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+  <span class="n">symemu</span><span class="o">.</span><span class="n">emulog</span><span class="p">(</span><span class="s1">&#39;Heap allocator Vtable address is: 0x</span><span class="si">{:X}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>And you should get this:</p>
@@ -120,10 +121,11 @@ always located at the beginning of a class layout.</p>
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="basic.html">Scripting basic</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Process operations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging with GDB and IDA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging with IDA</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a></li>
@@ -135,7 +137,7 @@ always located at the beginning of a class layout.</p>
   <li><a href="../index.html">Documentation overview</a><ul>
   <li><a href="index.html">Tutorials</a><ul>
       <li>Previous: <a href="basic.html" title="previous chapter">Scripting basic</a></li>
-      <li>Next: <a href="debugging.html" title="next chapter">Debugging with GDB and IDA</a></li>
+      <li>Next: <a href="debugging.html" title="next chapter">Debugging with IDA</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -149,7 +151,7 @@ always located at the beginning of a class layout.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -163,10 +165,10 @@ always located at the beginning of a class layout.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

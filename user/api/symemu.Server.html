@@ -1,20 +1,23 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Server &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Session" href="symemu.Session.html" />
+    <link rel="prev" title="Process" href="symemu.Process.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,7 +36,7 @@
             
   <div class="section" id="server">
 <h1>Server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="symemu.Server">
 <em class="property">class </em><code class="sig-prename descclassname">symemu.</code><code class="sig-name descname">Server</code><a class="headerlink" href="#symemu.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
@@ -44,7 +47,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Server.getName" title="symemu.Server.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Server.getName" title="symemu.Server.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>(self)</p></td>
 <td><p>Get name of the server.</p></td>
 </tr>
 </tbody>
@@ -56,15 +59,15 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Server.getName" title="symemu.Server.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Server.getName" title="symemu.Server.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>(self)</p></td>
 <td><p>Get name of the server.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Documentation</p>
-<dl class="method">
+<dl class="py method">
 <dt id="symemu.Server.getName">
-<code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Server.getName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getName</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Server" title="symemu.Server">symemu.Server</a></span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#symemu.Server.getName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get name of the server.</p>
 </dd></dl>
 
@@ -91,6 +94,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../apirefs/symemu2/index.html">symemu2</a></li>
@@ -102,9 +106,7 @@
 <li class="toctree-l5"><a class="reference internal" href="symemu.Cpu.html">Cpu</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.IpcMessage.html">IpcMessage</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Process.html">Process</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="#">Server</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Server</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Session.html">Session</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Thread.html">Thread</a></li>
 </ul>
@@ -125,6 +127,8 @@
   <li><a href="../apirefs/index.html">Scripting API references</a><ul>
   <li><a href="../apirefs/symemu/index.html">symemu</a><ul>
   <li><a href="../apirefs/symemu/symemu.html">symemu Module</a><ul>
+      <li>Previous: <a href="symemu.Process.html" title="previous chapter">Process</a></li>
+      <li>Next: <a href="symemu.Session.html" title="next chapter">Session</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -140,7 +144,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -154,10 +158,10 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

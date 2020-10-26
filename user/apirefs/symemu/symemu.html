@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>symemu Module &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="emulog" href="../../api/symemu.emulog.html" />
@@ -43,7 +44,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.emulog.html#symemu.emulog" title="symemu.emulog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulog</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.emulog.html#symemu.emulog" title="symemu.emulog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">emulog</span></code></a>(arg0, *args)</p></td>
 <td><p>Log to the emulator’s logging system</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.getCurrentProcess.html#symemu.getCurrentProcess" title="symemu.getCurrentProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentProcess</span></code></a>()</p></td>
@@ -55,40 +56,40 @@
 <tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.getProcessesList.html#symemu.getProcessesList" title="symemu.getProcessesList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProcessesList</span></code></a>()</p></td>
 <td><p>Get a list of processes currently running</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.loadCodeseg.html#symemu.loadCodeseg" title="symemu.loadCodeseg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadCodeseg</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.loadCodeseg.html#symemu.loadCodeseg" title="symemu.loadCodeseg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadCodeseg</span></code></a>(arg0, arg1)</p></td>
 <td><p>Load a codeseg from an E32Image/ROM image.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.messageFromHandle.html#symemu.messageFromHandle" title="symemu.messageFromHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">messageFromHandle</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.messageFromHandle.html#symemu.messageFromHandle" title="symemu.messageFromHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">messageFromHandle</span></code></a>(arg0)</p></td>
 <td><p>Retrieve an IPC message object from a handle.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.readByte.html#symemu.readByte" title="symemu.readByte"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readByte</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.readByte.html#symemu.readByte" title="symemu.readByte"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readByte</span></code></a>(arg0)</p></td>
 <td><p>Read a byte from current process address space.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.readDword.html#symemu.readDword" title="symemu.readDword"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readDword</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.readDword.html#symemu.readDword" title="symemu.readDword"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readDword</span></code></a>(arg0)</p></td>
 <td><p>Read a dword from current process address space.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.readQword.html#symemu.readQword" title="symemu.readQword"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readQword</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.readQword.html#symemu.readQword" title="symemu.readQword"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readQword</span></code></a>(arg0)</p></td>
 <td><p>Read a qword from current process address space.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.readWord.html#symemu.readWord" title="symemu.readWord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readWord</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.readWord.html#symemu.readWord" title="symemu.readWord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readWord</span></code></a>(arg0)</p></td>
 <td><p>Read a word from current process address space.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.registerBreakpointInvokement.html#symemu.registerBreakpointInvokement" title="symemu.registerBreakpointInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerBreakpointInvokement</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.registerBreakpointInvokement.html#symemu.registerBreakpointInvokement" title="symemu.registerBreakpointInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerBreakpointInvokement</span></code></a>(arg0, arg1, …)</p></td>
 <td><p>Register a function to be called when a breakpoint is hit.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.registerLibraryInvokement.html#symemu.registerLibraryInvokement" title="symemu.registerLibraryInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerLibraryInvokement</span></code></a>()</p></td>
-<td><p>Register a function to be called when a library function is called</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.registerIpcInvokement.html#symemu.registerIpcInvokement" title="symemu.registerIpcInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerIpcInvokement</span></code></a>(arg0, arg1, arg2, arg3)</p></td>
+<td><p>Register a function to be called around IPC event.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.registerPanicInvokement.html#symemu.registerPanicInvokement" title="symemu.registerPanicInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerPanicInvokement</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.registerLibraryInvokement.html#symemu.registerLibraryInvokement" title="symemu.registerLibraryInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerLibraryInvokement</span></code></a>(arg0, arg1, arg2, arg3)</p></td>
+<td><p>Register a function to be called when a library function is called.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.registerPanicInvokement.html#symemu.registerPanicInvokement" title="symemu.registerPanicInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerPanicInvokement</span></code></a>(arg0, arg1)</p></td>
 <td><p>Register a function to be called when a panic happen</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.registerRescheduleInvokement.html#symemu.registerRescheduleInvokement" title="symemu.registerRescheduleInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerRescheduleInvokement</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.registerRescheduleInvokement.html#symemu.registerRescheduleInvokement" title="symemu.registerRescheduleInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerRescheduleInvokement</span></code></a>(arg0)</p></td>
 <td><p>Register a function to be called right before a reschedule is started</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../api/symemu.registerSvcInvokement.html#symemu.registerSvcInvokement" title="symemu.registerSvcInvokement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">registerSvcInvokement</span></code></a>()</p></td>
-<td><p>Register a function to be called when a specific SVC is called</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.sessionFromHandle.html#symemu.sessionFromHandle" title="symemu.sessionFromHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sessionFromHandle</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../api/symemu.sessionFromHandle.html#symemu.sessionFromHandle" title="symemu.sessionFromHandle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sessionFromHandle</span></code></a>(arg0)</p></td>
 <td><p>Retrieve a Session message object from a handle.</p></td>
 </tr>
 </tbody>
@@ -135,7 +136,7 @@
 </div>
 <div class="section" id="class-inheritance-diagram">
 <h2>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h2>
-<div class="graphviz"><img src="../../_images/inheritance-6a097056462493be0c185d832de4e71f5f1b1476.png" alt="Inheritance diagram of symemu.Codeseg, symemu.Cpu, symemu.IpcMessage, symemu.Process, symemu.Server, symemu.Session, symemu.Thread" usemap="#inheritance4a75eccfda" class="inheritance graphviz" /></div>
+<div class="graphviz"><img src="../../_images/inheritance-a3f20eaee568c7145ce0e79de8f72a699a9d3666.png" alt="Inheritance diagram of symemu.Codeseg, symemu.Cpu, symemu.IpcMessage, symemu.Process, symemu.Server, symemu.Session, symemu.Thread" usemap="#inheritance4a75eccfda" class="inheritance graphviz" /></div>
 <map id="inheritance4a75eccfda" name="inheritance4a75eccfda">
 <area shape="rect" id="node1" href="../../api/symemu.Codeseg.html#symemu.Codeseg" target="_top" title="Codeseg" alt="" coords="179,5,252,31"/>
 <area shape="rect" id="node3" href="../../api/symemu.Cpu.html#symemu.Cpu" target="_top" title="Cpu" alt="" coords="179,55,251,80"/>
@@ -166,6 +167,7 @@
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Scripting API references</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../symemu2/index.html">symemu2</a></li>
@@ -183,10 +185,10 @@
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu.readQword.html">readQword</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu.readWord.html">readWord</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu.registerBreakpointInvokement.html">registerBreakpointInvokement</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../api/symemu.registerIpcInvokement.html">registerIpcInvokement</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu.registerLibraryInvokement.html">registerLibraryInvokement</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu.registerPanicInvokement.html">registerPanicInvokement</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu.registerRescheduleInvokement.html">registerRescheduleInvokement</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../api/symemu.registerSvcInvokement.html">registerSvcInvokement</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../api/symemu.sessionFromHandle.html">sessionFromHandle</a></li>
 </ul>
 </li>
@@ -231,7 +233,7 @@
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -245,10 +247,10 @@
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

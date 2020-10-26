@@ -11,6 +11,7 @@ IpcMessage
    .. autosummary::
 
       ~IpcMessage.arg
+      ~IpcMessage.flags
       ~IpcMessage.function
       ~IpcMessage.sender
       ~IpcMessage.session
@@ -18,6 +19,7 @@ IpcMessage
    .. rubric:: Methods Documentation
 
    .. automethod:: arg
+   .. automethod:: flags
    .. automethod:: function
    .. automethod:: sender
    .. automethod:: session

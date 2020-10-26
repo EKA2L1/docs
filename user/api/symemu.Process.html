@@ -1,20 +1,23 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Process &#8212; EKA2L1 0.0.1 documentation</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Server" href="symemu.Server.html" />
+    <link rel="prev" title="IpcMessage" href="symemu.IpcMessage.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -33,7 +36,7 @@
             
   <div class="section" id="process">
 <h1>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="symemu.Process">
 <em class="property">class </em><code class="sig-prename descclassname">symemu.</code><code class="sig-name descname">Process</code><a class="headerlink" href="#symemu.Process" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
@@ -44,19 +47,31 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getExecutablePath" title="symemu.Process.getExecutablePath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExecutablePath</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getExecutablePath" title="symemu.Process.getExecutablePath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExecutablePath</span></code></a>(self)</p></td>
 <td><p>Get the executable path in Symbian filesystem.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.getName" title="symemu.Process.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.getName" title="symemu.Process.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>(self)</p></td>
 <td><p>Get the process’s name</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getThreadList" title="symemu.Process.getThreadList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getThreadList</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getThreadList" title="symemu.Process.getThreadList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getThreadList</span></code></a>(self)</p></td>
 <td><p>Get all the thread that the process owns.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readProcessMemory" title="symemu.Process.readProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readProcessMemory</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readByte" title="symemu.Process.readByte"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readByte</span></code></a>(self, arg0)</p></td>
+<td><p>“Read a byte from process memory at given address.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.readDword" title="symemu.Process.readDword"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readDword</span></code></a>(self, arg0)</p></td>
+<td><p>“Read a double word from process memory at given address.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readProcessMemory" title="symemu.Process.readProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readProcessMemory</span></code></a>(self, arg0, arg1)</p></td>
 <td><p>Read at the specified address in the process’s address space.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.writeProcessMemory" title="symemu.Process.writeProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeProcessMemory</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.readQword" title="symemu.Process.readQword"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readQword</span></code></a>(self, arg0)</p></td>
+<td><p>“Read a quad word from process memory at given address.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readWord" title="symemu.Process.readWord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readWord</span></code></a>(self, arg0)</p></td>
+<td><p>“Read a word from process memory at given address.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.writeProcessMemory" title="symemu.Process.writeProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeProcessMemory</span></code></a>(self, arg0, arg1)</p></td>
 <td><p>Write at the specified address in the process’s address space.</p></td>
 </tr>
 </tbody>
@@ -68,39 +83,51 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getExecutablePath" title="symemu.Process.getExecutablePath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExecutablePath</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getExecutablePath" title="symemu.Process.getExecutablePath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getExecutablePath</span></code></a>(self)</p></td>
 <td><p>Get the executable path in Symbian filesystem.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.getName" title="symemu.Process.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.getName" title="symemu.Process.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>(self)</p></td>
 <td><p>Get the process’s name</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getThreadList" title="symemu.Process.getThreadList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getThreadList</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.getThreadList" title="symemu.Process.getThreadList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getThreadList</span></code></a>(self)</p></td>
 <td><p>Get all the thread that the process owns.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readProcessMemory" title="symemu.Process.readProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readProcessMemory</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readByte" title="symemu.Process.readByte"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readByte</span></code></a>(self, arg0)</p></td>
+<td><p>“Read a byte from process memory at given address.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.readDword" title="symemu.Process.readDword"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readDword</span></code></a>(self, arg0)</p></td>
+<td><p>“Read a double word from process memory at given address.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readProcessMemory" title="symemu.Process.readProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readProcessMemory</span></code></a>(self, arg0, arg1)</p></td>
 <td><p>Read at the specified address in the process’s address space.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.writeProcessMemory" title="symemu.Process.writeProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeProcessMemory</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.readQword" title="symemu.Process.readQword"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readQword</span></code></a>(self, arg0)</p></td>
+<td><p>“Read a quad word from process memory at given address.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symemu.Process.readWord" title="symemu.Process.readWord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readWord</span></code></a>(self, arg0)</p></td>
+<td><p>“Read a word from process memory at given address.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symemu.Process.writeProcessMemory" title="symemu.Process.writeProcessMemory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeProcessMemory</span></code></a>(self, arg0, arg1)</p></td>
 <td><p>Write at the specified address in the process’s address space.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Documentation</p>
-<dl class="method">
+<dl class="py method">
 <dt id="symemu.Process.getExecutablePath">
-<code class="sig-name descname">getExecutablePath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Process.getExecutablePath" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getExecutablePath</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Process" title="symemu.Process">symemu.Process</a></span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#symemu.Process.getExecutablePath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the executable path in Symbian filesystem.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="symemu.Process.getName">
-<code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Process.getName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getName</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Process" title="symemu.Process">symemu.Process</a></span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#symemu.Process.getName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the process’s name</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="symemu.Process.getThreadList">
-<code class="sig-name descname">getThreadList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Process.getThreadList" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getThreadList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Process" title="symemu.Process">symemu.Process</a></span></em><span class="sig-paren">)</span> &#x2192; List[eka2l1::scripting::thread]<a class="headerlink" href="#symemu.Process.getThreadList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all the thread that the process owns.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -112,9 +139,21 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
+<dt id="symemu.Process.readByte">
+<code class="sig-name descname">readByte</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Process" title="symemu.Process">symemu.Process</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Process.readByte" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Read a byte from process memory at given address.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="symemu.Process.readDword">
+<code class="sig-name descname">readDword</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Process" title="symemu.Process">symemu.Process</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Process.readDword" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Read a double word from process memory at given address.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="symemu.Process.readProcessMemory">
-<code class="sig-name descname">readProcessMemory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Process.readProcessMemory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">readProcessMemory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Process" title="symemu.Process">symemu.Process</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">arg1</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; bytes<a class="headerlink" href="#symemu.Process.readProcessMemory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read at the specified address in the process’s address space.</p>
 <p>The function can throw an exception in case the memory at the given address in the memory
 space is not yet mapped, or the size of the data exceeds the mapped memory size from that
@@ -137,9 +176,21 @@ address fowards.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
+<dt id="symemu.Process.readQword">
+<code class="sig-name descname">readQword</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Process" title="symemu.Process">symemu.Process</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Process.readQword" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Read a quad word from process memory at given address.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="symemu.Process.readWord">
+<code class="sig-name descname">readWord</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Process" title="symemu.Process">symemu.Process</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#symemu.Process.readWord" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Read a word from process memory at given address.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="symemu.Process.writeProcessMemory">
-<code class="sig-name descname">writeProcessMemory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symemu.Process.writeProcessMemory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">writeProcessMemory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#symemu.Process" title="symemu.Process">symemu.Process</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">arg1</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#symemu.Process.writeProcessMemory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write at the specified address in the process’s address space.</p>
 <p>The function can throw an exception in case the memory at the given address in the memory
 space is not yet mapped, or the size of the data exceeds the mapped memory size from that
@@ -179,6 +230,7 @@ address fowards.</p>
 <h3>Navigation</h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Document changelogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../apirefs/index.html">Scripting API references</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../apirefs/symemu2/index.html">symemu2</a></li>
@@ -189,9 +241,7 @@ address fowards.</p>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Codeseg.html">Codeseg</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Cpu.html">Cpu</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.IpcMessage.html">IpcMessage</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="#">Process</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Process</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Server.html">Server</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Session.html">Session</a></li>
 <li class="toctree-l5"><a class="reference internal" href="symemu.Thread.html">Thread</a></li>
@@ -213,6 +263,8 @@ address fowards.</p>
   <li><a href="../apirefs/index.html">Scripting API references</a><ul>
   <li><a href="../apirefs/symemu/index.html">symemu</a><ul>
   <li><a href="../apirefs/symemu/symemu.html">symemu Module</a><ul>
+      <li>Previous: <a href="symemu.IpcMessage.html" title="previous chapter">IpcMessage</a></li>
+      <li>Next: <a href="symemu.Server.html" title="next chapter">Server</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -228,7 +280,7 @@ address fowards.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -242,10 +294,10 @@ address fowards.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2019, pent0.
+      &copy;2019- EKA2L1 Project.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

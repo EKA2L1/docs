@@ -10,3 +10,4 @@ Start with EKA2L1, by reading these:
    basic
    process
    debugging
+   changelog
