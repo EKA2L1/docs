@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>EKA2L1 Lua API Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>EKA2L1</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/common.html">common</a></li>
+  <li><a href="../modules/cpu.html">cpu</a></li>
+  <li><a href="../modules/events.html">events</a></li>
+  <li><a href="../modules/ipc.context.html">ipc.context</a></li>
+  <li><a href="../modules/kernel.html">kernel</a></li>
+  <li><strong>mem</strong></li>
+  <li><a href="../modules/std.html">std</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/scriptingnote.md.html">Note about scripting</a></li>
+  <li><a href="../topics/debuggingwithgdb.md.html">Debugging with IDA</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>mem</code></h1>
+<p><strong>Mem</strong> module provides read/write operations on current memory address space.</p>
+<p> All the functions in here can also be executed in another way, by getting the current process
+ object in <a href="../modules/kernel.html#">kernel</a> module and call read/write functions.</p>
+
+<p> Invalid memory read will return 0, which is the limitation of this module. But write operations
+ can return a boolean indicates failure or success.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#readByte">readByte (addr)</a></td>
+	<td class="summary">Read the byte value <em>(8-bit)</em> at the specified address.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#readWord">readWord (addr)</a></td>
+	<td class="summary">Read the word value <em>(16-bit)</em> at the specified address.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#readDword">readDword (addr)</a></td>
+	<td class="summary">Read the dword value <em>(32-bit)</em> at the specified address.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#readQword">readQword (addr)</a></td>
+	<td class="summary">Read the qword value <em>(64-bit)</em> at the specified address.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#writeByte">writeByte (addr, data)</a></td>
+	<td class="summary">Write a byte <em>(8-bit)</em> to the specified address.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#readWord">readWord (addr, data)</a></td>
+	<td class="summary">Write a word <em>(16-bit)</em> to the specified address.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#readDword">readDword (addr, data)</a></td>
+	<td class="summary">Write a dword <em>(32-bit)</em> to the specified address.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#readQword">readQword (addr, data)</a></td>
+	<td class="summary">Write a qword <em>(64-bit)</em> to the specified address.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "readByte"></a>
+    <strong>readByte (addr)</strong>
+    </dt>
+    <dd>
+    Read the byte value <em>(8-bit)</em> at the specified address.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Byte value stored at the given address.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "readWord"></a>
+    <strong>readWord (addr)</strong>
+    </dt>
+    <dd>
+    Read the word value <em>(16-bit)</em> at the specified address.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Word value stored at the given address.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "readDword"></a>
+    <strong>readDword (addr)</strong>
+    </dt>
+    <dd>
+    Read the dword value <em>(32-bit)</em> at the specified address.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Dword value stored at the given address.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "readQword"></a>
+    <strong>readQword (addr)</strong>
+    </dt>
+    <dd>
+    Read the qword value <em>(64-bit)</em> at the specified address.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Qword value stored at the given address.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "writeByte"></a>
+    <strong>writeByte (addr, data)</strong>
+    </dt>
+    <dd>
+    Write a byte <em>(8-bit)</em> to the specified address.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+        <li><span class="parameter">data</span>
+         The byte to write.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        True if the write operation performed successfully.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "readWord"></a>
+    <strong>readWord (addr, data)</strong>
+    </dt>
+    <dd>
+    Write a word <em>(16-bit)</em> to the specified address.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+        <li><span class="parameter">data</span>
+         The byte to write.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        True if the write operation performed successfully.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "readDword"></a>
+    <strong>readDword (addr, data)</strong>
+    </dt>
+    <dd>
+    Write a dword <em>(32-bit)</em> to the specified address.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+        <li><span class="parameter">data</span>
+         The byte to write.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        True if the write operation performed successfully.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "readQword"></a>
+    <strong>readQword (addr, data)</strong>
+    </dt>
+    <dd>
+    Write a qword <em>(64-bit)</em> to the specified address.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+        <li><span class="parameter">data</span>
+         The byte to write.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        True if the write operation performed successfully.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2021-10-30 01:38:52 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

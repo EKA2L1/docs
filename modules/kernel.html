@@ -1,0 +1,1281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>EKA2L1 Lua API Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>EKA2L1</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Fields">Fields</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/common.html">common</a></li>
+  <li><a href="../modules/cpu.html">cpu</a></li>
+  <li><a href="../modules/events.html">events</a></li>
+  <li><a href="../modules/ipc.context.html">ipc.context</a></li>
+  <li><strong>kernel</strong></li>
+  <li><a href="../modules/mem.html">mem</a></li>
+  <li><a href="../modules/std.html">std</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/scriptingnote.md.html">Note about scripting</a></li>
+  <li><a href="../topics/debuggingwithgdb.md.html">Debugging with IDA</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>kernel</code></h1>
+<p><strong>Kernel</strong> module provides access to the emulated system's kernel object (read/write/...)</p>
+<p> All kernel objects provided here are class-based.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#kernel.codeseg:codeSize">kernel.codeseg:codeSize ()</a></td>
+	<td class="summary">Get the size of the segment's code section.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.codeseg:dataSize">kernel.codeseg:dataSize ()</a></td>
+	<td class="summary">Get the size of the segment's data section.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.codeseg:bssSize">kernel.codeseg:bssSize ()</a></td>
+	<td class="summary">Get the size of the segment's bss (initialised data) section.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.codeseg:exportCount">kernel.codeseg:exportCount ()</a></td>
+	<td class="summary">Get the number of export functions (addresses) this code segment provides.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.codeseg:lookup">kernel.codeseg:lookup (process, ord)</a></td>
+	<td class="summary">Search for a function with specified index (ordinal) in the library and retrieve its address.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#loadCodeseg">loadCodeseg (path)</a></td>
+	<td class="summary">Load a new code segment.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.process:readByte">kernel.process:readByte (addr)</a></td>
+	<td class="summary">Read the byte value <em>(8-bit)</em> at the specified address from this process's memory space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.process:readWord">kernel.process:readWord (addr)</a></td>
+	<td class="summary">Read the word value <em>(16-bit)</em> at the specified address from this process's memory space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.process:readDword">kernel.process:readDword (addr)</a></td>
+	<td class="summary">Read the dword value <em>(32-bit)</em> at the specified address from this process's memory space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.process:readQword">kernel.process:readQword (addr)</a></td>
+	<td class="summary">Read the qword value <em>(64-bit)</em> at the specified address from this process's memory space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.process:name">kernel.process:name ()</a></td>
+	<td class="summary">Get the name of the process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.process:executablePath">kernel.process:executablePath ()</a></td>
+	<td class="summary">Get the path to the running process's executable.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.process:readMemory">kernel.process:readMemory (addr, size)</a></td>
+	<td class="summary">Read a certain amount of data from the process's memory.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.process:writeMemory">kernel.process:writeMemory (addr, buffer)</a></td>
+	<td class="summary">Write a byte array into the process's memory space.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getCurrentProcess">getCurrentProcess ()</a></td>
+	<td class="summary">Get the current running process on the current emulated core.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:name">kernel.thread:name ()</a></td>
+	<td class="summary">Get the name of the thread.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:stackBase">kernel.thread:stackBase ()</a></td>
+	<td class="summary">Get the stack base of the thread.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:heapBase">kernel.thread:heapBase ()</a></td>
+	<td class="summary">Get the heap base of the thread.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:getRegister">kernel.thread:getRegister (idx)</a></td>
+	<td class="summary">Retrieve the value in register from R0 to R15.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:getPc">kernel.thread:getPc ()</a></td>
+	<td class="summary">Retrieve the value in the PC (program counter) register.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:getLr">kernel.thread:getLr ()</a></td>
+	<td class="summary">Retrieve the value in the PC (program counter) register.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:getSp">kernel.thread:getSp ()</a></td>
+	<td class="summary">Retrieve the value in the SP (stack pointer) register.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:getCpsr">kernel.thread:getCpsr ()</a></td>
+	<td class="summary">Retrieve the value in the CPSR register.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:exitReason">kernel.thread:exitReason ()</a></td>
+	<td class="summary">Get the reason this thread exited.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:currentState">kernel.thread:currentState ()</a></td>
+	<td class="summary">Get the current scheduling state of the thread.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:priority">kernel.thread:priority ()</a></td>
+	<td class="summary">Get the scheduling priority of the thread in the process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:nextInProcess">kernel.thread:nextInProcess ()</a></td>
+	<td class="summary">Get the thread next to the caller thread in the thread's owning process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.thread:ownProcess">kernel.thread:ownProcess ()</a></td>
+	<td class="summary">Get the process that owns this thread.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.process:firstThread">kernel.process:firstThread ()</a></td>
+	<td class="summary">Get the first thread of the process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getCurrentThread">getCurrentThread ()</a></td>
+	<td class="summary">Get the current running thread on the current emulated core.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.server:name">kernel.server:name ()</a></td>
+	<td class="summary">Get the name of the server.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.session:server">kernel.session:server ()</a></td>
+	<td class="summary">Get the server that this session is connected to.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sessionFromHandle">sessionFromHandle (handle)</a></td>
+	<td class="summary">Retrieve the session object from the kernel handle.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.ipcMessage:func">kernel.ipcMessage:func ()</a></td>
+	<td class="summary">Get the function/opcode of this message.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.ipcMessage:flags">kernel.ipcMessage:flags ()</a></td>
+	<td class="summary">Get the argument flags of this message.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.ipcMessage:arg">kernel.ipcMessage:arg (idx)</a></td>
+	<td class="summary">Get the argument value of the message.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.ipcMessage:sender">kernel.ipcMessage:sender ()</a></td>
+	<td class="summary">Get the thread sending the message.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.ipcMessage:session">kernel.ipcMessage:session ()</a></td>
+	<td class="summary">Get the session responsible for establishing connection to the server and sending the message.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#kernel.ipcMessage:requestStatusAddress">kernel.ipcMessage:requestStatusAddress ()</a></td>
+	<td class="summary">Get the request status address in the sender process's memory space.</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#THREAD_STATE_CREATED">THREAD_STATE_CREATED</a></td>
+	<td class="summary">Thread is created but not yet to run.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#THREAD_STATE_RUN">THREAD_STATE_RUN</a></td>
+	<td class="summary">Thread is running.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#THREAD_STATE_WAIT">THREAD_STATE_WAIT</a></td>
+	<td class="summary">Thread is currently blocked and is waiting for a sync object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#THREAD_STATE_READY">THREAD_STATE_READY</a></td>
+	<td class="summary">Thread is in the ready queue, waiting to be run.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#THREAD_STATE_WAIT_FAST_SEMA">THREAD_STATE_WAIT_FAST_SEMA</a></td>
+	<td class="summary">Thread is currently waiting for a fast semaphore.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#THREAD_STATE_WAIT_MUTEX">THREAD_STATE_WAIT_MUTEX</a></td>
+	<td class="summary">Thread is currently waiting for a mutex.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#THREAD_STATE_WAIT_MUTEX_SUSPEND">THREAD_STATE_WAIT_MUTEX_SUSPEND</a></td>
+	<td class="summary">Thread is currently waiting for a mutex and is also suspended.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#THREAD_STATE_WAIT_FAST_SEMA_SUSPEND">THREAD_STATE_WAIT_FAST_SEMA_SUSPEND</a></td>
+	<td class="summary">Thread is currently waiting for a fast semaphore and is also suspended.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#THREAD_STATE_HOLD_MUTEX_PENDING">THREAD_STATE_HOLD_MUTEX_PENDING</a></td>
+	<td class="summary">Thread is currently in queue to own the mutex object.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "kernel.codeseg:codeSize"></a>
+    <strong>kernel.codeseg:codeSize ()</strong>
+    </dt>
+    <dd>
+    Get the size of the segment's code section.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A 32-bit integer as the code size.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.codeseg:dataSize"></a>
+    <strong>kernel.codeseg:dataSize ()</strong>
+    </dt>
+    <dd>
+    Get the size of the segment's data section.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A 32-bit integer as the data size.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.codeseg:bssSize"></a>
+    <strong>kernel.codeseg:bssSize ()</strong>
+    </dt>
+    <dd>
+    Get the size of the segment's bss (initialised data) section.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A 32-bit integer as the bss size.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.codeseg:exportCount"></a>
+    <strong>kernel.codeseg:exportCount ()</strong>
+    </dt>
+    <dd>
+    Get the number of export functions (addresses) this code segment provides.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A 32-bit integer containing the export count.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.codeseg:lookup"></a>
+    <strong>kernel.codeseg:lookup (process, ord)</strong>
+    </dt>
+    <dd>
+    Search for a function with specified index (ordinal) in the library and retrieve its address. </p>
+
+<p> For each process, a library may have different code address. ROM libraries are exception to this.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">process</span>
+         A <code>process</code> object, where the address of the function should be retrieved on.
+        </li>
+        <li><span class="parameter">ord</span>
+         The ordinal identify the library function to get.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        32-bit integer as address to the function in the process's memory space, 0 on failure.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "loadCodeseg"></a>
+    <strong>loadCodeseg (path)</strong>
+    </dt>
+    <dd>
+    Load a new code segment. </p>
+
+<p> This code segment is not attached to any process during this function.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+         The emulated system's path to the codeseg to load.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        codeseg class if the codeseg loads successfully, else nil.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.process:readByte"></a>
+    <strong>kernel.process:readByte (addr)</strong>
+    </dt>
+    <dd>
+    Read the byte value <em>(8-bit)</em> at the specified address from this process's memory space.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Byte value stored at the given address.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.process:readWord"></a>
+    <strong>kernel.process:readWord (addr)</strong>
+    </dt>
+    <dd>
+    Read the word value <em>(16-bit)</em> at the specified address from this process's memory space.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Word value stored at the given address.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.process:readDword"></a>
+    <strong>kernel.process:readDword (addr)</strong>
+    </dt>
+    <dd>
+    Read the dword value <em>(32-bit)</em> at the specified address from this process's memory space.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Dword value stored at the given address.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.process:readQword"></a>
+    <strong>kernel.process:readQword (addr)</strong>
+    </dt>
+    <dd>
+    Read the qword value <em>(64-bit)</em> at the specified address from this process's memory space.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to perform the read.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Qword value stored at the given address.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.process:name"></a>
+    <strong>kernel.process:name ()</strong>
+    </dt>
+    <dd>
+    Get the name of the process.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A <a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> contains the process's name.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.process:executablePath"></a>
+    <strong>kernel.process:executablePath ()</strong>
+    </dt>
+    <dd>
+    Get the path to the running process's executable. </p>
+
+<p> This path is in the emulated's virtual file system.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A <a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> contains the executable path.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.process:readMemory"></a>
+    <strong>kernel.process:readMemory (addr, size)</strong>
+    </dt>
+    <dd>
+    Read a certain amount of data from the process's memory.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to read data from.
+        </li>
+        <li><span class="parameter">size</span>
+         The number of bytes to read.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A byte array contains the read result.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.process:writeMemory"></a>
+    <strong>kernel.process:writeMemory (addr, buffer)</strong>
+    </dt>
+    <dd>
+    Write a byte array into the process's memory space. </p>
+
+<p> This function will call <a href="https://www.lua.org/manual/5.1/manual.html#pdf-error">error</a> on falure.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">addr</span>
+         The address to write the byte array to.
+        </li>
+        <li><span class="parameter">buffer</span>
+         Byte array to write to the memory.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getCurrentProcess"></a>
+    <strong>getCurrentProcess ()</strong>
+    </dt>
+    <dd>
+    Get the current running process on the current emulated core.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Current process with type <code>process</code>.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:name"></a>
+    <strong>kernel.thread:name ()</strong>
+    </dt>
+    <dd>
+    Get the name of the thread.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A <a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> contains the thread's name.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:stackBase"></a>
+    <strong>kernel.thread:stackBase ()</strong>
+    </dt>
+    <dd>
+    Get the stack base of the thread. </p>
+
+<p> This is the beginning address of the stack memory chunk, also can
+ be called as the highest point of the stack.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A 32-bit integer address as the stack base value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:heapBase"></a>
+    <strong>kernel.thread:heapBase ()</strong>
+    </dt>
+    <dd>
+    Get the heap base of the thread. </p>
+
+<p> This is the beginning address of the heap memory chunk, which is created by the
+ code in the thread and not directly managed by the kernel.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A 32-bit integer address as the heap base value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:getRegister"></a>
+    <strong>kernel.thread:getRegister (idx)</strong>
+    </dt>
+    <dd>
+    Retrieve the value in register from R0 to R15. </p>
+
+<p> This is the saved value from the last time this thread ran. If this is the current
+ thread, the value will be the same as the one called from <a href="../modules/cpu.html#">cpu</a> module.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+         The index of the register to retrieve (0 - 15). Undefined behaviour will raise for index out of the given range.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The value of the target register as a 32-bit integer.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:getPc"></a>
+    <strong>kernel.thread:getPc ()</strong>
+    </dt>
+    <dd>
+    Retrieve the value in the PC (program counter) register. </p>
+
+<p> This is the saved value from the last time this thread ran. If this is the current
+ thread, the value will be the same as the one called from <a href="../modules/cpu.html#">cpu</a> module.</p>
+
+<p> The PC register is identical to the R15 register (PC is a different name for R15).
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The value of the PC as a 32-bit integer.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:getLr"></a>
+    <strong>kernel.thread:getLr ()</strong>
+    </dt>
+    <dd>
+    Retrieve the value in the PC (program counter) register. </p>
+
+<p> This is the saved value from the last time this thread ran. If this is the current
+ thread, the value will be the same as the one called from <a href="../modules/cpu.html#">cpu</a> module.</p>
+
+<p> The PC register is identical to the R15 register (PC is a different name for R15).
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The value of the PC as a 32-bit integer.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:getSp"></a>
+    <strong>kernel.thread:getSp ()</strong>
+    </dt>
+    <dd>
+    Retrieve the value in the SP (stack pointer) register. </p>
+
+<p> This is the saved value from the last time this thread ran. If this is the current
+ thread, the value will be the same as the one called from <a href="../modules/cpu.html#">cpu</a> module.</p>
+
+<p> The SP register is identical to the R13 register (SP is a different name for R13).
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The value of the SP as a 32-bit integer.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:getCpsr"></a>
+    <strong>kernel.thread:getCpsr ()</strong>
+    </dt>
+    <dd>
+    Retrieve the value in the CPSR register. </p>
+
+<p> This is the saved value from the last time this thread ran. If this is the current
+ thread, the value will be the same as the one called from <a href="../modules/cpu.html#">cpu</a> module.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The value of the CPSR as a 32-bit integer.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:exitReason"></a>
+    <strong>kernel.thread:exitReason ()</strong>
+    </dt>
+    <dd>
+    Get the reason this thread exited. </p>
+
+<p> The reason is a code, which will be 0 if the thread is still running.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        32-bit integer code indicating the exit reason.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:currentState"></a>
+    <strong>kernel.thread:currentState ()</strong>
+    </dt>
+    <dd>
+    Get the current scheduling state of the thread.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        One of the value in <code>THREAD_STATE_WAIT_</code> constant enums.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:priority"></a>
+    <strong>kernel.thread:priority ()</strong>
+    </dt>
+    <dd>
+    Get the scheduling priority of the thread in the process.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        One of the value in <code>PRIORITY_</code> constant enums.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:nextInProcess"></a>
+    <strong>kernel.thread:nextInProcess ()</strong>
+    </dt>
+    <dd>
+    Get the thread next to the caller thread in the thread's owning process. </p>
+
+<p> Use this to iterate all threads in the process.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        <code>nil</code> if there's no more thread in the process, else the next thread as a <code>thread</code> object.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.thread:ownProcess"></a>
+    <strong>kernel.thread:ownProcess ()</strong>
+    </dt>
+    <dd>
+    Get the process that owns this thread.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The owning process as a <code>process</code> object.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.process:firstThread"></a>
+    <strong>kernel.process:firstThread ()</strong>
+    </dt>
+    <dd>
+    Get the first thread of the process. </p>
+
+<p> From the first thread you can travel to the next thread by using the <a href="../modules/kernel.html#kernel.thread:nextInProcess">kernel.thread:nextInProcess</a> function.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The first thread of the process as a <code>process</code> object.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/kernel.html#kernel.thread:nextInProcess">kernel.thread:nextInProcess</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "getCurrentThread"></a>
+    <strong>getCurrentThread ()</strong>
+    </dt>
+    <dd>
+    Get the current running thread on the current emulated core.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Current thread with type <code>thread</code>.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.server:name"></a>
+    <strong>kernel.server:name ()</strong>
+    </dt>
+    <dd>
+    Get the name of the server.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A <a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> object containing the server's name.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.session:server"></a>
+    <strong>kernel.session:server ()</strong>
+    </dt>
+    <dd>
+    Get the server that this session is connected to. </p>
+
+<p> The session will be responsible for sending messages/requests to the connected server.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The connected server object with type of <a href="../modules/kernel.html#kernel.session:server">server</a>.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sessionFromHandle"></a>
+    <strong>sessionFromHandle (handle)</strong>
+    </dt>
+    <dd>
+    Retrieve the session object from the kernel handle.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">handle</span>
+         The kernel handle of the session.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The <a href="../modules/kernel.html#kernel.ipcMessage:session">session</a> object correspond to this kernel handle.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.ipcMessage:func"></a>
+    <strong>kernel.ipcMessage:func ()</strong>
+    </dt>
+    <dd>
+    Get the function/opcode of this message.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        32-bit integer containing the message's function code.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.ipcMessage:flags"></a>
+    <strong>kernel.ipcMessage:flags ()</strong>
+    </dt>
+    <dd>
+    Get the argument flags of this message. </p>
+
+<p> This value is only relevant on IPCv2 model (appears usually on late S60v2 and further).
+ On EKA1 this value is 0xFFFFFFFF.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        32-bit integer containing the message's argument flags.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.ipcMessage:arg"></a>
+    <strong>kernel.ipcMessage:arg (idx)</strong>
+    </dt>
+    <dd>
+    Get the argument value of the message. </p>
+
+<p> Each message stores 4 integer arguments that can be considered as pointer,
+ handle or pure integer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+         The index of the argument to retrieve (0 - 3). Undefined behaviour if value passed is not in specified range.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The value of the argument.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.ipcMessage:sender"></a>
+    <strong>kernel.ipcMessage:sender ()</strong>
+    </dt>
+    <dd>
+    Get the thread sending the message.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The <code>thread</code> object that sends the message.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.ipcMessage:session"></a>
+    <strong>kernel.ipcMessage:session ()</strong>
+    </dt>
+    <dd>
+    Get the session responsible for establishing connection to the server and sending the message.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The <a href="../modules/kernel.html#kernel.ipcMessage:session">session</a> object that does the message submit.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "kernel.ipcMessage:requestStatusAddress"></a>
+    <strong>kernel.ipcMessage:requestStatusAddress ()</strong>
+    </dt>
+    <dd>
+    Get the request status address in the sender process's memory space. </p>
+
+<p> It's recommended to use <a href="../modules/std.html#requestStatus">std.requestStatus</a> class for exploring more about the condition
+ of the status.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Address to the request status as a 32-bit integer.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "THREAD_STATE_CREATED"></a>
+    <strong>THREAD_STATE_CREATED</strong>
+    </dt>
+    <dd>
+    Thread is created but not yet to run.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "THREAD_STATE_RUN"></a>
+    <strong>THREAD_STATE_RUN</strong>
+    </dt>
+    <dd>
+    Thread is running.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "THREAD_STATE_WAIT"></a>
+    <strong>THREAD_STATE_WAIT</strong>
+    </dt>
+    <dd>
+    Thread is currently blocked and is waiting for a sync object.
+ Currently unused.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "THREAD_STATE_READY"></a>
+    <strong>THREAD_STATE_READY</strong>
+    </dt>
+    <dd>
+    Thread is in the ready queue, waiting to be run.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "THREAD_STATE_WAIT_FAST_SEMA"></a>
+    <strong>THREAD_STATE_WAIT_FAST_SEMA</strong>
+    </dt>
+    <dd>
+    Thread is currently waiting for a fast semaphore.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "THREAD_STATE_WAIT_MUTEX"></a>
+    <strong>THREAD_STATE_WAIT_MUTEX</strong>
+    </dt>
+    <dd>
+    Thread is currently waiting for a mutex.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "THREAD_STATE_WAIT_MUTEX_SUSPEND"></a>
+    <strong>THREAD_STATE_WAIT_MUTEX_SUSPEND</strong>
+    </dt>
+    <dd>
+    Thread is currently waiting for a mutex and is also suspended.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "THREAD_STATE_WAIT_FAST_SEMA_SUSPEND"></a>
+    <strong>THREAD_STATE_WAIT_FAST_SEMA_SUSPEND</strong>
+    </dt>
+    <dd>
+    Thread is currently waiting for a fast semaphore and is also suspended.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "THREAD_STATE_HOLD_MUTEX_PENDING"></a>
+    <strong>THREAD_STATE_HOLD_MUTEX_PENDING</strong>
+    </dt>
+    <dd>
+    Thread is currently in queue to own the mutex object.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2021-10-30 01:38:52 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

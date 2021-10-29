@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>EKA2L1 Lua API Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>EKA2L1</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/common.html">common</a></li>
+  <li><strong>cpu</strong></li>
+  <li><a href="../modules/events.html">events</a></li>
+  <li><a href="../modules/ipc.context.html">ipc.context</a></li>
+  <li><a href="../modules/kernel.html">kernel</a></li>
+  <li><a href="../modules/mem.html">mem</a></li>
+  <li><a href="../modules/std.html">std</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/scriptingnote.md.html">Note about scripting</a></li>
+  <li><a href="../topics/debuggingwithgdb.md.html">Debugging with IDA</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>cpu</code></h1>
+<p><strong>CPU</strong> provides access to read/write operations on the emulated CPU's general purpose registers (GPRs).</p>
+<p> The CPU that is targetted by these functions is the one being emulated on the current caller thread. Because of that,
+ these functions can not be run on threads that are not emulating CPUs, as it may result in undefined behaviour.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#getReg">getReg (idx)</a></td>
+	<td class="summary">Read value of register from R0 - R15.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getCpsr">getCpsr ()</a></td>
+	<td class="summary">Read the CPSR register value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getPc">getPc ()</a></td>
+	<td class="summary">Get the current program counter (PC) of the CPU.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getSp">getSp ()</a></td>
+	<td class="summary">Get the current stack pointer (SP) of the CPU.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getLr">getLr ()</a></td>
+	<td class="summary">Get the current stack pointer (LR) of the CPU.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setReg">setReg (idx, val)</a></td>
+	<td class="summary">Set value of register from R0 - R15.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "getReg"></a>
+    <strong>getReg (idx)</strong>
+    </dt>
+    <dd>
+    Read value of register from R0 - R15.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+         The index of the register (0 - 15). Value outside the given range may produce undefined behaviour.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The value currently stored in the targetted register.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getCpsr"></a>
+    <strong>getCpsr ()</strong>
+    </dt>
+    <dd>
+    Read the CPSR register value.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        CPSR register value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getPc"></a>
+    <strong>getPc ()</strong>
+    </dt>
+    <dd>
+    Get the current program counter (PC) of the CPU. </p>
+
+<p> This call is identical to <strong>cpu.getReg(15)</strong> <em>(PC is R15)</em>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Register PC's value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getSp"></a>
+    <strong>getSp ()</strong>
+    </dt>
+    <dd>
+    Get the current stack pointer (SP) of the CPU. </p>
+
+<p> This call is identical to <strong>cpu.getReg(13)</strong> <em>(SP is R13)</em>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Register SP's value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getLr"></a>
+    <strong>getLr ()</strong>
+    </dt>
+    <dd>
+    Get the current stack pointer (LR) of the CPU. </p>
+
+<p> This call is identical to <strong>cpu.getReg(14)</strong> <em>(LR is R14)</em>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Register SP's value
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setReg"></a>
+    <strong>setReg (idx, val)</strong>
+    </dt>
+    <dd>
+    Set value of register from R0 - R15.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+         The index of the register (0 - 15). Value outside the given range may produce undefined behaviour.
+        </li>
+        <li><span class="parameter">val</span>
+         The value that is to write to the destinated register.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2021-10-30 01:38:52 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

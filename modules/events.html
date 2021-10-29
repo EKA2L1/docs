@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>EKA2L1 Lua API Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>EKA2L1</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Fields">Fields</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/common.html">common</a></li>
+  <li><a href="../modules/cpu.html">cpu</a></li>
+  <li><strong>events</strong></li>
+  <li><a href="../modules/ipc.context.html">ipc.context</a></li>
+  <li><a href="../modules/kernel.html">kernel</a></li>
+  <li><a href="../modules/mem.html">mem</a></li>
+  <li><a href="../modules/std.html">std</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/scriptingnote.md.html">Note about scripting</a></li>
+  <li><a href="../topics/debuggingwithgdb.md.html">Debugging with IDA</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>events</code></h1>
+<p><strong>Events</strong> module provides abilities to register callbacks at certain events in the emulator.</p>
+<p> The current supported callback types are: breakpoint and IPC (Inter-process communication) callback. For breakpoint callback,
+ it's always preferred to not spend too much time in the callback, which may impact emulated app performance.</p>
+
+<p> Each script is allowed to have a limit of 2^32 callbacks, but the true number depends on the memory of your system and how much the Lua
+ runner can hold. All callbacks are discarded on script unload.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#registerLibraryHook">registerLibraryHook (libName, ord, processUid, func)</a></td>
+	<td class="summary">Register a callback on library function being called.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#registerBreakpointHook">registerBreakpointHook (libName, addr, processUid, func)</a></td>
+	<td class="summary">Register a callback on a breakpoint.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#registerIpcHook">registerIpcHook (serverName, opcode, when, func)</a></td>
+	<td class="summary">Register a callback on IPC request send/complete.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#clearHook">clearHook (handle)</a></td>
+	<td class="summary">Unregistering a callback.</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#EVENT_IPC_SEND">EVENT_IPC_SEND</a></td>
+	<td class="summary">Passed to <strong>registerIpcHook</strong>, indicating that IPC callback will be invoked when the client process first
+ sends message to the server process.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#EVENT_IPC_COMPLETE">EVENT_IPC_COMPLETE</a></td>
+	<td class="summary">Passed to <strong>registerIpcHook</strong>, indicating that IPC callback will be invoked after the server process finished
+ processing the request and tell the emulator to notify back to the waiting client.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#INVALID_HOOK_HANDLE">INVALID_HOOK_HANDLE</a></td>
+	<td class="summary">Constant indicating an invalid handle returned from callback registering.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "registerLibraryHook"></a>
+    <strong>registerLibraryHook (libName, ord, processUid, func)</strong>
+    </dt>
+    <dd>
+    Register a callback on library function being called. </p>
+
+<p> This is <strong>registerBreakpointHook</strong> in disguise, but with automated address detection. This is preferred
+ for the callback to work across many emulated devices, because address of the library function may change,
+ but the ordinal is consistent.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">libName</span>
+         Name of the library that contains the target library function.
+        </li>
+        <li><span class="parameter">ord</span>
+         The ordinal of the function inside the library.
+        </li>
+        <li><span class="parameter">processUid</span>
+         UID3 of the process you want this callback to be triggered on. Use 0 for any active process.
+        </li>
+        <li><span class="parameter">func</span>
+         Callback function with no parameter and no return.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A handle to this callback (> 0), which can later be used for unregistering. <a href="../modules/events.html#INVALID_HOOK_HANDLE">INVALID_HOOK_HANDLE</a> on failure.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../modules/events.html#clearHook">clearHook</a></li>
+         <li><a href="../modules/events.html#registerBreakpointHook">registerBreakpointHook</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "registerBreakpointHook"></a>
+    <strong>registerBreakpointHook (libName, addr, processUid, func)</strong>
+    </dt>
+    <dd>
+    Register a callback on a breakpoint. </p>
+
+<p> The address passed to this function should be relative to the original code base address found in
+ disassemble/image explorer program. The emulator will rebase the address relatively to where the library
+ is loaded in memory.</p>
+
+<p> In case the breakpoint address is constant and should not be related to any libraries or executables, pass the string "constantaddr"
+ to the <code>libName</code> variable.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">libName</span>
+         Name of the library that contains the target breakpoint. Use "constantaddr" for no library.
+        </li>
+        <li><span class="parameter">addr</span>
+         The address of the breakpoint, relative to the library's original code base address if libName is not "constantaddr"
+        </li>
+        <li><span class="parameter">processUid</span>
+         UID3 of the process you want this callback to be triggered on. Use 0 for any active process.
+        </li>
+        <li><span class="parameter">func</span>
+         Callback function with no parameter and no return.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A handle to this callback (> 0), which can later be used for unregistering. <a href="../modules/events.html#INVALID_HOOK_HANDLE">INVALID_HOOK_HANDLE</a> on failure.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../modules/events.html#clearHook">clearHook</a></li>
+         <li><a href="../modules/events.html#registerLibraryHook">registerLibraryHook</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "registerIpcHook"></a>
+    <strong>registerIpcHook (serverName, opcode, when, func)</strong>
+    </dt>
+    <dd>
+    Register a callback on IPC request send/complete. </p>
+
+<p> For IPC send callback, you have the ability to read data the client sent before the request is delivered
+ to the server process.</p>
+
+<p> For IPC complete callback, you will receive the message context before the request is signaled to be completed to
+ the client process.</p>
+
+<p> Both the callback will receive an <a href="../modules/ipc.context.html#">ipc.context</a> object as its parameter.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">serverName</span>
+         Name of the server to intercept IPC messages.
+        </li>
+        <li><span class="parameter">opcode</span>
+         The target message opcode to intercept.
+        </li>
+        <li><span class="parameter">when</span>
+         The moment to receive the callback. Two options are <a href="../modules/events.html#EVENT_IPC_SEND">EVENT_IPC_SEND</a> and <a href="../modules/events.html#EVENT_IPC_COMPLETE">EVENT_IPC_COMPLETE</a>
+        </li>
+        <li><span class="parameter">func</span>
+         The callback function, with <a href="../modules/ipc.context.html#">ipc.context</a> object as its only parameter.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A handle to this callback (> 0), which can later be used for unregistering. <a href="../modules/events.html#INVALID_HOOK_HANDLE">INVALID_HOOK_HANDLE</a> on failure.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/events.html#clearHook">clearHook</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "clearHook"></a>
+    <strong>clearHook (handle)</strong>
+    </dt>
+    <dd>
+    Unregistering a callback. </p>
+
+<p> This method is safe to call inside a callback. The callback will still continue to do the rest of its job
+ after the delete.</p>
+
+<p> Note that failure is silent, and may only be reported on the log channel.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">handle</span>
+         The handle retrieved from registering.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "EVENT_IPC_SEND"></a>
+    <strong>EVENT_IPC_SEND</strong>
+    </dt>
+    <dd>
+    Passed to <strong>registerIpcHook</strong>, indicating that IPC callback will be invoked when the client process first
+ sends message to the server process.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "EVENT_IPC_COMPLETE"></a>
+    <strong>EVENT_IPC_COMPLETE</strong>
+    </dt>
+    <dd>
+    Passed to <strong>registerIpcHook</strong>, indicating that IPC callback will be invoked after the server process finished
+ processing the request and tell the emulator to notify back to the waiting client.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "INVALID_HOOK_HANDLE"></a>
+    <strong>INVALID_HOOK_HANDLE</strong>
+    </dt>
+    <dd>
+    Constant indicating an invalid handle returned from callback registering.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2021-10-30 01:38:52 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

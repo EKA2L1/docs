@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>EKA2L1 Lua API Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>EKA2L1</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Fields">Fields</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/common.html">common</a></li>
+  <li><a href="../modules/cpu.html">cpu</a></li>
+  <li><a href="../modules/events.html">events</a></li>
+  <li><a href="../modules/ipc.context.html">ipc.context</a></li>
+  <li><a href="../modules/kernel.html">kernel</a></li>
+  <li><a href="../modules/mem.html">mem</a></li>
+  <li><strong>std</strong></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/scriptingnote.md.html">Note about scripting</a></li>
+  <li><a href="../topics/debuggingwithgdb.md.html">Debugging with IDA</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>std</code></h1>
+<p><strong>Std</strong> contains standard functions related to Symbian development's data structure.</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#std.descriptor8:rawData">std.descriptor8:rawData ()</a></td>
+	<td class="summary">Get the raw data that this descriptor is containing.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#rawUtf16ToString">rawUtf16ToString (raw, length)</a></td>
+	<td class="summary">Convert a raw 8-bit C FFI byte array into a 16-bit Unicode string/</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#std.descriptor16:rawData">std.descriptor16:rawData ()</a></td>
+	<td class="summary">Get the raw data that this descriptor is containing.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#std.requestStatus:value">std.requestStatus:value ()</a></td>
+	<td class="summary">Retrieve the current value of the request status</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#std.requestStatus:flags">std.requestStatus:flags ()</a></td>
+	<td class="summary">Retrieve the current flags of the request status</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#descriptor">descriptor</a></td>
+	<td class="summary">Abstract class which allows the containment of data.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descriptor8">descriptor8</a></td>
+	<td class="summary">Detailed descriptor that is designed to hold 8-bit data.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#descriptor16">descriptor16</a></td>
+	<td class="summary">Detailed descriptor that is designed to hold 16-bit data.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#requestStatus">requestStatus</a></td>
+	<td class="summary">Struct holding the status of a request.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "std.descriptor8:rawData"></a>
+    <strong>std.descriptor8:rawData ()</strong>
+    </dt>
+    <dd>
+    Get the raw data that this descriptor is containing.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A raw FFI byte array containing data.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "rawUtf16ToString"></a>
+    <strong>rawUtf16ToString (raw, length)</strong>
+    </dt>
+    <dd>
+    Convert a raw 8-bit C FFI byte array into a 16-bit Unicode string/
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">raw</span>
+         The raw byte array to convert.
+        </li>
+        <li><span class="parameter">length</span>
+         The number of characters that the result string should produce.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Converted <a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> object.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "std.descriptor16:rawData"></a>
+    <strong>std.descriptor16:rawData ()</strong>
+    </dt>
+    <dd>
+    Get the raw data that this descriptor is containing.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A raw FFI byte array containing data.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "std.requestStatus:value"></a>
+    <strong>std.requestStatus:value ()</strong>
+    </dt>
+    <dd>
+    Retrieve the current value of the request status
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A 32-bit integer as the status code.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "std.requestStatus:flags"></a>
+    <strong>std.requestStatus:flags ()</strong>
+    </dt>
+    <dd>
+    Retrieve the current flags of the request status
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A 32-bit integer, which each bit as a flag.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "descriptor"></a>
+    <strong>descriptor</strong>
+    </dt>
+    <dd>
+    Abstract class which allows the containment of data.
+
+
+    <ul>
+        <li><span class="parameter">pr</span>
+         The process where this descriptor lives on.
+        </li>
+        <li><span class="parameter">addr</span>
+         The address of the descriptor in the process's memory.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descriptor8"></a>
+    <strong>descriptor8</strong>
+    </dt>
+    <dd>
+    Detailed descriptor that is designed to hold 8-bit data. </p>
+
+<p> This kind of descriptor usually used to hold 8-bit string or binary data, and can be coverted
+ to string by using <strong>tostring</strong>.
+
+
+    <ul>
+        <li><span class="parameter">pr</span>
+         The process where this descriptor lives on.
+        </li>
+        <li><span class="parameter">addr</span>
+         The address of the descriptor in the process's memory.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "descriptor16"></a>
+    <strong>descriptor16</strong>
+    </dt>
+    <dd>
+    Detailed descriptor that is designed to hold 16-bit data. </p>
+
+<p> This kind of descriptor usually used to hold 16-bit Unicode string, and can be coverted
+ to string by using <strong>tostring</strong>.
+
+
+    <ul>
+        <li><span class="parameter">pr</span>
+         The process where this descriptor lives on.
+        </li>
+        <li><span class="parameter">addr</span>
+         The address of the descriptor in the process's memory.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "requestStatus"></a>
+    <strong>requestStatus</strong>
+    </dt>
+    <dd>
+    Struct holding the status of a request. </p>
+
+<p> On EKA1, this struct simply holds an integer, which contains the result code
+ of completed operation.</p>
+
+<p> However, on EKA2, 32-bit <code>flag</code> bitarray is also added to this struct to tell
+ the status of the sync object associated with this request
+
+
+    <ul>
+        <li><span class="parameter">pr</span>
+         The process where this request status lives on.
+        </li>
+        <li><span class="parameter">addr</span>
+         The address of the request status in the process's memory.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2021-10-30 01:38:52 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>EKA2L1 Lua API Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>EKA2L1</h1>
+
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Fields">Fields</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/common.html">common</a></li>
+  <li><a href="../modules/cpu.html">cpu</a></li>
+  <li><a href="../modules/events.html">events</a></li>
+  <li><strong>ipc.context</strong></li>
+  <li><a href="../modules/kernel.html">kernel</a></li>
+  <li><a href="../modules/mem.html">mem</a></li>
+  <li><a href="../modules/std.html">std</a></li>
+</ul>
+<h2>Topics</h2>
+<ul class="">
+  <li><a href="../topics/scriptingnote.md.html">Note about scripting</a></li>
+  <li><a href="../topics/debuggingwithgdb.md.html">Debugging with IDA</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>ipc.context</code></h1>
+<p><strong>IPC context</strong> provides utilities for manipulating an IPC request.</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.arguments:valueType">IpcContext.arguments:valueType (idx)</a></td>
+	<td class="summary">Get the type of an argument.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.arguments:value">IpcContext.arguments:value (idx)</a></td>
+	<td class="summary">Get the raw argument value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.context:rawArgument">IpcContext.context:rawArgument (idx)</a></td>
+	<td class="summary">Get the raw argument value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.context:ownThread">IpcContext.context:ownThread ()</a></td>
+	<td class="summary">Get the thread owning the context.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.context:argument">IpcContext.context:argument (idx)</a></td>
+	<td class="summary">Get the value of the argument processed.</td>
+	</tr>
+</table>
+<h2><a href="#Fields">Fields</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.IPC_ARGUMENT_TYPE_UNSPECIFIED">IpcContext.IPC_ARGUMENT_TYPE_UNSPECIFIED</a></td>
+	<td class="summary">The argument type is not known.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.IPC_ARGUMENT_TYPE_HANDLE">IpcContext.IPC_ARGUMENT_TYPE_HANDLE</a></td>
+	<td class="summary">Argument is a kernel handle.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.IPC_ARGUMENT_TYPE_DES8">IpcContext.IPC_ARGUMENT_TYPE_DES8</a></td>
+	<td class="summary">Argument is a 8-bit descriptor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.IPC_ARGUMENT_TYPE_DES16">IpcContext.IPC_ARGUMENT_TYPE_DES16</a></td>
+	<td class="summary">Argument is a 16-bit descriptor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.IPC_ARGUMENT_TYPE_DESC8">IpcContext.IPC_ARGUMENT_TYPE_DESC8</a></td>
+	<td class="summary">Argument is a 8-bit constant descriptor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#IpcContext.IPC_ARGUMENT_TYPE_DESC16">IpcContext.IPC_ARGUMENT_TYPE_DESC16</a></td>
+	<td class="summary">Argument is a 16-bit constant descriptor.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "IpcContext.arguments:valueType"></a>
+    <strong>IpcContext.arguments:valueType (idx)</strong>
+    </dt>
+    <dd>
+    Get the type of an argument.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+         The argument to retrieve the type.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        One of the <code>IPC_ARGUMENT_TYPE_</code> constants.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "IpcContext.arguments:value"></a>
+    <strong>IpcContext.arguments:value (idx)</strong>
+    </dt>
+    <dd>
+    Get the raw argument value.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+         The index of the argument to retrieve value from.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Argument in the form of 32-bit integer value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "IpcContext.context:rawArgument"></a>
+    <strong>IpcContext.context:rawArgument (idx)</strong>
+    </dt>
+    <dd>
+    Get the raw argument value. </p>
+
+<p> This is a direct call to <a href="../modules/ipc.context.html#IpcContext.arguments:value">IpcContext.arguments:value</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+         The index of the argument to retrieve value from.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Argument in the form of 32-bit integer value.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "IpcContext.context:ownThread"></a>
+    <strong>IpcContext.context:ownThread ()</strong>
+    </dt>
+    <dd>
+    Get the thread owning the context. </p>
+
+<p> This is the thread that want to send the IPC message.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Own thread as <code>kernel.thread</code>.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "IpcContext.context:argument"></a>
+    <strong>IpcContext.context:argument (idx)</strong>
+    </dt>
+    <dd>
+    Get the value of the argument processed. </p>
+
+<p> For descriptor argument type, this will return either a <a href="../modules/std.html#descriptor8">std.descriptor8</a> or <a href="../modules/std.html#descriptor16">std.descriptor16</a> class.</p>
+
+<p> Otherwise, this will return a 32-bit integer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+         The index of the argument to retrieve value from.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The value at the target index processed.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="Fields"></a>Fields</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "IpcContext.IPC_ARGUMENT_TYPE_UNSPECIFIED"></a>
+    <strong>IpcContext.IPC_ARGUMENT_TYPE_UNSPECIFIED</strong>
+    </dt>
+    <dd>
+    The argument type is not known.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "IpcContext.IPC_ARGUMENT_TYPE_HANDLE"></a>
+    <strong>IpcContext.IPC_ARGUMENT_TYPE_HANDLE</strong>
+    </dt>
+    <dd>
+    Argument is a kernel handle.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "IpcContext.IPC_ARGUMENT_TYPE_DES8"></a>
+    <strong>IpcContext.IPC_ARGUMENT_TYPE_DES8</strong>
+    </dt>
+    <dd>
+    Argument is a 8-bit descriptor.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "IpcContext.IPC_ARGUMENT_TYPE_DES16"></a>
+    <strong>IpcContext.IPC_ARGUMENT_TYPE_DES16</strong>
+    </dt>
+    <dd>
+    Argument is a 16-bit descriptor.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "IpcContext.IPC_ARGUMENT_TYPE_DESC8"></a>
+    <strong>IpcContext.IPC_ARGUMENT_TYPE_DESC8</strong>
+    </dt>
+    <dd>
+    Argument is a 8-bit constant descriptor.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "IpcContext.IPC_ARGUMENT_TYPE_DESC16"></a>
+    <strong>IpcContext.IPC_ARGUMENT_TYPE_DESC16</strong>
+    </dt>
+    <dd>
+    Argument is a 16-bit constant descriptor.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2021-10-30 01:38:52 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
